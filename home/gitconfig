@@ -1,0 +1,64 @@
+[user]
+  name = YuZakuro
+  email = zakuro@yuzakuro.me
+[core]
+  editor = vim -c \"set fenc=utf-8\"
+  excludesfile = /home/zakuro9715/.gitignore
+[alias]
+# shortened format commands
+  a    = add
+  ad   = add .
+  ba   = branch
+  bad  = branch -D
+  bam  = branch -m
+  c    = commit
+  ca   = commit --amend
+  co   = checkout
+  cob  = checkout -b
+  com  = checkout master
+  d    = diff
+  i    = init
+  l    = !git sog
+  ps   = push
+  psh  = push heroku
+  pshf = push heroku -f
+  pso  = push origin
+  psof = push origin -f
+  pl   = pull
+  plo  = pull origin
+  plom = pull origin master
+  re   = rebase
+  rei  = rebase -i
+  rea  = rebase --abort
+  rec  = rebase --continue
+  res  = rebase --skip
+  rem  = rebase master
+  rt   = remote
+  s    = status
+  sa   = stash
+  sak  = stash -k
+  sal  = stash list
+  sap  = stash pop
+  sad  = stash drop
+  sb   = submodule
+  sbi  = submodule init
+  sbs  = submodule sync
+  sbu  = submodule update
+  um   = !git unmerged
+# useful commands
+  sync = !git checkout master \
+    && git pull origin master \
+    && git fetch -p origin \
+    && git branch -d $(git branch --merged | grep -v master | grep -v '*')
+
+# log commands
+  # graphical log
+  gog = log --graph --date=iso --decorate=short
+  # short log
+  sog = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
+  # my log
+  mog = !git sog --author=YuZakuro
+
+  unmerged = !git --no-pager diff --name-only --diff-filter=U
+[push]
+  default = current

@@ -1,0 +1,43 @@
+autoload -Uz vcs_info
+
+# PROMPT
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:*' max-exports 5
+zstyle ':vcs_info:*' formats "%b" '%S' '%c' '%u'
+zstyle ':vcs_info:*' actionformats '%b|%a' '$s' '%c' '%u'
+
+precmd () { 
+  vcs_info 
+  prompt
+}
+
+prompt() {
+  local happy='(._.%)'
+  local unhappy='(;_;%)'
+  local kao="%(?#$happy#$unhappy)"
+  local stcolor='%(?.blue.red)'
+  local symbol='%(!.#.$)'
+  PROMPT="%B%K{$stcolor}$kao%k%b "
+  
+  local branch="[$vcs_info_msg_0_]"
+  local repo_dir="$vcs_info_msg_1_"
+  local unstaged="$vcs_info_msg_2_"
+  local untracked="$(git status 2> /dev/null | grep "^Untracked")"
+  local staged="$vcs_info_msg_3_"
+  local mark=''
+  
+  if [[ $staged ]]; then
+    mark='%B'
+  fi  
+  if [[ $unstaged || $untracked ]]; then
+    mark='%B%F{red}' # unstagedを優先
+  fi
+  local vcs="$mark $branch%f%b"
+
+  local pos='%~'
+  if [[ $repo_dir ]]; then
+    pos=$repo_dir
+  fi
+ 
+  RPROMPT="$vcs %F{yellow}[$pos]%f"
+}

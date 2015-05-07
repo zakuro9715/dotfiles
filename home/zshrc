@@ -3,7 +3,7 @@ autoload -Uz vcs_info
 # PROMPT
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:*' max-exports 5
-zstyle ':vcs_info:*' formats "%b" '%S' '%c' '%u'
+zstyle ':vcs_info:*' formats '%r' '%S' '%b' '%c' '%u'
 zstyle ':vcs_info:*' actionformats '%b|%a' '$s' '%c' '%u'
 
 precmd () { 
@@ -12,32 +12,50 @@ precmd () {
 }
 
 prompt() {
-  local happy='(._.%)'
-  local unhappy='(;_;%)'
-  local kao="%(?#$happy#$unhappy)"
-  local stcolor='%(?.blue.red)'
-  local symbol='%(!.#.$)'
-  PROMPT="%B%K{$stcolor}$kao%k%b "
-  
-  local branch="[$vcs_info_msg_0_]"
-  local repo_dir="$vcs_info_msg_1_"
-  local unstaged="$vcs_info_msg_2_"
-  local untracked="$(git status 2> /dev/null | grep "^Untracked")"
-  local staged="$vcs_info_msg_3_"
-  local mark=''
-  
-  if [[ $staged ]]; then
-    mark='%B'
-  fi  
-  if [[ $unstaged || $untracked ]]; then
-    mark='%B%F{red}' # unstagedを優先
-  fi
-  local vcs="$mark $branch%f%b"
+  local branch repo_dir untracked unstaged staged
+  vcs_repo_name="$vcs_info_msg_0_"
+  vcs_pwd="$vcs_info_msg_1_"
+  vcs_branch="$vcs_info_msg_2_"
+  vcs_untracked="$(git status 2> /dev/null | grep "^Untracked")"
+  vcs_unstaged="$vcs_info_msg_3_"
+  vcs_staged="$vcs_info_msg_4_"
 
-  local pos='%~'
-  if [[ $repo_dir ]]; then
-    pos=$repo_dir
+  # $vcs_pwd is '.' if $PWD is /path/to/repo.
+  # And result of concating $vcs_repo_name and $vcs_pwd is 'repo/.'.
+  # But I want it to be 'repo'.
+  if [[ $vcs_pwd = '.' ]]; then
+    vcs_pwd=''
+  fi
+
+  
+  local happy unhappy kao stcolor symbol
+  
+  happy='(._.%)'
+  unhappy='(;_;%)'
+  kao="%(?#$happy#$unhappy)"
+  stcolor='%(?.blue.red)'
+  symbol='%(!.#.$)'
+  PROMPT="%B%K{$stcolor}$kao%k%b "
+  if [[ $vcs_untracked || $vcs_unstaged || $vcs_staged ]] then
+    PROMPT="$PROMPT%F{yellow}%Bx%b%f "
+  fi
+
+
+  local pos vcs="[$vcs_branch]%f "
+  if [[ $vcs_staged ]]; then
+    vcs="%F{blue}$vcs"
+  fi  
+  if [[ $vcs_unstaged || $vcs_untracked ]]; then
+    vcs="%F{red}$vcs"
+  fi
+
+  if [[ $vcs_repo_name ]]; then # In a vcs directory
+    pos="$vcs_repo_name/$vcs_pwd"
+    pos="${pos%/}" # Remove a tail '/'
+  else
+    pos='%1d'
+    vcs=''
   fi
  
-  RPROMPT="$vcs %F{yellow}[$pos]%f"
+  RPROMPT="$vcs%F{yellow}[$pos]%f"
 }

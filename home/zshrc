@@ -28,14 +28,24 @@ prompt() {
   fi
 
   
-  local happy unhappy kao stcolor symbol
+  local happy unhappy kao stcolor color symbol text
+  
+  color='%(?.blue.red)'
+  symbol='%(!.#.$)'
   
   happy='(._.%)'
-  unhappy='(;_;%)'
+  unhappy='(;_;%)' 
+  if [[ $VIRTUAL_ENV ]]; then
+    happy='(._.%)'
+    unhappy='(>_<%)'
+    text=`basename $VIRTUAL_ENV`
+  fi 
   kao="%(?#$happy#$unhappy)"
-  stcolor='%(?.blue.red)'
-  symbol='%(!.#.$)'
-  PROMPT="%B%K{$stcolor}$kao%k%b "
+  
+  PROMPT="%B%K{$color}$kao%k%b "
+  if [[ $text ]] then
+    PROMPT="$PROMPT($text) "
+  fi
   if [[ $vcs_untracked || $vcs_unstaged || $vcs_staged ]] then
     PROMPT="$PROMPT%F{yellow}%Bx%b%f "
   fi

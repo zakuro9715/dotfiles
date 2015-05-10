@@ -1,4 +1,5 @@
 source 'zsh/prompt.zsh'
+source 'zsh/completion.zsh'
 
 precmd () { 
   vcs_info 

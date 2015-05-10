@@ -69,3 +69,21 @@ prompt() {
  
   RPROMPT="$vcs%F{yellow}[$pos]%f"
 }
+
+
+# cd
+
+chpwd() {
+  check_pyvenv
+}
+
+check_pyvenv() {
+  if [[ -n "$VIRTUAL_ENV" ]]; then
+    case $(pwd) in
+      $VIRTUAL_ENV* ) ;; # In venv
+      *             ) deactivate ;;
+    esac
+  elif [[ -r 'bin/activate' ]]; then # Can read bin/activate and venv hasn't activated
+    source 'bin/activate'
+  fi
+}

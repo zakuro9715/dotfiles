@@ -1,5 +1,5 @@
-source '.zsh/prompt.zsh'
-source '.zsh/completion.zsh'
+source "$HOME/.zsh/prompt.zsh"
+source "$HOME/.zsh/completion.zsh"
 
 eval "$(rbenv init -)"
 

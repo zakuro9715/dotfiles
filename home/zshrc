@@ -2,6 +2,7 @@ source "$HOME/.zsh/prompt.zsh"
 source "$HOME/.zsh/completion.zsh"
 
 eval "$(rbenv init -)"
+eval "$(direnv hook zsh)"
 
 export EDITOR=vim
 export PATH="~/.rbenv/shims:$PATH"

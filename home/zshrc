@@ -1,5 +1,8 @@
-source 'zsh/prompt.zsh'
-source 'zsh/completion.zsh'
+source '.zsh/prompt.zsh'
+source '.zsh/completion.zsh'
+
+eval "$(rbenv init -)"
+
 
 precmd () { 
   vcs_info 

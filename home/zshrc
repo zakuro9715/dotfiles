@@ -3,6 +3,8 @@ source '.zsh/completion.zsh'
 
 eval "$(rbenv init -)"
 
+export EDITOR=vim
+
 orphans() {
   if [[ ! -n $(pacman -Qdt) ]]; then
     echo "No orphans to remove."

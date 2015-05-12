@@ -4,6 +4,7 @@ source "$HOME/.zsh/completion.zsh"
 eval "$(rbenv init -)"
 
 export EDITOR=vim
+export PATH="~/.rbenv/shims:$PATH"
 
 orphans() {
   if [[ ! -n $(pacman -Qdt) ]]; then

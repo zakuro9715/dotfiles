@@ -3,6 +3,14 @@ source '.zsh/completion.zsh'
 
 eval "$(rbenv init -)"
 
+orphans() {
+  if [[ ! -n $(pacman -Qdt) ]]; then
+    echo "No orphans to remove."
+  else
+    sudo pacman -Rns $(pacman -Qdtq)
+  fi
+}
+
 
 precmd () { 
   vcs_info 

@@ -1,11 +1,14 @@
 source "$HOME/.zsh/prompt.zsh"
 source "$HOME/.zsh/completion.zsh"
 
+export EDITOR=vim
+export PATH="$HOME/.rbenv/bin:$PATH"
+
+export NVM_DIR="/home/zakuro9715/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
 eval "$(rbenv init -)"
 eval "$(direnv hook zsh)"
-
-export EDITOR=vim
-export PATH="~/.rbenv/shims:$PATH"
 
 orphans() {
   if [[ ! -n $(pacman -Qdt) ]]; then

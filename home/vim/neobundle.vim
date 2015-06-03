@@ -17,6 +17,9 @@ NeoBundle 'kannokanno/previm'
 " Python
 NeoBundle 'davidhalter/jedi-vim'
 
+" Node
+NeoBundle 'digitaltoad/vim-jade'
+
 " Others
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less'

@@ -4,6 +4,7 @@ syntax on
 
 color desert
 
+set t_Co=256
 
 set nocompatible
 set background=dark

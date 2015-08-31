@@ -1,0 +1,1 @@
+/home/zakuro9715/github/vim-b-html/syntax/bhtml.vim

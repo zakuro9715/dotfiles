@@ -1,4 +1,8 @@
 .ruby-version
+.python-version
 .envrc
 .bin
 .vimrc-local
+
+.idea
+*.iml

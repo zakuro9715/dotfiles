@@ -1,0 +1,11 @@
+[ui]
+username = YuZakuro <zakuro@yuzakuro.me>
+editor = vim
+
+[extensions]
+color =
+pager =
+convert =
+
+[pager]
+pager = LESS='FSRX' less

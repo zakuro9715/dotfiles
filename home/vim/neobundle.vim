@@ -9,6 +9,10 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'fugalh/desert.vim'
 
+" Powerline
+NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+NeoBundle 'powerline/fontpatcher'
+
 " Markdown
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
 NeoBundle 'rcmdnk/vim-markdown'
@@ -17,10 +21,14 @@ NeoBundle 'kannokanno/previm'
 " Python
 NeoBundle 'davidhalter/jedi-vim'
 
-" Node
+" rst
+NeoBundle 'Rykka/riv.vim'
+
+" Jade
 NeoBundle 'digitaltoad/vim-jade'
 
 " Others
+NeoBundle 'zakuro9715/vim-b-html'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'tyru/open-browser.vim'
@@ -28,12 +36,16 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'vim-jp/vim-go-extra'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'Shougo/neocomplete'
+NeoBundle 'wavded/vim-stylus'
 NeoBundle 'zakuro9715/httpstatus.vim'
 call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
 
+" vim-markdown
+" ------------
+let g:vim_markdown_folding_disabled=1
 
 " Syntastic
 " ---------
@@ -57,6 +69,11 @@ autocmd FileType python setlocal completeopt-=preview
 
 let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
+
+
+" powerline
+" ---------
+let g:Powerline_symbols = 'fancy'
 
 " neocomplete
 " -----------

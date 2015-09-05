@@ -27,6 +27,9 @@ NeoBundle 'Rykka/riv.vim'
 " Jade
 NeoBundle 'digitaltoad/vim-jade'
 
+" es
+NeoBundle 'othree/yajs.vim'
+
 " Others
 NeoBundle 'zakuro9715/vim-b-html'
 NeoBundle 'hail2u/vim-css3-syntax'

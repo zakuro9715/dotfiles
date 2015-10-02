@@ -7,6 +7,8 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+
 NeoBundle 'fugalh/desert.vim'
 
 " Powerline
@@ -32,6 +34,7 @@ NeoBundle 'othree/yajs.vim'
 
 " Others
 NeoBundle 'zakuro9715/vim-b-html'
+NeoBundle 'Quramy/vison'
 NeoBundle 'hail2u/vim-css3-syntax'
 NeoBundle 'groenewege/vim-less'
 NeoBundle 'tyru/open-browser.vim'
@@ -45,6 +48,10 @@ call neobundle#end()
 
 filetype plugin indent on
 NeoBundleCheck
+
+" Vison
+" -----
+autocmd BufRead,BufNewFile package.json Vison
 
 " vim-markdown
 " ------------
@@ -62,7 +69,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8']
-
+let g:syntastic_cpp_compiler_options = 'std=c++14' 
 
 " jedi
 " ----

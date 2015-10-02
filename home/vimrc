@@ -71,5 +71,6 @@ function! s:vimrc_local(loc)
 endfunction
 
 source $HOME/.vim/neobundle.vim
+source $HOME/.vim/remove_trailing_whitespace.vim
 
 filetype indent plugin on

@@ -1,5 +1,5 @@
 [user]
-  name = YuZakuro
+  name = Takahiro Yaota
   email = zakuro@yuzakuro.me
 [core]
   editor = vim -c \"set fenc=utf-8\"

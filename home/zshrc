@@ -1,4 +1,4 @@
-export ZSH=/home/zakuro9715/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 source "$HOME/.zsh/alias.zsh"
 
@@ -7,8 +7,8 @@ source "$HOME/.zsh/alias.zsh"
 
 export EDITOR=vim
 export GIT_GUI=gitg
-export GOPATH="/home/zakuro9715/go"
-export PATH="/home/zakuro9715/bin:$GOPATH/bin:/usr/local/bin:/usr/bin:/bin:/bin/usr/local/games:/usr/games"
+export GOPATH="$HOME/go"
+export PATH="$HOME/bin:$GOPATH/bin:/usr/local/bin:/usr/bin:/bin:/bin/usr/local/games:/usr/games"
 
 # Extra PATH
 export PATH="/usr/opt/bin:$PATH"
@@ -38,7 +38,7 @@ export PATH="$RBENV_ROOT/bin:$PATH"
 eval "$(rbenv init -)"
 
 # nvm
-export NVM_DIR="/home/zakuro9715/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # direnv
@@ -68,7 +68,7 @@ bindkey '^m' do_enter
 # oh-my-zsh
 # =========
 
-ZSH_CUSTOM="/home/zakuro9715/github"
+ZSH_CUSTOM="$HOME/github"
 ZSH_THEME="zakuroster/zakuroster"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case

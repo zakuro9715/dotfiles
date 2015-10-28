@@ -60,6 +60,10 @@
 # log commands
   # graphical log
   gog = log --graph --date=iso --decorate=short
+  # short graphical log
+  sfog = log --graph --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
+  # short graphical log
+  sgog = !git sog --graph
   # short log
   sog = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
   # my log

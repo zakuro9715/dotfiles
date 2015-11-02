@@ -1,1 +1,0 @@
-/home/zakuro9715/github/vim-b-html/ftdetect/bhtml.vim

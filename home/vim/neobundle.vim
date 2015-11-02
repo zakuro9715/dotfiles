@@ -13,7 +13,6 @@ NeoBundle 'fugalh/desert.vim'
 
 " Powerline
 NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-NeoBundle 'powerline/fontpatcher'
 
 " Markdown
 NeoBundle 'joker1007/vim-markdown-quote-syntax'
@@ -69,7 +68,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_cpp_compiler_options = 'std=c++14' 
+let g:syntastic_cpp_compiler_options = 'std=c++14'
 
 " jedi
 " ----

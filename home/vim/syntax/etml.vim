@@ -1,1 +1,0 @@
-/home/zakuro9715/github/vim-etml/syntax/etml.vim

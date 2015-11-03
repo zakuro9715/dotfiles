@@ -1,14 +1,14 @@
 #!/usr/bin/zsh
-for f in home/*
+for f in home/.*
 do
-  link="$HOME/.${f##*/}"
+  link="$HOME/${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
   
   rm "$link" -r
   
   case ${OSTYPE} in
     msys*)
-      link="%USERPROFILE%/.${f##*/}"
+      link="%USERPROFILE%/${f##*/}"
       target="C:\\wnix\\${target:gs/\//\\/}"
       cmd /c "mklink \"$link\" \"$target\""
     ;;

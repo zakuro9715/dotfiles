@@ -1,6 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 source "$HOME/.zsh/alias.zsh"
+source "$HOME/.zsh/utils.zsh"
 
 # Env
 # ===
@@ -18,8 +19,13 @@ export PATH="/usr/opt/bin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+if [[ -d "$PYENV_ROOT" ]]
+then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+else
+  echo 'pyenv not found'
+fi
 
 check_pyvenv() {
   if [[ -n "$VIRTUAL_ENV" ]]; then
@@ -34,19 +40,38 @@ check_pyvenv() {
 
 # rbenv
 export RBENV_ROOT="$HOME/.rbenv"
-export PATH="$RBENV_ROOT/bin:$PATH"
-eval "$(rbenv init -)"
+if [[ -d "$RBENV_ROOT" ]]
+then
+  export PATH="$RBENV_ROOT/bin:$PATH"
+  eval "$(rbenv init -)"
+else
+  echo 'rbenv not found'
+fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
+if [[ -n "$NVM_DIR" ]]
+then
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+else
+  echo 'nvm not found'
+fi
 
 # direnv
-eval "$(direnv hook zsh)"
+if check-command direnv
+then
+  eval "$(direnv hook zsh)"
+else
+  echo 'direnv not found'
+fi
 
 # hub
-eval "$(hub alias -s)"
-
+if check-command hub
+then
+  eval "$(hub alias -s)"
+else
+  echo 'hub not found'
+fi
 
 chpwd() {
   check_pyvenv
@@ -57,7 +82,6 @@ do_enter() {
     zle accept-line
     return 0
   fi
-  echo
   ls
   zle reset-prompt
 }

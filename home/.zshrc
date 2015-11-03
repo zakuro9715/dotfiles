@@ -33,7 +33,7 @@ fi
 
 export EDITOR=vim
 export GIT_GUI=gitg
-export GOPATH="$HOME/go"
+export GOPATH="$HOME"
 export PATH="$GOPATH/bin:$PATH"
 
 # Applications

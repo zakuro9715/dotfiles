@@ -3,6 +3,20 @@ export ZSH="$HOME/.oh-my-zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/utils.zsh"
 
+export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
+
+# OS-specific configuration
+# =========================
+
+os_specific_file="$HOME/.zsh/$(os).zsh"
+
+if [[ -f "$os_specific_file" ]]
+then
+  source "$os_specific_file"
+else
+  echo "WARNING: $os_specific_file not found"
+fi
+
 # Env
 # ===
 

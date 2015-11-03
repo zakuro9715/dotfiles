@@ -82,8 +82,8 @@ do_enter() {
     zle accept-line
     return 0
   fi
-  ls
   zle reset-prompt
+  return ls
 }
 zle -N do_enter
 bindkey '^m' do_enter

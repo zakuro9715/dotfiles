@@ -17,16 +17,24 @@ else
   echo "WARNING: $os_specific_file not found"
 fi
 
+# host-specific configuration
+# ===========================
+
+host_specific_file="$HOME/.zsh/$(hostname).zsh"
+if [[ -f "$host_specific_file" ]]
+then
+  source "$host_specific_file"
+else
+  echo "WARNING: $host_specific_file not found"
+fi
+
 # Env
 # ===
 
 export EDITOR=vim
 export GIT_GUI=gitg
 export GOPATH="$HOME/go"
-export PATH="$HOME/bin:$GOPATH/bin:/usr/local/bin:/usr/bin:/bin:/bin/usr/local/games:/usr/games"
-
-# Extra PATH
-export PATH="/usr/opt/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
 # Applications
 # ============

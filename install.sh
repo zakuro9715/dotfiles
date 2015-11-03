@@ -3,9 +3,9 @@ for f in home/.*
 do
   link="$HOME/${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
-  
+
   rm "$link" -r
-  
+
   case ${OSTYPE} in
     msys*)
       link="%USERPROFILE%/${f##*/}"
@@ -13,7 +13,6 @@ do
       cmd /c "mklink \"$link\" \"$target\""
     ;;
     linux*)
-    echo QTESTT
       ln -sf "$target" "$link"
     ;;
   esac

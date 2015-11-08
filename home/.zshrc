@@ -34,6 +34,7 @@ fi
 export EDITOR=vim
 export GIT_GUI=gitg
 export GOPATH="$HOME"
+export GHQ_ROOT="$HOME/src"
 export PATH="$GOPATH/bin:$PATH"
 
 # Applications
@@ -72,9 +73,9 @@ fi
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-if [[ -n "$NVM_DIR" ]]
+if [[ -d "$NVM_DIR" ]]
 then
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 else
   echo 'nvm not found'
 fi

@@ -3,7 +3,7 @@
   email = zakuro@yuzakuro.me
 [core]
   editor = vim -c \"set fenc=utf-8\"
-  excludesfile = /home/zakuro9715/.gitignore
+  excludesfile = ~/.gitignore
 	autocrlf = input
 [alias]
 # shortened format commands

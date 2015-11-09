@@ -50,14 +50,20 @@ else
   echo 'pyenv not found'
 fi
 
+# pyvenv
 check_pyvenv() {
-  if [[ -n "$VIRTUAL_ENV" ]]; then
-    case $(pwd) in
+  if [[ -n "$VIRTUAL_ENV" ]];
+  then
+    case "$(pwd)" in
       $VIRTUAL_ENV* ) ;; # In venv
       *             ) deactivate ;;
     esac
-  elif [[ -r 'bin/activate' ]]; then # Can read bin/activate and venv hasn't activated
+  elif [[ -r 'bin/activate' ]];
+  then
     source 'bin/activate'
+  elif [[ -r 'venv/bin/activate' ]];
+  then
+    source 'venv/bin/activate'
   fi
 }
 

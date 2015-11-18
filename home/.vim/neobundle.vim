@@ -152,6 +152,14 @@ let g:vim_markdown_folding_disabled=1
 NeoBundle 'Rykka/riv.vim'
 
 
+" Shell
+" =====
+
+" Bats
+" ----
+NeoBundle 'vim-scripts/bats.vim'
+
+
 " JSON
 " ====
 

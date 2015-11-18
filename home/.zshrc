@@ -28,6 +28,15 @@ else
   echo "WARNING: $host_specific_file not found"
 fi
 
+# Secret configuration(Password, Authtoken, etc...)
+# =================================================
+secret_file="$HOME/.zsh/secret.zsh"
+if [[ -f "$secret_file" ]]
+then
+  source "$secret_file"
+fi
+
+
 # Env
 # ===
 
@@ -36,6 +45,7 @@ export GIT_GUI=gitg
 export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export PATH="$GOPATH/bin:$PATH"
+
 
 # Applications
 # ============

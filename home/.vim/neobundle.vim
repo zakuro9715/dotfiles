@@ -178,6 +178,7 @@ NeoBundle 'zakuro9715/vim-b-html'
 " ECMAScript
 " ==========
 NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 
 " CSS

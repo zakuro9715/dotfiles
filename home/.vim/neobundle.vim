@@ -177,8 +177,6 @@ NeoBundle 'zakuro9715/vim-b-html'
 
 " ECMAScript
 " ==========
-NeoBundle 'othree/yajs.vim'
-
 
 " CSS
 " ===

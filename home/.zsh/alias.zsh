@@ -15,3 +15,11 @@ alias herc="bundle exec rails c"
 alias hers="bundle exec rails s"
 
 alias gi="git"
+
+
+if check-command colordiff
+then
+  alias diff="colordiff -u"
+else
+  alias diff="diff -u"
+fi

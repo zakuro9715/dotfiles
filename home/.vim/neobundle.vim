@@ -151,6 +151,10 @@ let g:vim_markdown_folding_disabled=1
 " ----------------
 NeoBundle 'Rykka/riv.vim'
 
+" CSV
+" ---
+NeoBundle 'chrisbra/csv.vim'
+
 
 " Shell
 " =====

@@ -32,3 +32,27 @@ do
     ;;
   esac
 done
+
+
+install-packages() {
+  source "$HOME/.zsh/utils.zsh"
+  install=''
+  index=0
+
+  if check-command 'apt-get'
+  then
+    echo 'apt-get detected'
+    index=1
+    install='sudo apt-get install -y'
+  else
+    echo 'Unknown pcakage manager'
+    return 1
+  fi
+
+  for line in $(cat  'packages.csv' | grep -v ^#)
+  do
+    install="$install $(echo $line | cut -d ',' -f $index)"
+  done
+  eval $install
+}
+install-packages

@@ -51,7 +51,7 @@ export PATH="$GOPATH/bin:$PATH"
 # ============
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
+export PYENV_ROOT="$GHQ_ROOT/github.com/yyuu/pyenv"
 if [[ -d "$PYENV_ROOT" ]]
 then
   export PATH="$PYENV_ROOT/bin:$PATH"
@@ -78,7 +78,7 @@ check_pyvenv() {
 }
 
 # rbenv
-export RBENV_ROOT="$HOME/.rbenv"
+export RBENV_ROOT="$GHQ_ROOT/github.com/rbenv/rbenv"
 if [[ -d "$RBENV_ROOT" ]]
 then
   export PATH="$RBENV_ROOT/bin:$PATH"
@@ -88,7 +88,7 @@ else
 fi
 
 # nvm
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$GHQ_ROOT/github.com/creationix/nvm"
 if [[ -d "$NVM_DIR" ]]
 then
   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

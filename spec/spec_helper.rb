@@ -21,3 +21,15 @@ def slim_files
   Dir.entries("#{basedir}/home")
     .select { |f| f.include?('slim') }
 end
+
+class String
+  def linkpath
+    # make symlink file name
+    "#{homedir}/#{gsub('-slim', '')}"
+  end
+
+  def targetpath
+    #make target file name
+    "#{basedir}/home/#{self}"
+  end
+end

@@ -17,8 +17,11 @@ do
   link="$HOME/${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
 
-  echo "Removing $link"
-  rm "$link" -r
+  if [[ -e $link ]]
+  then
+    echo "Removing $link"
+    rm "$link" -r
+  fi
 
   echo "Creating $link"
   case ${OSTYPE} in

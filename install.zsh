@@ -65,7 +65,7 @@ EOS
 
 if [[ $# -ne 1 ]]
 then
-  echo "Usage: zsh install.sh TARGET"
+  echo "Usage: zsh install.zsh TARGET"
   exit 1
 fi
 

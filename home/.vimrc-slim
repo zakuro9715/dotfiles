@@ -1,0 +1,4 @@
+﻿filetype off
+syntax on
+source $HOME/.vim/core.vim
+filetype indent plugin on

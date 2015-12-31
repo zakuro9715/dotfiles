@@ -17,7 +17,6 @@ namespace :spec do
   task :default => :all
 
   targets.each do |target|
-    p target
     original_target = target == "_default" ? target[1..-1] : target
     desc "Run serverspec tests to #{original_target}"
     RSpec::Core::RakeTask.new(target.to_sym) do |t|

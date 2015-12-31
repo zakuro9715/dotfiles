@@ -11,5 +11,4 @@ RUN bundle install
 
 COPY . /dotfiles
 
-ENV TARGET full
 cmd ["/bin/bash"]

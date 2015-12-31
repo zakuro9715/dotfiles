@@ -1,0 +1,11 @@
+language: ruby
+env:
+  - TARGET=full
+  - TARGET=slim
+install:
+  - sudo apt-get update
+  - sudo apt-get install -y zsh
+  - bundle install
+script:
+  - zsh install.zsh $TARGET
+  - rake "spec:$TARGET"

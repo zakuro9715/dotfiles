@@ -5,6 +5,13 @@ source "$HOME/.zsh/alias.zsh"
 
 export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 
+# Add all ruby gem command directories to PATH
+for dir in $HOME/.gem/ruby/*/bin
+do
+  export PATH="$dir:$PATH"
+done
+
+
 # OS-specific configuration
 # =========================
 
@@ -188,3 +195,6 @@ source $ZSH/oh-my-zsh.sh
 
 
 
+
+# added by travis gem
+[ -f /home/zakuro/.travis/travis.sh ] && source /home/zakuro/.travis/travis.sh

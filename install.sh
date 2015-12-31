@@ -12,7 +12,7 @@ cat << EOS
 ####################################################################################################
 EOS
 
-for f in home/.*
+for f in home/.[!.]*
 do
   link="$HOME/${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"

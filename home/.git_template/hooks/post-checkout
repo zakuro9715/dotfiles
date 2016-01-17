@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 
-if [[ "$(git config --local user.email)" != "$GIT_EMAIL" ]]
+if update-git-email > /dev/null
 then
-  git config --local user.email $GIT_EIMAL
-  echo "git: git config --local user.email $GIT_EIMAL"
+  echo git email updated to $GIT_EMAIL
 fi

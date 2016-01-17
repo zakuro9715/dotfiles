@@ -15,7 +15,7 @@ update-git-email () {
   if [[ $old_email == $new_email ]]
   then
     echo "No need to update."
-    return 0
+    return 1
   fi
   git config --local user.email $new_email
   echo "Old email is ${old_email:-[empty]}."

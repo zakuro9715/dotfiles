@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+source "$HOME/.zsh/commands.zsh"
+
 if update-git-email > /dev/null
 then
   echo git email updated to $GIT_EMAIL

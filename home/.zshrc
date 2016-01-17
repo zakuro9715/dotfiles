@@ -2,6 +2,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/alias.zsh"
+source "$HOME/.zsh/commands.zsh"
 
 export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 

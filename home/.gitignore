@@ -1,6 +1,7 @@
 .ruby-version
 .python-version
 .envrc
+.env.local
 .bin
 .vimrc-local
 

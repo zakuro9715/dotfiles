@@ -1,7 +1,7 @@
 update-git-hooks () {
   hooks_dir=~/.git_template/hooks
 
-  for repo in $(ghq list zakuro)
+  for repo in $(ghq list)
   do
     target_dir=$GHQ_ROOT/$repo/.git/hooks
     rm $target_dir

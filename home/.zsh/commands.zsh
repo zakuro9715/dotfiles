@@ -21,3 +21,31 @@ update-git-email () {
   echo "Old email is ${old_email:-[empty]}."
   echo "New email is $new_email."
 }
+
+irsync() {
+  do-rsync() {
+    echo "$ rsync $@"
+    rsync $@ | while read line; do echo "[rsync] $line"; done
+  }
+
+  sync-loop() {
+    do-rsync $@
+    while read msg
+    do
+      echo "[inotifywait] $msg"
+      do-rsync $@
+    done
+  }
+
+  local src=${@:$(($# - 1)):1} # The second last element of arguments
+  local dest=${@:$#:1}         # The last element of arguments
+
+  local inotify_actions=${IRSYNC_ACTIONS:-modify,attrib,move,create,delete}
+  local inotify_options=${IRSYNC_INOTIFY_OPTIONS:--mr}
+
+  echo "$ inotifywait -e $inotify_actions $inotify_options $src"
+  zsh -c "inotifywait -e $inotify_actions $inotify_options $src" | sync-loop $@
+
+  unset do-rsync
+  unset sync-loop
+}

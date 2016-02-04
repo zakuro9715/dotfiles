@@ -54,7 +54,7 @@ export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export PATH="$GOPATH/bin:$PATH"
 
-export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='(.git|.lock$)'"
+export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='.git'"
 
 
 # Applications

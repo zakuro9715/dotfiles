@@ -6,12 +6,6 @@ source "$HOME/.zsh/commands.zsh"
 
 export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 
-# Add all ruby gem command directories to PATH
-for dir in $HOME/.gem/ruby/*/bin
-do
-  export PATH="$dir:$PATH"
-done
-
 
 # OS-specific configuration
 # =========================

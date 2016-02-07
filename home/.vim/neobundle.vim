@@ -27,6 +27,15 @@ NeoBundle 'fugalh/desert.vim'
 NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 let g:Powerline_symbols = 'fancy'
 
+" Completion
+" ===========
+
+" deoplete
+" --------
+if has('nvim')
+  NeoBundle 'Shougo/deoplete.nvim'
+endif
+
 
 " Syntax check
 " ============

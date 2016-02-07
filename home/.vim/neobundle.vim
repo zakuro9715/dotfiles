@@ -76,6 +76,11 @@ let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_cpp_compiler_options = 'std=c++14'
 
 
+" Deoplete
+" =========
+let g:deoplete#enable_at_startup = 1
+
+
 " Jedi
 " ====
 " don't show docstring

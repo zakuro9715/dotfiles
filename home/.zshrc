@@ -47,6 +47,7 @@ export GIT_GUI=gitg
 export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export PATH="$GOPATH/bin:$PATH"
+export XDG_CONFIG_HOME="$PATH/.config"
 
 export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='.git'"
 

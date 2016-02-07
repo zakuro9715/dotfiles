@@ -15,6 +15,7 @@ alias herc="bundle exec rails c"
 alias hers="bundle exec rails s"
 
 alias gi="git"
+alias nim="nvim"
 
 
 if check-command colordiff

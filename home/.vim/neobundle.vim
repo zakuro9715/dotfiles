@@ -34,12 +34,10 @@ NeoBundle 'wavded/vim-stylus'
 NeoBundle 'zakuro9715/httpstatus.vim'
 NeoBundle 'zakuro9715/vim-b-html'
 
-if has('vim')
-  NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
-endif
-
 if has('nvim')
   NeoBundle 'Shougo/deoplete.nvim'
+else
+  NeoBundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 endif
 
 call neobundle#end()

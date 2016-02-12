@@ -30,6 +30,8 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tyru/open-browser.vim'
 " V
 NeoBundle 'vim-jp/vim-go-extra'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'vim-scripts/Align'
 NeoBundle 'wavded/vim-stylus'
 NeoBundle 'zakuro9715/httpstatus.vim'
 NeoBundle 'zakuro9715/vim-b-html'

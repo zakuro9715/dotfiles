@@ -1,5 +1,3 @@
-export ZSH="$HOME/.oh-my-zsh"
-
 source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
@@ -48,6 +46,7 @@ export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export PATH="$GOPATH/bin:$PATH"
 export XDG_CONFIG_HOME="$HOME/.config"
+export ZSH="$GHQ_ROOT/github.com/robbyrussell/oh-my-zsh"
 
 export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='.git'"
 

@@ -40,6 +40,7 @@ fi
 # Env
 # ===
 
+export LANG=ja_JP.UTF-8
 export EDITOR=vim
 export GIT_GUI=gitg
 export GOPATH="$HOME"

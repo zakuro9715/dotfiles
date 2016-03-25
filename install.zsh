@@ -7,7 +7,7 @@ create-symlink() {
   if [[ -e $link ]]
   then
     echo "Removing $link"
-    rm "$link" -r
+    rm -r "$link"
   fi
   echo "Creating $link"
   case ${OSTYPE} in

@@ -16,7 +16,7 @@ create-symlink() {
       target="C:\\wnix\\${target:gs/\//\\/}"
       cmd /c "mklink \"$link\" \"$target\""
     ;;
-    linux*)
+    *)
       ln -sf "$target" "$link"
     ;;
   esac

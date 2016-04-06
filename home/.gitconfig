@@ -42,7 +42,7 @@
   rem  = rebase master
   rt   = remote
   s    = status
-  sa   = stash
+  sa   = stash save
   sak  = stash -k
   sal  = stash list
   sap  = stash pop

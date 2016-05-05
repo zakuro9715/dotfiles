@@ -49,8 +49,6 @@ call dein#add('zakuro9715/vim-b-html')
 
 if has('nvim')
   call dein#add('Shougo/deoplete.nvim')
-else
-  call dein#add('powerline/powerline', {'rtp': 'powerline/bindings/vim/'})
 endif
 
 call dein#end()

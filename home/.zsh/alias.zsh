@@ -17,6 +17,8 @@ alias hers="bundle exec rails s"
 alias gi="git"
 alias nim="nvim"
 
+alias chown-me="sudo chown zakuro:zakuro"
+
 
 if check-command colordiff
 then

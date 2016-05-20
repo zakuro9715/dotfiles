@@ -1,4 +1,5 @@
-#!/usr/bin/zsh
+basedir="$(dirname $(dirname $0))"
+source "$basedir/home/.zsh/utils.zsh"
 
 create-symlink() {
   link=$1
@@ -6,10 +7,10 @@ create-symlink() {
 
   if [[ -e $link ]]
   then
-    echo "Removing $link"
+    log-info "Removing $link"
     rm -r "$link"
   fi
-  echo "Creating $link"
+  log-info "Creating $link"
   ln -sf "$target" "$link"
 }
 

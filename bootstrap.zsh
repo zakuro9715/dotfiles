@@ -39,5 +39,4 @@ show-welcome-message
 verify-system
 
 zsh "scripts/install-symlinks.zsh"
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 git clone https://github.com/zakuro9715/zakuroster.git ~/.oh-my-zsh/themes/zakuroster

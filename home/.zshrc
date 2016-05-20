@@ -2,43 +2,11 @@ source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
 
-export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
-
-
-# OS-specific configuration
-# =========================
-
-os_specific_file="$HOME/.zsh/$(os).zsh"
-
-if [[ -f "$os_specific_file" ]]
-then
-  source "$os_specific_file"
-else
-  echo "WARNING: $os_specific_file not found"
-fi
-
-# host-specific configuration
-# ===========================
-
-host_specific_file="$HOME/.zsh/$(hostname).zsh"
-if [[ -f "$host_specific_file" ]]
-then
-  source "$host_specific_file"
-else
-  echo "WARNING: $host_specific_file not found"
-fi
-
-# Secret configuration(Password, Authtoken, etc...)
-# =================================================
-secret_file="$HOME/.zsh/secret.zsh"
-if [[ -f "$secret_file" ]]
-then
-  source "$secret_file"
-fi
-
 
 # Env
 # ===
+
+export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
@@ -55,6 +23,41 @@ export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='.git'"
 # ======
 
 source "$GHQ_ROOT/github.com/zakuro9715/zakuroster/zakuroster.zsh"
+
+
+# OS-specific configuration
+# =========================
+
+os_specific_file="$HOME/.zsh/$(os).zsh"
+
+if [[ -f "$os_specific_file" ]]
+then
+  source "$os_specific_file"
+else
+  echo "WARNING: $os_specific_file not found"
+fi
+
+
+# host-specific configuration
+# ===========================
+
+host_specific_file="$HOME/.zsh/$(hostname).zsh"
+if [[ -f "$host_specific_file" ]]
+then
+  source "$host_specific_file"
+else
+  echo "WARNING: $host_specific_file not found"
+fi
+
+
+# Secret configuration(Password, Authtoken, etc...)
+# =================================================
+secret_file="$HOME/.zsh/secret.zsh"
+if [[ -f "$secret_file" ]]
+then
+  source "$secret_file"
+fi
+
 
 # Applications
 # ============

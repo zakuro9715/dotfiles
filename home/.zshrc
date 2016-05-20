@@ -38,6 +38,8 @@ autoload -U colors && colors
 autoload -U compinit && compinit
 fpath=("$GHQ_ROOT/github.com/zsh-users/zsh-completions/src", $fpath)
 
+setopt list_packed
+setopt magic_equal_subst
 setopt auto_param_slash
 setopt mark_dirs
 

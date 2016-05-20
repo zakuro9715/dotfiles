@@ -30,6 +30,16 @@ source "$GHQ_ROOT/github.com/zakuro9715/zakuroster/zakuroster.zsh"
 autoload -U colors && colors
 
 
+# Completion
+# ==========
+
+autoload -U compinit && compinit
+fpath=("$GHQ_ROOT/github.com/zsh-users/zsh-completions/src", $fpath)
+
+setopt auto_param_slash
+setopt mark_dirs
+
+
 # OS-specific configuration
 # =========================
 

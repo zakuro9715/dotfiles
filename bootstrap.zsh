@@ -12,7 +12,7 @@ show-welcome-message() {
 EOS
 }
 
-show-welcome-mesgae
+show-welcome-message
 
 zsh "scripts/install-symlinks.zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

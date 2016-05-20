@@ -34,9 +34,33 @@ verify-system() {
   fi
 }
 
+log-installing() {
+  local message="Installing $1"
+  log-info "$message"
+}
+
+required_go_packages=(
+  "github.com/github/hub"
+  "github.com/motemen/ghq"
+)
+
+required_repositories=(
+  "zakuro9715/zakuroster"
+)
 
 show-welcome-message
 verify-system
-
 zsh "scripts/install-symlinks.zsh"
-git clone https://github.com/zakuro9715/zakuroster.git ~/.oh-my-zsh/themes/zakuroster
+
+
+for pkg in ${required_go_packages[@]}
+do
+  log-installing "$pkg"
+  go get "$pkg"
+done
+
+for repo in ${required_repositories[@]}
+do
+  log-installing "$pkg"
+  ghq get $repo
+done

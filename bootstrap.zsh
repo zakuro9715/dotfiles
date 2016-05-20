@@ -1,3 +1,6 @@
+basedir=$(dirname $0)
+source "$basedir/home/.zsh/utils.zsh"
+
 show-welcome-message() {
   cat << EOS
 
@@ -12,7 +15,28 @@ show-welcome-message() {
 EOS
 }
 
+verify-system() {
+  local required_commands=('git' 'zsh' 'ghq' 'go')
+  local valid=true
+  for cmd in ${required_commands[@]}
+  do
+    if ! check-command "$cmd"
+    then
+      log-error "Cannot found $cmd"
+      valid=false
+    fi
+  done
+  if $valid
+  then
+    log-success "Complete system verification."
+  else
+    exit(1)
+  fi
+}
+
+
 show-welcome-message
+verify-system
 
 zsh "scripts/install-symlinks.zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

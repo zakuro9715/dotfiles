@@ -51,6 +51,11 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='.git'"
 
 
+# PROMPT
+# ======
+
+source "$GHQ_ROOT/github.com/zakuro9715/zakuroster/zakuroster.zsh"
+
 # Applications
 # ============
 

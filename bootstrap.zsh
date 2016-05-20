@@ -46,6 +46,7 @@ required_go_packages=(
 
 required_repositories=(
   "zakuro9715/zakuroster"
+  "zsh-users/zsh-completions"
 )
 
 show-welcome-message

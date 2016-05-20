@@ -50,6 +50,15 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
 
+setopt share_history
+setopt hist_ignore_dups  # Don't store a same command as last one.
+setopt hist_ignore_all_dups  # Romove same comands as command to store
+setopt append_history  # append not overwrite
+setopt extended_history
+setopt hist_ignore_space # Ignore if command is started with space
+setopt hist_save_no_dups
+
+
 
 # OS-specific configuration
 # =========================

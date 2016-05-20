@@ -10,16 +10,7 @@ create-symlink() {
     rm -r "$link"
   fi
   echo "Creating $link"
-  case ${OSTYPE} in
-    msys*)
-      link="%USERPROFILE%/${f##*/}"
-      target="C:\\wnix\\${target:gs/\//\\/}"
-      cmd /c "mklink \"$link\" \"$target\""
-    ;;
-    *)
-      ln -sf "$target" "$link"
-    ;;
-  esac
+  ln -sf "$target" "$link"
 }
 
 

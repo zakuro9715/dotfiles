@@ -3,6 +3,7 @@ source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
 
 bindkey -e  # I'm vimmer but emacs bind is useful more than vim bind.
+autoload -Uz add-zsh-hook
 
 # Env
 # ===
@@ -96,21 +97,27 @@ else
 fi
 
 # pyvenv
-check_pyvenv() {
+PYVENV_DIRS=('.' 'venv')
+check-pyvenv() {
   if [[ -n "$VIRTUAL_ENV" ]];
   then
     case "$(pwd)" in
       $VIRTUAL_ENV* ) ;; # In venv
       *             ) deactivate ;;
     esac
-  elif [[ -r 'bin/activate' ]];
-  then
-    source 'bin/activate'
-  elif [[ -r 'venv/bin/activate' ]];
-  then
-    source 'venv/bin/activate'
+  else
+    for dir in ${PYVENV_DIRS[@]}
+    do
+      if [[ -r "$dir/bin/activate" ]]
+      then
+        source "$dir/bin/activate"
+        break
+      fi
+    done
   fi
 }
+
+add-zsh-hook chpwd check-pyvenv
 
 # rbenv
 export RBENV_ROOT="$GHQ_ROOT/github.com/rbenv/rbenv"
@@ -146,10 +153,6 @@ then
 else
   echo 'hub not found'
 fi
-
-chpwd() {
-  check_pyvenv
-}
 
 do_enter() {
   if [ -n "$BUFFER" ]; then

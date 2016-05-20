@@ -40,6 +40,13 @@ fpath=("$GHQ_ROOT/github.com/zsh-users/zsh-completions/src", $fpath)
 setopt auto_param_slash
 setopt mark_dirs
 
+# histroy completion
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+
 
 # OS-specific configuration
 # =========================

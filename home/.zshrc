@@ -25,6 +25,11 @@ export IRSYNC_INOTIFY_OPTIONS="-mr --exclude='.git'"
 source "$GHQ_ROOT/github.com/zakuro9715/zakuroster/zakuroster.zsh"
 
 
+# Color
+# =====
+autoload -U colors && colors
+
+
 # OS-specific configuration
 # =========================
 

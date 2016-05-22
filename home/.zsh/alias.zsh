@@ -1,3 +1,4 @@
+alias ls="ls --color=auto"
 alias l="ls"
 alias la="ls -a"
 alias lal="ls -al"

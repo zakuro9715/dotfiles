@@ -101,6 +101,10 @@ let g:jedi#completions_enabled = 0
 let g:jedi#auto_vim_configuration = 0
 
 
+" Riv
+" ===
+let g:riv_disable_folding = 1
+
 " Others
 " ======
 let g:vim_markdown_folding_disabled=1

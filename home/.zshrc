@@ -4,6 +4,7 @@ source "$HOME/.zsh/commands.zsh"
 
 bindkey -e  # I'm vimmer but emacs bind is useful more than vim bind.
 autoload -Uz add-zsh-hook
+eval $(dircolors -b)
 
 # Env
 # ===

@@ -1,6 +1,7 @@
 source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
+source "$HOME/.zsh/shortcuts.zsh"
 
 bindkey -e  # I'm vimmer but emacs bind is useful more than vim bind.
 autoload -Uz add-zsh-hook

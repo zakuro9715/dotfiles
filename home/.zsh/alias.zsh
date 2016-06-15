@@ -19,7 +19,7 @@ alias gi="git"
 alias nim="nvim"
 
 alias chown-me="sudo chown zakuro:zakuro"
-
+alias xmm="xmodmap ~/.xmodmap"
 
 if check-command colordiff
 then

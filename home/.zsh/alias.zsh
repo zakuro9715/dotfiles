@@ -15,6 +15,7 @@ alias her="bundle exec rails"
 alias herc="bundle exec rails c"
 alias hers="bundle exec rails s"
 
+alias dc="docker-compose"
 alias gi="git"
 alias nim="nvim"
 

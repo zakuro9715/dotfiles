@@ -1,12 +1,16 @@
-au BufNewFile,BufRead *.s :set filetype=gas
-au BufNewFile,BufRead *.vue :set filetype=html
-au BufNewFile,BufRead *.zsh-theme :set filetype=zsh
-au BufNewFile,BufRead *.dockerfile :set filetype=dockerfile
+aug filetype_detection
+  au!
 
-" JSON configuration files
-au BufNewFile,BufRead *.babelrc :set filetype=json
-au BufNewFile,BufRead *.stylelintrc :set filetype=json
-au BufNewFile,BufRead *.eslintrc :set filetype=json
+  au BufNewFile,BufRead *.s :set filetype=gas
+  au BufNewFile,BufRead *.vue :set filetype=html
+  au BufNewFile,BufRead *.zsh-theme :set filetype=zsh
+  au BufNewFile,BufRead *.dockerfile :set filetype=dockerfile
 
-" Shell-like file
-au BufNewFile,BufRead *.envrc :set filetype=sh
+  " JSON configuration files
+  au BufNewFile,BufRead *.babelrc :set filetype=json
+  au BufNewFile,BufRead *.stylelintrc :set filetype=json
+  au BufNewFile,BufRead *.eslintrc :set filetype=json
+
+  " Shell-like file
+  au BufNewFile,BufRead *.envrc :set filetype=sh
+aug END

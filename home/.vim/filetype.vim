@@ -7,3 +7,6 @@ au BufNewFile,BufRead *.dockerfile :set filetype=dockerfile
 au BufNewFile,BufRead *.babelrc :set filetype=json
 au BufNewFile,BufRead *.stylelintrc :set filetype=json
 au BufNewFile,BufRead *.eslintrc :set filetype=json
+
+" Shell-like file
+au BufNewFile,BufRead *.envrc :set filetype=sh

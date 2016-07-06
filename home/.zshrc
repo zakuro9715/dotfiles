@@ -178,6 +178,20 @@ do_enter() {
 zle -N do_enter
 bindkey '^m' do_enter
 
+# gcloud sdk
+export GCLOUD_SDK_ROOT="$HOME/google-cloud-sdk"
+if [[ -d "$GCLOUD_SDK_ROOT" ]]
+then
+  source "$GCLOUD_SDK_ROOT/path.zsh.inc"
+  source "$GCLOUD_SDK_ROOT/completion.zsh.inc"
+fi
+
+# appengine
+export GO_APPENGINE_ROOT="$HOME/go_appengine"
+if [[ -d "$GO_APPENGINE_ROOT" ]]
+then
+  export PATH="$GO_APPENGINE_ROOT:$PATH"
+fi
 
 # added by travis gem
 [ -f /home/zakuro/.travis/travis.sh ] && source /home/zakuro/.travis/travis.sh

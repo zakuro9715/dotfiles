@@ -20,7 +20,7 @@
   co   = checkout
   cob  = checkout -b
   com  = checkout master
-  d    = diff
+  f    = diff
   i    = init
   l    = !git sog
   me   = merge

@@ -37,8 +37,12 @@ autoload -U colors && colors
 # Completion
 # ==========
 
+fpath=(
+  "$GHQ_ROOT/github.com/zsh-users/zsh-completions/src",
+  "/usr/share/git/completion",
+  $fpath
+)
 autoload -U compinit && compinit
-fpath=("$GHQ_ROOT/github.com/zsh-users/zsh-completions/src", $fpath)
 
 setopt list_packed
 setopt magic_equal_subst
@@ -163,6 +167,7 @@ fi
 if check-command hub
 then
   eval "$(hub alias -s)"
+  compdef hub=git
 else
   echo 'hub not found'
 fi

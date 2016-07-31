@@ -1,6 +1,6 @@
 [user]
   name = Takahiro Yaota
-  # email = $GIT_EMAIL
+  email = z@kuro.red
 [init]
   templatedir = ~/.git_template
 [core]

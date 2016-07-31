@@ -9,19 +9,6 @@ update-git-hooks () {
   done
 }
 
-update-git-email () {
-  old_email="$(git config --local user.email)"
-  new_email="$GIT_EMAIL"
-  if [[ $old_email == $new_email ]]
-  then
-    echo "No need to update."
-    return 1
-  fi
-  git config --local user.email $new_email
-  echo "Old email is ${old_email:-[empty]}."
-  echo "New email is $new_email."
-}
-
 irsync() {
   do-rsync() {
     echo "$ rsync $@"

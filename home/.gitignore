@@ -1,5 +1,6 @@
 .ruby-version
 .python-version
+.nvmrc
 .envrc
 .env.local
 .bin

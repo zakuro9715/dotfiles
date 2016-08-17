@@ -150,7 +150,7 @@ fi
 export NVM_DIR="$GHQ_ROOT/github.com/creationix/nvm"
 if [[ -d "$NVM_DIR" ]]
 then
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 else
   echo 'nvm not found'
 fi

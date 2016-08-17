@@ -28,6 +28,7 @@ call dein#add('groenewege/vim-less')
 call dein#add('hail2u/vim-css3-syntax')
 call dein#add('joker1007/vim-markdown-quote-syntax')
 call dein#add('kannokanno/previm')  " Markdown Preview
+call dein#add('leafgarland/typescript-vim')
 call dein#add('mxw/vim-jsx')
 " O
 call dein#add('pangloss/vim-javascript')

@@ -24,6 +24,7 @@ call dein#add('davidhalter/jedi-vim')
 call dein#add('digitaltoad/vim-jade')
 call dein#add('fugalh/desert.vim')  " color scheme
 call dein#add('groenewege/vim-less')
+call dein#add('google/vim-jsonnet')
 " H
 call dein#add('hail2u/vim-css3-syntax')
 call dein#add('joker1007/vim-markdown-quote-syntax')

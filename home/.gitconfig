@@ -1,8 +1,6 @@
 [user]
   name = Takahiro Yaota
   email = z@kuro.red
-[init]
-  templatedir = ~/.git_template
 [core]
   editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore

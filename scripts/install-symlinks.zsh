@@ -4,14 +4,26 @@ source "$basedir/home/.zsh/utils.zsh"
 create-symlink() {
   link=$1
   target=$2
+  issudo=$3
 
   if [[ -e $link ]]
   then
     log-info "Removing $link"
-    rm -r "$link"
+    if [[ -n $issudo ]]
+    then
+      sudo rm -r "$link"
+    else
+      rm -r "$link"
+    fi
   fi
+
   log-info "Creating $link"
-  ln -sf "$target" "$link"
+  if [[ -n $issudo ]]
+  then
+    sudo ln -sf "$target" "$link"
+  else
+    ln -sf "$target" "$link"
+  fi
 }
 
 for f in home/.[!.]*
@@ -26,4 +38,10 @@ do
   link="${XDG_CONFIG_HOME:-$HOME/.config}/${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
   create-symlink $link $target
+done
+
+cat locations.txt | while read f link issudo
+do
+  target="$(cd $(dirname $f) && pwd)/$(basename $f)"
+  create-symlink $link $target $issudo
 done

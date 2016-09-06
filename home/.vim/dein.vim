@@ -33,8 +33,8 @@ call dein#add('leafgarland/typescript-vim')
 call dein#add('mxw/vim-jsx')
 " O
 call dein#add('pangloss/vim-javascript')
+call dein#add('plasticboy/vim-markdown')
 call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
-call dein#add('rcmdnk/vim-markdown')
 call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
 call dein#add('Rykka/riv.vim')  " reStrucuturedText
 call dein#add('scrooloose/syntastic')

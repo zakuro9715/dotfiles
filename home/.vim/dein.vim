@@ -19,10 +19,14 @@ call dein#begin(s:plugins_root)
 
 call dein#add('Shougo/dein.vim')
 
+" Color scheme
+call dein#add('fugalh/desert.vim')
+call dein#add('tomasr/molokai')
+call dein#add('altercation/vim-colors-solarized')
+
 " A
 call dein#add('davidhalter/jedi-vim')
 call dein#add('digitaltoad/vim-jade')
-call dein#add('fugalh/desert.vim')  " color scheme
 call dein#add('groenewege/vim-less')
 call dein#add('google/vim-jsonnet')
 " H
@@ -64,6 +68,12 @@ endif
 " =================
 " Configure plugins
 " =================
+
+" Color scheme
+" ============
+let g:solarized_termcolors=256
+
+colorscheme desert
 
 " Vison
 " =====

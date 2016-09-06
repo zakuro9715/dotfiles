@@ -5,6 +5,7 @@ aug filetype_detection
   au BufNewFile,BufRead *.vue :set filetype=html
   au BufNewFile,BufRead *.zsh-theme :set filetype=zsh
   au BufNewFile,BufRead *.dockerfile :set filetype=dockerfile
+  au BufNewFile,BufRead *.apib :set filetype=markdown
 
   " JSON configuration files
   au BufNewFile,BufRead *.babelrc :set filetype=json

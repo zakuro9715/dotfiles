@@ -57,6 +57,9 @@
     && git branch -d $(git branch --merged | grep -v master | grep -v '*')
   gui  = !$GIT_GUI
 
+# external tools
+  connect = !$GIT_CONNECT
+
 # log commands
   # graphical log
   gog = log --graph --date=iso --decorate=short

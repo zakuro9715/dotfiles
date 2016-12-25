@@ -60,8 +60,9 @@
 # development tools
   zsh-call = !zsh ~/.zsh/load-then-call.zsh ~/.zsh/commands.zsh
 
-  build = !git zsh-call build-with-appropriate-way
+  build   = !git zsh-call build-with-appropriate-way
   connect = !$GIT_CONNECT
+  run     = !$RUN
 
 # log commands
   # graphical log

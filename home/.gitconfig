@@ -57,7 +57,10 @@
     && git branch -d $(git branch --merged | grep -v master | grep -v '*')
   gui  = !$GIT_GUI
 
-# external tools
+# development tools
+  zsh-call = !zsh ~/.zsh/load-then-call.zsh ~/.zsh/commands.zsh
+
+  build = !git zsh-call build-with-appropriate-way
   connect = !$GIT_CONNECT
 
 # log commands

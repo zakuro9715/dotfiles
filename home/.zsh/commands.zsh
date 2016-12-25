@@ -36,3 +36,44 @@ irsync() {
   unset do-rsync
   unset sync-loop
 }
+
+can-build-with-docker-compose() {
+  test -f 'docker-compose.yml'
+}
+
+build-with-docker-compose() {
+  docker-compose build
+}
+
+can-build-with-make() {
+  test -f 'Makefile'
+}
+
+build-with-make() {
+  make
+}
+
+can-build-with-npm() {
+  test -f 'package.json'
+}
+
+build-with-npm() {
+  npm run build
+}
+
+build-with-appropriate-way() {
+  ways=(docker-compose make npm)
+
+  for way in $ways
+  do
+    if can-build-with-${way}
+    then
+      echo "build with ${way}"
+      build-with-${way}
+      return
+    fi
+  done
+
+  echo "Can't detect appropriate building way" >&2
+  return 1
+}

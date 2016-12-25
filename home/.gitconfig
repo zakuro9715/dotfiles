@@ -62,7 +62,7 @@
 
   build   = !git zsh-call build-with-appropriate-way
   connect = !$GIT_CONNECT
-  run     = !$RUN
+  run     = !git zsh-call run-with-appropriate-way
 
 # log commands
   # graphical log

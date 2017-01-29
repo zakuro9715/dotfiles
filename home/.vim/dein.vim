@@ -11,47 +11,94 @@ endif
 execute 'set runtimepath^=' . s:dein_root
 
 
-" ===================
-" Add plugins to dein
-" ===================
-
 call dein#begin(s:plugins_root)
 
-call dein#add('Shougo/dein.vim')
+" ========
+" Vim Core
+" ========
 
 " Color scheme
-call dein#add('fugalh/desert.vim')
-call dein#add('tomasr/molokai')
-call dein#add('altercation/vim-colors-solarized')
+  call dein#add('fugalh/desert.vim')
+  call dein#add('tomasr/molokai')
+  call dein#add('altercation/vim-colors-solarized')
 
-" A
-call dein#add('davidhalter/jedi-vim')
-call dein#add('digitaltoad/vim-jade')
-call dein#add('groenewege/vim-less')
-call dein#add('google/vim-jsonnet')
-" H
-call dein#add('hail2u/vim-css3-syntax')
-call dein#add('joker1007/vim-markdown-quote-syntax')
-call dein#add('kannokanno/previm')  " Markdown Preview
-call dein#add('leafgarland/typescript-vim')
-call dein#add('mxw/vim-jsx')
-" O
-call dein#add('pangloss/vim-javascript')
-call dein#add('plasticboy/vim-markdown')
-call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
-call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
-call dein#add('Rykka/riv.vim')  " reStrucuturedText
-call dein#add('scrooloose/syntastic')
-call dein#add('Shougo/unite.vim')
-call dein#add('slim-template/vim-slim')
-call dein#add('tyru/open-browser.vim')
-" V
-call dein#add('vim-jp/vim-go-extra')
-call dein#add('vim-ruby/vim-ruby')
-call dein#add('vim-scripts/Align')
-call dein#add('wavded/vim-stylus')
-call dein#add('zakuro9715/httpstatus.vim')
-call dein#add('zakuro9715/vim-b-html')
+" Tools
+  call dein#add('Shougo/dein.vim')
+  call dein#add('Shougo/unite.vim')
+
+" ================
+" Markup Languages
+" ================
+
+" b-html
+  call dein#add('zakuro9715/vim-b-html')
+
+" Jade
+  call dein#add('digitaltoad/vim-jade')
+
+" Markdown
+  call dein#add('joker1007/vim-markdown-quote-syntax')
+  call dein#add('plasticboy/vim-markdown')
+  call dein#add('kannokanno/previm')  " Markdown Preview
+
+" reStrucuturedText
+  call dein#add('Rykka/riv.vim')
+
+" slim
+  call dein#add('slim-template/vim-slim')
+
+" ===========
+" Stylesheets
+" ===========
+
+" css
+  call dein#add('hail2u/vim-css3-syntax')
+
+" Less
+  call dein#add('groenewege/vim-less')
+
+" stylus
+  call dein#add('wavded/vim-stylus')
+
+" =====================
+" Programming Languages
+" =====================
+
+" bash
+  call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
+
+" Go
+  call dein#add('vim-jp/vim-go-extra')
+
+" javascript
+  call dein#add('mxw/vim-jsx')
+  call dein#add('pangloss/vim-javascript')
+
+" python
+  call dein#add('davidhalter/jedi-vim')
+
+" Ruby
+  call dein#add('vim-ruby/vim-ruby')
+
+" typescript
+  call dein#add('leafgarland/typescript-vim')
+
+" ===============
+" Other Languages
+" ===============
+
+" JSON
+  call dein#add('google/vim-jsonnet')
+  call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
+
+" ======
+" Others
+" ======
+
+  call dein#add('tyru/open-browser.vim')
+  call dein#add('scrooloose/syntastic')
+  call dein#add('zakuro9715/httpstatus.vim')
+  call dein#add('vim-scripts/Align')
 
 if has('nvim')
   call dein#add('Shougo/deoplete.nvim')

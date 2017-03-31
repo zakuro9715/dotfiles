@@ -2,6 +2,7 @@ source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
 source "$HOME/.zsh/shortcuts.zsh"
+source "$HOME/.zsh/prompt.zsh"
 
 bindkey -e  # I'm vimmer but emacs bind is useful more than vim bind.
 autoload -Uz add-zsh-hook
@@ -20,13 +21,6 @@ export GHQ_ROOT="$HOME/src"
 export PATH="$GOPATH/bin:$PATH"
 export TERM="xterm-256color"
 export XDG_CONFIG_HOME="$HOME/.config"
-
-
-# PROMPT
-# ======
-
-source "$GHQ_ROOT/github.com/zakuro9715/zakuroster/zakuroster.zsh"
-
 
 # Color
 # =====

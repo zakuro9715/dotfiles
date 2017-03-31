@@ -82,6 +82,7 @@ call dein#begin(s:plugins_root)
 
 " typescript
   call dein#add('leafgarland/typescript-vim')
+  call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install'  })
 
 " ===============
 " Other Languages

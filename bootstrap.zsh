@@ -16,7 +16,7 @@ EOS
 }
 
 verify-system() {
-  local required_commands=('git' 'zsh' 'ghq' 'go')
+  local required_commands=('git' 'zsh' 'go')
   local valid=true
   for cmd in ${required_commands[@]}
   do
@@ -45,23 +45,24 @@ required_go_packages=(
 )
 
 required_repositories=(
-  "zakuro9715/zakuroster"
   "zsh-users/zsh-completions"
 )
 
 show-welcome-message
 verify-system
-zsh "scripts/install-symlinks.zsh"
 
-
+export GOPATH="$HOME"
 for pkg in ${required_go_packages[@]}
 do
   log-installing "$pkg"
   go get "$pkg"
 done
 
+export PATH="$GOPATH/bin:$PATH"
 for repo in ${required_repositories[@]}
 do
   log-installing "$pkg"
   ghq get $repo
 done
+
+zsh "scripts/install-symlinks.zsh"

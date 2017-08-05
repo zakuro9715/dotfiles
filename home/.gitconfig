@@ -33,7 +33,7 @@
   psof = push origin -f
   pl   = pull
   plo  = pull origin
-  plom = pull origin ${GIT_DEFAULT_BRANCH:-master}
+  plom = !git pull origin ${GIT_DEFAULT_BRANCH:-master}
   re   = rebase
   rei  = rebase -i
   rea  = rebase --abort

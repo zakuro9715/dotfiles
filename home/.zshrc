@@ -96,16 +96,6 @@ fi
 # Applications
 # ============
 
-# pyenv
-export PYENV_ROOT="$GHQ_ROOT/github.com/yyuu/pyenv"
-if [[ -d "$PYENV_ROOT" ]]
-then
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-else
-  echo 'pyenv not found'
-fi
-
 # pyvenv
 PYVENV_DIRS=('.' 'venv')
 check-pyvenv() {
@@ -137,15 +127,6 @@ then
   eval "$(rbenv init -)"
 else
   echo 'rbenv not found'
-fi
-
-# nvm
-export NVM_DIR="$GHQ_ROOT/github.com/creationix/nvm"
-if [[ -d "$NVM_DIR" ]]
-then
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-else
-  echo 'nvm not found'
 fi
 
 # direnv
@@ -193,3 +174,7 @@ fi
 
 # added by travis gem
 [ -f /home/zakuro/.travis/travis.sh ] && source /home/zakuro/.travis/travis.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -17,12 +17,12 @@
   cm   = commit -m
   co   = checkout
   cob  = checkout -b
-  com  = checkout master
+  com  = !git checkout ${GIT_DEFAULT_BRANCH
   f    = diff
   i    = init
   l    = !git sog
   me   = merge
-  mem  = merge master
+  mem  = !git merge $GIT_DEFAULT_BRANCH
   ps   = push
   psh  = push heroku
   pshf = push heroku -f
@@ -30,14 +30,14 @@
   psof = push origin -f
   pl   = pull
   plo  = pull origin
-  plom = pull origin master
+  plom = pull origin $GIT_DEFAULT_BRANCH
   re   = rebase
   rei  = rebase -i
   rea  = rebase --abort
   rec  = rebase --continue
   rce  = rebase --continue # for typo
   res  = rebase --skip
-  rem  = rebase master
+  rem  = !git rebase $GIT_DEFAULT_BRANCH
   rt   = remote
   s    = status
   sa   = stash save
@@ -50,11 +50,6 @@
   sbs  = submodule sync
   sbu  = submodule update
   um   = !git unmerged
-# useful commands
-  sync = !git checkout master \
-    && git pull origin master \
-    && git fetch -p origin \
-    && git branch -d $(git branch --merged | grep -v master | grep -v '*')
   gui  = !$GIT_GUI
 
 # development tools

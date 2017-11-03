@@ -6,17 +6,21 @@ islinux() {
   [[ "$(uname)" == "Linux" ]]
 }
 
+iswsl() {
+  uname -a | grep "Microsoft" > /dev/null
+}
+
 iswindows() {
-  [[ "$OS" == "Windows_NT" ]]
+  iswsl || [[ "$OS" == "Windows_NT" ]]
 }
 
 os() {
-  if islinux
-  then
-    echo "linux"
-  elif iswindows
+  if iswindows
   then
     echo "windows"
+  elif islinux
+  then
+    echo "linux"
   fi
 }
 

@@ -95,6 +95,9 @@ call dein#begin(s:plugins_root)
   call dein#add('google/vim-jsonnet')
   call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
 
+" ANTLR
+  call dein#add('jrozner/vim-antlr')
+
 " ======
 " Others
 " ======

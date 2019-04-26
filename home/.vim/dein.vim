@@ -47,6 +47,9 @@ call dein#begin(s:plugins_root)
 " slim
   call dein#add('slim-template/vim-slim')
 
+" vue
+  call dein#add('posva/vim-vue')
+
 " ===========
 " Stylesheets
 " ===========

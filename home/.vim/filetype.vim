@@ -2,7 +2,7 @@ aug filetype_detection
   au!
 
   au BufNewFile,BufRead *.s :set filetype=gas
-  au BufNewFile,BufRead *.vue :set filetype=html
+  "au BufNewFile,BufRead *.vue :set filetype=html
   au BufNewFile,BufRead *.zsh-theme :set filetype=zsh
   au BufNewFile,BufRead *.dockerfile :set filetype=dockerfile
   au BufNewFile,BufRead *.apib :set filetype=markdown

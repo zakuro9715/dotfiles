@@ -15,6 +15,7 @@ export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
+export SHELL="$(which zsh)"
 export GIT_GUI=gitg
 export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"

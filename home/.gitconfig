@@ -21,7 +21,9 @@
   cp   = cherry-pick
   cpc  = cherry-pick --continue
   cpa  = cherry-pick --abort
-  f    = diff
+  di   = diff
+  dih  = diff HEAD
+  dis  = diff --staged
   i    = init
   l    = !git sog
   me   = merge

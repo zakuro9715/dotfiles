@@ -35,11 +35,14 @@ verify-system() {
 }
 
 do-install() {
-  local message="Installing $1"
-  log-info "$message"
-
+  local name="$1"
   shift
-  $@
+  if $@
+  then
+    log-success "Installed $name"
+  else
+    log-error "Failed to install $name"
+  fi
 }
 
 required_go_packages=(

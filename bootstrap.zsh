@@ -34,9 +34,12 @@ verify-system() {
   fi
 }
 
-log-installing() {
+do-install() {
   local message="Installing $1"
   log-info "$message"
+
+  shift
+  $@
 }
 
 required_go_packages=(
@@ -54,15 +57,13 @@ verify-system
 export GOPATH="$HOME"
 for pkg in ${required_go_packages[@]}
 do
-  log-installing "$pkg"
-  go get "$pkg"
+  do-install "$pkg" go get "$pkg"
 done
 
 export PATH="$GOPATH/bin:$PATH"
 for repo in ${required_repositories[@]}
 do
-  log-installing "$pkg"
-  ghq get $repo
+  do-install "$repo" ghq get "$repo"
 done
 
 zsh "scripts/install-symlinks.zsh"

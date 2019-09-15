@@ -2,12 +2,12 @@ CURRENT_BG='NONE'
 PRIMARY_FG=black
 
 # Characters
-SEGMENT_SEPARATOR="\ue0b0"
-PLUSMINUS="\u00b1"
-BRANCH="\ue0a0"
-PYTHON="\u2624"
-DETACHED="\u27a6"
-GEAR="\u2699"
+SEGMENT_SEPARATOR="" #"\u25B6" #"\ue0b0"
+PLUSMINUS="" #"\u00B1"
+BRANCH="" #"\ue0a0"
+PYTHON="" #"\u2624"
+DETACHED="" #"\u27a6"
+GEAR="⚙" #"\u2699"
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,

@@ -5,6 +5,7 @@ source "$HOME/.zsh/shortcuts.zsh"
 source "$HOME/.zsh/prompt.zsh"
 
 bindkey -e  # I'm vimmer but emacs bind is useful more than vim bind.
+bindkey -r "^j"
 autoload -Uz add-zsh-hook
 eval $(dircolors -b)
 

@@ -28,3 +28,5 @@ then
 else
   alias diff="diff -u"
 fi
+
+alias emenv="source ~/src/github.com/emscripten-core/emsdk/emsdk_env.sh"

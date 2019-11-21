@@ -132,6 +132,16 @@ else
   echo 'rbenv not found'
 fi
 
+# pyenv
+export PYENV_ROOT="$GHQ_ROOT/github.com/pyenv/pyenv"
+if [[ -d "$PYENV_ROOT" ]]
+then
+  export PATH="$PYENV_ROOT/bin:$PATH"
+  eval "$(pyenv init -)"
+else
+  echo 'pyenv not found'
+fi
+
 # direnv
 if check-command direnv
 then

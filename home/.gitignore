@@ -4,7 +4,7 @@
 .envrc
 .env.local
 .bin
-.vimrc-local
+.vimrc.local
 
 .idea
 *.iml

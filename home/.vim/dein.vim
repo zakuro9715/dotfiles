@@ -70,6 +70,10 @@ call dein#begin(s:plugins_root)
 " bash
   call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
 
+" elm
+  call dein#add('andys8/vim-elm-syntax')
+  call dein#add('elm-tooling/elm-vim')
+
 " Go
   call dein#add('vim-jp/vim-go-extra')
 

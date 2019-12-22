@@ -37,6 +37,8 @@ prompt_end() {
 
 # Git: branch/detached head, dirty status
 prompt_git() {
+  yellow=228
+  green=42
   local color ref
   is_dirty() {
     test -n "$(git status --porcelain --ignore-submodules)"
@@ -44,9 +46,9 @@ prompt_git() {
   ref="$vcs_info_msg_0_"
   if [[ -n "$ref" ]]; then
     if is_dirty; then
-      color=yellow
+      color=$yellow
     else
-      color=green
+      color=$green
     fi
     if [[ "${ref/.../}" != "$ref" ]]; then
       ref="${ref/.../}"
@@ -59,7 +61,9 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  prompt_segment "%(?.blue.red)" $PRIMARY_FG ' %~ '
+  blue=26
+  red=125
+  prompt_segment "%(?.$blue.$red)" $PRIMARY_FG ' %~ '
 }
 #Context: user@hostname (who am I and where am I)
 prompt_context() {

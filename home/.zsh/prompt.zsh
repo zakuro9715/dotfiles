@@ -2,11 +2,7 @@ CURRENT_BG='NONE'
 PRIMARY_FG=black
 
 # Characters
-SEGMENT_SEPARATOR="" #"\u25B6" #"\ue0b0"
-PLUSMINUS="" #"\u00B1"
-BRANCH="" #"\ue0a0"
-PYTHON="" #"\u2624"
-DETACHED="" #"\u27a6"
+SEGMENT_SEPARATOR=" " #"\u25B6" #"\ue0b0"
 GEAR="⚙" #"\u2699"
 
 # Begin a segment
@@ -49,18 +45,14 @@ prompt_git() {
   if [[ -n "$ref" ]]; then
     if is_dirty; then
       color=yellow
-      ref="${ref} $PLUSMINUS"
     else
       color=green
-      ref="${ref} "
     fi
-    if [[ "${ref/.../}" == "$ref" ]]; then
-      ref="$BRANCH $ref"
-    else
-      ref="$DETACHED ${ref/.../}"
+    if [[ "${ref/.../}" != "$ref" ]]; then
+      ref="${ref/.../}"
     fi
     prompt_segment $color $PRIMARY_FG
-    print -Pn " $ref"
+    print -Pn " $ref "
   fi
 }
   echo $RETVAL
@@ -72,16 +64,7 @@ prompt_dir() {
 #Context: user@hostname (who am I and where am I)
 prompt_context() {
   local user=`whoami`
-  prompt_segment $PRIMARY_FG default "$user "
-}
-# Status:
-# - are there background jobs?
-prompt_status() {
-  local symbols
-  symbols=()
-  [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="$GEAR"
-
-  [[ -n "$symbols" ]] && prompt_segment $PRYMARY_FG $PRIMARY_FG " $symbols "
+  prompt_segment "" "" "$user "
 }
 
 # Python venv
@@ -94,7 +77,6 @@ prompt_venv() {
 prompt_zakuro_main() {
   RETVAL=$?
   CURRENT_BG='NONE'
-  prompt_status
   prompt_context
   prompt_dir
   prompt_venv
@@ -106,7 +88,7 @@ prompt_zakuro_precmd() {
   vcs_info
   PROMPT="\
 ╭─ %{%f%b%k%}$(prompt_zakuro_main)
-╰─> "
+╰─ > "
 }
 
 prompt_zakuro_setup() {

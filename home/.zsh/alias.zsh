@@ -10,10 +10,10 @@ mkcd() { mkdir $1 && cd $1 }
 alias rm="rm -r"
 
 alias bnudle="bundle"
-alias he="bundle exec"
-alias her="bundle exec rails"
-alias herc="bundle exec rails c"
-alias hers="bundle exec rails s"
+alias be="bundle exec"
+alias ber="bundle exec rails"
+alias berc="bundle exec rails c"
+alias bers="bundle exec rails s"
 
 alias dc="docker-compose"
 alias gi="git"

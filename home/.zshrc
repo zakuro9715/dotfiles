@@ -23,7 +23,7 @@ export GIT_GUI=gitg
 export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export GO111MODULE=on
-export PATH="$GOPATH/bin:$HOME/.local/bin:$PATH"
+export PATH="$GOPATH/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export TERM="xterm-256color"
 export XDG_CONFIG_HOME="$HOME/.config"
 

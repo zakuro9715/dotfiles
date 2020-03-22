@@ -6,3 +6,6 @@ home/.zsh/secret.zsh
 /vendor/bundle
 
 *~
+
+go.mod
+go.sum

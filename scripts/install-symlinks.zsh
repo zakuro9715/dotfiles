@@ -39,9 +39,3 @@ do
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
   create-symlink $link $target
 done
-
-cat locations.txt | while read f link issudo
-do
-  target="$(cd $(dirname $f) && pwd)/$(basename $f)"
-  create-symlink $link $target $issudo
-done

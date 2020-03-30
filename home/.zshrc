@@ -19,13 +19,11 @@ export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 export EDITOR=vim
 export SHELL="$(which zsh)"
-export GIT_GUI=gitg
 export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export GO111MODULE=on
 export PATH="$GOPATH/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export TERM="xterm-256color"
-export XDG_CONFIG_HOME="$HOME/.config"
 
 # Color
 # =====

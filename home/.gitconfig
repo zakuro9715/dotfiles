@@ -1,5 +1,5 @@
 [user]
-  name = Takahiro Yaota
+  name = z@kuro
   email = z@kuro.red
 [core]
   editor = vim -c \"set fenc=utf-8\"
@@ -14,23 +14,12 @@
   bam  = branch -m
   c    = commit
   ca   = commit --amend
-  cm   = commit -m
   co   = checkout
   cob  = checkout -b
   com  = !git checkout ${GIT_DEFAULT_BRANCH:-master}
-  cp   = cherry-pick
-  cpc  = cherry-pick --continue
-  cpa  = cherry-pick --abort
-  di   = diff
-  dih  = diff HEAD
-  dis  = diff --staged
-  i    = init
-  l    = !git sog
   me   = merge
   mem  = !git merge ${GIT_DEFAULT_BRANCH:-master}
   ps   = push
-  psh  = push heroku
-  pshf = push heroku -f
   pso  = push origin
   psof = push origin -f
   pl   = pull
@@ -40,42 +29,13 @@
   rei  = rebase -i
   rea  = rebase --abort
   rec  = rebase --continue
-  rce  = rebase --continue # for typo
   res  = rebase --skip
   rem  = !git rebase ${GIT_DEFAULT_BRANCH:-master}
-  rt   = remote
   s    = status
-  sa   = stash save
   sak  = stash -k
   sal  = stash list
   sap  = stash pop
   sad  = stash drop
-  sb   = submodule
-  sbi  = submodule init
-  sbs  = submodule sync
-  sbu  = submodule update
-  um   = !git unmerged
-  gui  = !$GIT_GUI
 
-# development tools
-  zsh-call = !zsh ~/.zsh/load-then-call.zsh ~/.zsh/commands.zsh
-
-  build   = !git zsh-call build-with-appropriate-way
-  connect = !$GIT_CONNECT
-  run     = !git zsh-call run-with-appropriate-way
-
-# log commands
-  # graphical log
-  gog = log --graph --date=iso --decorate=short
-  # short graphical log
-  sfog = log --graph --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
-  # short graphical log
-  sgog = !git sog --graph
-  # short log
-  sog = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
-  # my log
-  mog = !git sog --author=YuZakuro
-
-  unmerged = !git --no-pager diff --name-only --diff-filter=U
 [push]
   default = current

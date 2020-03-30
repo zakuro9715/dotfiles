@@ -1,0 +1,3 @@
+reload() {
+  source ~/.zshrc
+}

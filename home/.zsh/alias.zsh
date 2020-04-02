@@ -1,4 +1,4 @@
-alias ls="ls --color=auto"
+alias ls="ls --color=always"
 alias l="ls"
 
 alias mkdir="mkdir -p"
@@ -16,3 +16,4 @@ alias bers="bundle exec rails s"
 
 alias dc="docker-compose"
 
+alias npm="npm --color=always"

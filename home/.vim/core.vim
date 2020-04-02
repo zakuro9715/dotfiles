@@ -40,7 +40,7 @@ set autoindent
 set smartindent
 
 set clipboard=unnamed,unnamedplus
-set mouse=a
+set mouse-=a
 set shellslash
 set iminsert=0
 

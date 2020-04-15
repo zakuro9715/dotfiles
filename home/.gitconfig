@@ -32,7 +32,8 @@
   rec  = rebase --continue
   res  = rebase --skip
   rem  = !git rebase ${GIT_DEFAULT_BRANCH:-master}
-  s    = status
+  s    = status .
+  sall = status
   sa   = stash
   sak  = stash -k
   sal  = stash list

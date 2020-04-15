@@ -1,6 +1,12 @@
 alias ls="ls --color=always"
 alias l="ls"
 
+alias g="git"
+alias gi="git"
+alias gis="git status"
+alias gid="git diff"
+alias gil="git log"
+
 alias mkdir="mkdir -p"
 
 alias rm="rm -r"

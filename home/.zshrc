@@ -24,7 +24,7 @@ export GHQ_ROOT="$HOME/src"
 export GO111MODULE=on
 export PATH="$GOPATH/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export TERM="xterm-256color"
-export NODE_OPTIONS="--max-old-space-size=2048"
+export NODE_OPTIONS="--max-old-space-size=4096"
 
 # Color
 # =====

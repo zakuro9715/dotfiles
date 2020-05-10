@@ -33,9 +33,10 @@ do
   create-symlink $link $target
 done
 
-for f in xdg_home/*
+mkdir -p $HOME/.config
+for f in config/*
 do
-  link="$XDG_CONFIG_HOME/${f##*/}"
+  link="$HOME/.config/${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
   create-symlink $link $target
 done

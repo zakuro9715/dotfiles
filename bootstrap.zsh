@@ -47,7 +47,7 @@ do-install() {
 
 required_go_packages=(
   "github.com/github/hub"
-  "github.com/motemen/ghq"
+  "github.com/x-motemen/ghq"
 )
 
 required_repositories=(

@@ -17,8 +17,8 @@
   co   = checkout
   cob  = checkout -b
   com  = !git checkout ${GIT_DEFAULT_BRANCH:-master}
-  dif = dit diff
-  d = git diff
+  dif = diff -- ':!package-lock.json'
+  d = dif
   dih = diff HEAD
   l = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
   me   = merge

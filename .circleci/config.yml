@@ -1,0 +1,197 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine. See: https://circleci.com/docs/2.0/configuration-reference
+version: 2.1
+# Use a package of configuration called an orb.
+orbs:
+  # Declare a dependency on the welcome-orb
+  welcome: circleci/welcome-orb@0.4.1
+
+jobs:
+  # ubuntu
+  ubuntu-latest:
+    docker:
+      - image: ubuntu:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isUbuntu
+  ubuntu-2004:
+    docker:
+      - image: ubuntu:20.04
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isUbuntu
+  ubuntu-1804:
+    docker:
+      - image: ubuntu:18.04
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isUbuntu
+
+  # debian
+  debian-latest:
+    docker:
+      - image: debian:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isDebian
+  debian-bullseye:
+    docker:
+      - image: debian:bullseye
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isDebian
+  debian-buster:
+    docker:
+      - image: debian:buster
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isDebian
+  debian-jessie:
+    docker:
+     - image: debian:jessie
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isDebian
+
+  # openSUSE
+  opensuse-latest:
+    docker:
+      - image: opensuse/leap:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isOpenSUSE
+  opensuse-15:
+    docker:
+      - image: opensuse/leap:15
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isOpenSUSE
+
+  # RedHat
+  redhat-8:
+    docker:
+      - image: registry.access.redhat.com/ubi8/ubi
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isRedhat
+  redhat-7:
+    docker:
+      - image: registry.access.redhat.com/ubi7/ubi
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isRedhat
+
+  # Fedora
+  fedra-latest:
+    docker:
+      - image: fadera:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isFedroa
+  fedra-32:
+    docker:
+      - image: fedra:32
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isFedroa
+
+  # CentOS
+  centos-latest:
+    docker:
+      - image: centos:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isCentos
+  centos-7:
+    docker:
+      - image: centos:7
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isCentos
+  centos-6:
+    docker:
+      - image: centos:6
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isCentos
+
+  # Arch Linux
+  arch-latest:
+    docker:
+      - image: archlinux:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isArch
+  arch-20200407:
+    docker:
+      - image: archlinux:20200407
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isArch
+  arch-20200306:
+    docker:
+      - image: archlinux:20200306
+    steps:
+      - checkout
+      - run: uname -a; source ./home/.zsh/os-detection.zsh; isArch
+  arch-20200205:
+    docker:
+      - image: archlinux:20200205
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isArch
+  arch-20200106:
+    docker:
+      - image: archlinux:20200106
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isArch
+
+  # Gentoo
+  gentoo-stage3:
+    docker:
+      - image: gentoo/stage3-amd64:latest
+    steps:
+      - checkout
+      - run: source ./home/.zsh/os-detection.zsh; isGentoo
+
+workflows:
+  version: 2
+  test:
+    jobs:
+      # ubuntu
+      - ubuntu-latest
+      - ubuntu-2004
+      - ubuntu-1804
+
+      # debian
+      - debian-latest
+      - debian-bullseye
+      - debian-buster
+      - debian-jessie
+
+      # openSUSE
+      - opensuse-latest
+      - opensuse-15
+
+      # RedHat
+      - redhat-8
+      - redhat-7
+
+      # Fedora
+      - fedra-latest
+      - fedra-32
+
+      # CentOS
+      - centos-latest
+      - centos-7
+      - centos-6
+
+      # Arch Linux
+      - arch-latest
+      - arch-20200407
+      - arch-20200306
+      - arch-20200205
+      - arch-20200106
+
+      # Gentoo
+      - gentoo-stage3

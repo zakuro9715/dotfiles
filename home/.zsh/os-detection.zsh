@@ -15,7 +15,7 @@ isOpenSUSE() {
 }
 
 isRedhat() {
-  cat /etc/redhat-release | grep Red Hat > /dev/null
+  cat /etc/redhat-release | grep 'Red Hat' > /dev/null
 }
 
 isCentos() {
@@ -27,7 +27,7 @@ isFedra() {
 }
 
 isArch() {
-  uname -a | grep ARCH > /dev/null
+  uname -a | grep archlinux > /dev/null
 }
 
 isGentoo() {

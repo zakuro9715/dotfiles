@@ -1,3 +1,5 @@
+source "$HOME/.zsh/os-detection.zsh"
+
 check-command() {
   type $1 &> /dev/null;
 }

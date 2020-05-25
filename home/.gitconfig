@@ -18,6 +18,7 @@
   cob  = checkout -b
   com  = !git checkout ${GIT_DEFAULT_BRANCH:-master}
   dif = diff -- ':!package-lock.json'
+  dib = diff HEAD~ -- ':!package-lock.json'
   d = dif
   dih = diff HEAD
   l = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'

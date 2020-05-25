@@ -12,10 +12,24 @@ show-welcome-message() {
  DDDDDDDDD      OOOOOOO       TT       FF          IIIIIIIIIII  LLLLLLLLL  EEEEEEEEEE    SSSSSSS
 
 ####################################################################################################
+
 EOS
 }
 
+install-go-with-apt() {
+  log-info "Installing golang ..."
+  sudo add-apt-repository -y ppa:longsleep/golang-backports
+	sudo apt update
+	sudo apt install -y golang-go
+  log-success "Complete"
+}
+
 verify-system() {
+  if ! check-command "go" && check-command 'apt'
+  then
+		install-go-with-apt
+  fi
+
   local required_commands=('git' 'zsh' 'go')
   local valid=true
   for cmd in ${required_commands[@]}

@@ -10,3 +10,22 @@ set-title() {
   fi
   echo -ne "\033]0;${title}\a"
 }
+
+repo() {
+  name=$1
+  if [[ -z "$name" ]];
+  then
+    echo "Usage: repo NAME" >&2
+    return 1
+  fi
+
+  find "$GHQ_ROOT" -maxdepth 3 -mindepth 3 -print0 |
+    while IFS= read -r -d '' repo; do
+      if [[ "$name" == "$(basename $repo)" ]]
+      then
+        set-title $name
+        cd $repo
+        return 0
+      fi
+    done
+}

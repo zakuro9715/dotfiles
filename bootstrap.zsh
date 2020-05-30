@@ -101,4 +101,8 @@ do
 done
 
 
+tpm_root="$(pwd)/home/.tmux/plugins/tpm"
+do-install tpm git clone https://github.com/tmux-plugins/tpm "$tpm_root"
+
+
 zsh "scripts/install-symlinks.zsh"

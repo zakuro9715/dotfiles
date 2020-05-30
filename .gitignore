@@ -1,6 +1,8 @@
 home/.vim/bundle
 home/.vim/.netrwhist
 home/.zsh/secret.zsh
+home/.tmux/plugins/
+!home/.tmux/plugins/.gitkeep
 
 .bundle
 /vendor/bundle

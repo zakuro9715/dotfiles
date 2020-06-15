@@ -112,6 +112,9 @@ call dein#begin(s:plugins_root)
   call dein#add('mattn/vim-lsp-settings')
 
 
+" editorconfig
+  call dein#add('editorconfig/editorconfig-vim')
+
 " ======
 " Others
 " ======

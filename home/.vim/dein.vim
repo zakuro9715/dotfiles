@@ -106,10 +106,13 @@ call dein#begin(s:plugins_root)
 " Tools
 " =====
 
-" lsp
+" lsp / completion
   call dein#add('prabirshrestha/async.vim')
+  call dein#add('prabirshrestha/asyncomplete.vim')
+  call dein#add('prabirshrestha/asyncomplete-lsp.vim')
   call dein#add('prabirshrestha/vim-lsp')
   call dein#add('mattn/vim-lsp-settings')
+  call dein#add('mattn/vim-lsp-icons')
 
 
 " editorconfig
@@ -187,6 +190,14 @@ let g:jedi#auto_vim_configuration = 0
 " Riv
 " ===
 let g:riv_disable_folding = 1
+
+" LSP
+" ===
+let g:lsp_signs_enabled = 1
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_signs_error = {'text': '✗'}
+let g:lsp_highlights_enabled = 1
 
 " Others
 " ======

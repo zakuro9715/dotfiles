@@ -61,38 +61,37 @@ do-install() {
 show-welcome-message
 verify-system
 
-
 packages() {
   name=$1
   filename="./packages/$name.txt"
   echo $(cat $filename | tr '\n' ' ')
 }
 
-apt_packages=($(packages 'apt'))
-go_packages=($(packages 'go'))
-
-install-packages() {
-  echo $@
-  command="${@:1:($# - 1)}"
-  packages=${@:$#:1}
-  for pkg in ${packages[@]}
-  do
-    echo $command $pkg
-    do-install "$pkg" $command "$pkg"
-  done
+apt-packages-install() {
+  if check-command 'apt'
+  then
+    sudo apt update -yqq
+    sudo apt install $(packages 'apt')
+  else
+    log-warning "apt not found. Skip install apt packages"
+  fi
 }
 
-if check-command 'apt'
-then
-  sudo apt update -yqq
- else
-  log-warning "apt not found. Skip install apt packages"
-fi
+go-packages-install() {
+  if check-command 'go'
+  then
+    go_packages=($(packages 'go'))
+    echo go_packages
+    for pkg in "${go_packages[@]}"
+    do
+      do-install "$pkg" go get "$pkg"
+    done
+  else
+    log-warning "go not found. Skip install go packages"
+  fi
+}
 
-install-packages go get "$go_packages"
-for pkg in ${go_packages[@]}
-do
-  do-install "$pkg" go get "$pkg"
-done
+apt-packages-install
+go-packages-install
 
 zsh "scripts/install-symlinks.zsh"

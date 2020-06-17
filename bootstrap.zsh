@@ -62,47 +62,37 @@ show-welcome-message
 verify-system
 
 
-required_apt_packages=(
-  "tmux"
-  "golang-go"
-  "nodejs"
-  "npm"
-)
+packages() {
+  name=$1
+  filename="./packages/$name.txt"
+  echo $(cat $filename | tr '\n' ' ')
+}
+
+apt_packages=($(packages 'apt'))
+go_packages=($(packages 'go'))
+
+install-packages() {
+  echo $@
+  command="${@:1:($# - 1)}"
+  packages=${@:$#:1}
+  for pkg in ${packages[@]}
+  do
+    echo $command $pkg
+    do-install "$pkg" $command "$pkg"
+  done
+}
+
 if check-command 'apt'
 then
   sudo apt update -yqq
-  for pkg in ${required_apt_packages[@]}
-  do
-      do-install "$pkg" sudo apt install -yqq "$pkg"
-  done
-else
+ else
   log-warning "apt not found. Skip install apt packages"
 fi
 
-
-required_go_packages=(
-  "github.com/github/hub"
-  "github.com/x-motemen/ghq"
-)
-export GOPATH="$HOME"
-for pkg in ${required_go_packages[@]}
+install-packages go get "$go_packages"
+for pkg in ${go_packages[@]}
 do
   do-install "$pkg" go get "$pkg"
 done
-
-
-required_ghq_repositories=(
-  "zsh-users/zsh-completions"
-)
-export PATH="$GOPATH/bin:$PATH"
-for repo in ${required_ghq_repositories[@]}
-do
-  do-install "$repo" ghq get "$repo"
-done
-
-
-tpm_root="$(pwd)/home/.tmux/plugins/tpm"
-do-install tpm git clone https://github.com/tmux-plugins/tpm "$tpm_root"
-
 
 zsh "scripts/install-symlinks.zsh"

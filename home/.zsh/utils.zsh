@@ -9,7 +9,7 @@ islinux() {
 }
 
 iswsl() {
-  uname -a | grep "Microsoft" > /dev/null
+  uname -a | grep "microsoft" > /dev/null
 }
 
 iswindows() {

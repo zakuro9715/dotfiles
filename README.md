@@ -1,15 +1,16 @@
 # Dotfiles
 
-## Install
-
-### Requirements
+## Requirements
 
 - git
 - zsh
-- go (When apt exists, install automaticaly):q
-- .
+- go (When apt exists, install automaticaly)
+
+## Install
+
+`zsh bootstrap.zsh`
 
 ## Directories
 
-- /home: ~/
+- /home: ~/ (Symlink)
 - /windows: Windows configration (You must copy manualy).

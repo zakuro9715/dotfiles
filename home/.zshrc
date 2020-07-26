@@ -1,6 +1,7 @@
 source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
+source "$HOME/.zsh/git.zsh"
 source "$HOME/.zsh/shortcuts.zsh"
 source "$HOME/.zsh/prompt.zsh"
 source "$HOME/.zsh/completion.zsh"

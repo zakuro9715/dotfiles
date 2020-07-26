@@ -17,10 +17,10 @@
   co   = checkout
   cob  = checkout -b
   com  = !git checkout ${GIT_DEFAULT_BRANCH:-master}
-  dif = diff -- ':!package-lock.json' ':!**/package-lock.json'
-  dib = diff HEAD~ -- ':!package-lock.json'
   d = dif
-  dih = diff HEAD
+  dif = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
+  dih = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD'
+  dib = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD~'
   l = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
   me   = merge
   mem  = !git merge ${GIT_DEFAULT_BRANCH:-master}

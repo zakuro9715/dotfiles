@@ -22,12 +22,12 @@ isCentos() {
   cat /etc/redhat-release | grep CentOS > /dev/null
 }
 
-isFedra() {
-  cat /etc/os-reloase | grep Fedra > /dev/null
+isFedora() {
+  cat /etc/os-release | grep Fedora > /dev/null
 }
 
 isArch() {
-  uname -a | grep archlinux > /dev/null
+  test -e /etc/arch-release
 }
 
 isGentoo() {

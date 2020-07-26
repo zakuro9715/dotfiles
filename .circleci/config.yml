@@ -81,18 +81,18 @@ jobs:
       - run: source ./home/.zsh/os-detection.zsh; isRedhat
 
   # Fedora
-  fedra-latest:
+  fedora-latest:
     docker:
-      - image: fadera:latest
+      - image: fedora:latest
     steps:
       - checkout
-      - run: source ./home/.zsh/os-detection.zsh; isFedroa
-  fedra-32:
+      - run: source ./home/.zsh/os-detection.zsh; isFedora
+  fedora-32:
     docker:
-      - image: fedra:32
+      - image: fedora:32
     steps:
       - checkout
-      - run: source ./home/.zsh/os-detection.zsh; isFedroa
+      - run: source ./home/.zsh/os-detection.zsh; isFedora
 
   # CentOS
   centos-latest:
@@ -178,8 +178,8 @@ workflows:
       - redhat-7
 
       # Fedora
-      - fedra-latest
-      - fedra-32
+      - fedora-latest
+      - fedora-32
 
       # CentOS
       - centos-latest

@@ -20,14 +20,14 @@ install-go-with-apt() {
   log-info "Installing golang ..."
   sudo add-apt-repository -y ppa:longsleep/golang-backports
 	sudo apt -yqq update
-  do-install sudo apt install -yqq golang-go
+  do-install "golang" sudo apt install -yqq golang-go
 }
 
 verify-system() {
-  if ! check-command "go" && check-command 'apt'
-  then
+  #if ! check-command "go" && check-command 'apt'
+  #then
 		install-go-with-apt
-  fi
+  #fi
 
   local required_commands=('git' 'zsh' 'go')
   local valid=true

@@ -29,3 +29,20 @@ repo() {
       fi
     done
 }
+
+_shellcheck() {
+  if type shellcheck > /dev/null
+  then
+    $bin $@
+  else
+    echo 'shellcheck not found' >&2
+  fi
+}
+
+shellcheck-sh() {
+  _shellcheck -s sh $@
+}
+
+shellcheck-bash() {
+  _shellcheck -s bash $@
+}

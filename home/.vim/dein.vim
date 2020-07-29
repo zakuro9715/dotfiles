@@ -75,6 +75,7 @@ call dein#begin(s:plugins_root)
   call dein#add('elm-tooling/elm-vim')
 
 " Go
+  call dein#add('mattn/vim-goimports')
   call dein#add('vim-jp/vim-go-extra')
 
 " javascript
@@ -202,6 +203,10 @@ let g:lsp_highlights_enabled = 1
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+
+" golang
+" ======
+let g:go_fmt_command = "goimports"
 
 " Others
 " ======

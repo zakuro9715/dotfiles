@@ -76,7 +76,6 @@ call dein#begin(s:plugins_root)
 
 " Go
   call dein#add('mattn/vim-goimports')
-  call dein#add('vim-jp/vim-go-extra')
 
 " javascript
   call dein#add('mxw/vim-jsx')
@@ -207,6 +206,7 @@ inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
 " golang
 " ======
 let g:go_fmt_command = "goimports"
+let g:goimports_simplify=1
 
 " Others
 " ======

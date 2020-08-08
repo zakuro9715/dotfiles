@@ -30,6 +30,14 @@ repo() {
     done
 }
 
+use-short-prompt() {
+  export SHORT_PROMPT='1'
+}
+
+use-long-prompt() {
+  export SHORT_PROMPT=''
+}
+
 _shellcheck() {
   if type shellcheck > /dev/null
   then

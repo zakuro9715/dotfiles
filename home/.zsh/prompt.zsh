@@ -5,6 +5,7 @@ PRIMARY_FG=black
 SEGMENT_SEPARATOR=" " #"\u25B6" #"\ue0b0"
 GEAR="⚙" #"\u2699"
 
+
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
 # rendering default background/foreground.
@@ -63,7 +64,8 @@ prompt_git() {
 prompt_dir() {
   blue=26
   red=125
-  prompt_segment "%(?.$blue.$red)" $PRIMARY_FG ' %~ '
+  dir=$([[ -n "$SHORT_PROMPT" ]] && echo '%C' || echo '%~')
+  prompt_segment "%(?.$blue.$red)" $PRIMARY_FG " $dir "
 }
 #Context: user@hostname (who am I and where am I)
 prompt_context() {

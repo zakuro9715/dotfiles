@@ -1,5 +1,6 @@
 reload() {
   source ~/.zshrc
+  tmux source ~/.tmux.conf
 }
 
 set-title() {

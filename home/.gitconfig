@@ -17,11 +17,12 @@
   co   = checkout
   cob  = checkout -b
   com  = !git checkout ${GIT_DEFAULT_BRANCH:-master}
-  d = dif
-  dif = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
-  dih = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD'
-  dib = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD~'
-  l = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
+  cp   = cherry-pick
+  d    = dif
+  dif  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
+  dih  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD'
+  dib  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD~'
+  l    = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
   me   = merge
   mem  = !git merge ${GIT_DEFAULT_BRANCH:-master}
   ps   = push

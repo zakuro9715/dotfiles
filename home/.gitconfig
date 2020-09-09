@@ -1,5 +1,5 @@
 [user]
-  name = z@kuro
+  name = zakuro
   email = z@kuro.red
 [core]
   editor = vim -c \"set fenc=utf-8\"

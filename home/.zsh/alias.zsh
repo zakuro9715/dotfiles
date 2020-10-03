@@ -8,6 +8,7 @@ alias gid="git diff"
 alias gil="git log"
 
 alias mkdir="mkdir -p"
+alias grep="grep --color"
 
 alias rm="rm -r"
 alias cp="cp -R"

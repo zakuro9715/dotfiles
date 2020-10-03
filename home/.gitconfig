@@ -16,7 +16,7 @@
   ca   = commit --amend
   co   = checkout
   cob  = checkout -b
-  com  = !git checkout ${GIT_DEFAULT_BRANCH:-master}
+  com  = !git checkout ${GIT_DEFAULT_BRANCH:-main}
   cp   = cherry-pick
   d    = dif
   dif  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
@@ -24,19 +24,19 @@
   dib  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD~'
   l    = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
   me   = merge
-  mem  = !git merge ${GIT_DEFAULT_BRANCH:-master}
+  mem  = !git merge ${GIT_DEFAULT_BRANCH:-main}
   ps   = push
   pso  = push origin
   psof = push origin -f
   pl   = pull
   plo  = pull origin
-  plom = !git pull origin ${GIT_DEFAULT_BRANCH:-master}
+  plom = !git pull origin ${GIT_DEFAULT_BRANCH:-main}
   re   = rebase
   rei  = rebase -i
   rea  = rebase --abort
   rec  = rebase --continue
   res  = rebase --skip
-  rem  = !git rebase ${GIT_DEFAULT_BRANCH:-master}
+  rem  = !git rebase ${GIT_DEFAULT_BRANCH:-main}
   s    = status .
   sall = status
   sa   = stash

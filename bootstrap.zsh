@@ -1,4 +1,5 @@
-basedir=$(dirname $0)
+zsh "scripts/install-symlinks.zsh"
+basedir=$(cd $(dirname $0); pwd)
 source "$basedir/home/.zsh/utils.zsh"
 
 show-welcome-message() {
@@ -24,10 +25,10 @@ install-go-with-apt() {
 }
 
 verify-system() {
-  #if ! check-command "go" && check-command 'apt'
-  #then
+  if ! check-command "go" && check-command 'apt'
+  then
 		install-go-with-apt
-  #fi
+  fi
 
   local required_commands=('git' 'zsh' 'go')
   local valid=true
@@ -70,8 +71,10 @@ packages() {
 apt-packages-install() {
   if check-command 'apt'
   then
-    sudo apt update -yqq
-    sudo apt install $(packages 'apt')
+    log-info "Installing apt packages"
+    sudo apt update -yqq > /dev/null 2> /dev/null
+    sudo apt install -yqq $(packages 'apt') > /dev/null 2> /dev/null
+    sudo apt full-upgrade -yqq > /dev/null 2> /dev/null
   else
     log-warning "apt not found. Skip install apt packages"
   fi
@@ -81,7 +84,6 @@ go-packages-install() {
   if check-command 'go'
   then
     go_packages=($(packages 'go'))
-    echo go_packages
     for pkg in "${go_packages[@]}"
     do
       do-install "$pkg" go get "$pkg"
@@ -94,4 +96,3 @@ go-packages-install() {
 apt-packages-install
 go-packages-install
 
-zsh "scripts/install-symlinks.zsh"

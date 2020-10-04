@@ -10,7 +10,7 @@
 
 `zsh bootstrap.zsh`
 
-## Directories
+## Docker
 
-- /home: ~/ (Symlink)
-- /windows: Windows configration (You must copy manualy).
+make docker-build
+make docker

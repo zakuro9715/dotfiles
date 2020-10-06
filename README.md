@@ -12,5 +12,4 @@
 
 ## Docker
 
-make docker-build
-make docker
+docker run -it zakuro/dotfiles

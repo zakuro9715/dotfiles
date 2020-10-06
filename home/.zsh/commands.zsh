@@ -55,3 +55,30 @@ shellcheck-sh() {
 shellcheck-bash() {
   _shellcheck -s bash $@
 }
+
+is_rails() {
+  [ -e "Gemfile" ] && cat Gemfile | grep rails > /dev/null
+}
+
+is_django() {
+  [ -e "manage.py" ] && cat manage.py | grep Django > /dev/null
+}
+
+is_node() {
+  [ -e package.json ]
+}
+
+serve() {
+  if is_rails
+  then
+    bundle exec rails s
+  elif is_django
+  then
+    python manage.py runserver
+  elif is_node
+  then
+    npm run serve
+  fi
+
+  echo "Failed to server detection"
+}

@@ -24,3 +24,5 @@ alias bers="bundle exec rails s"
 alias dc="docker-compose"
 
 alias npm="npm --color=always"
+
+alias s="serve"

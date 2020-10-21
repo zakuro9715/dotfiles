@@ -21,6 +21,7 @@ call dein#begin(s:plugins_root)
   call dein#add('fugalh/desert.vim')
   call dein#add('tomasr/molokai')
   call dein#add('altercation/vim-colors-solarized')
+  call dein#add('ghifarit53/tokyonight-vim')
 
 " Tools
   call dein#add('Shougo/dein.vim')
@@ -145,9 +146,12 @@ endif
 
 " Color scheme
 " ============
-let g:solarized_termcolors=256
+set termguicolors
 
-colorscheme desert
+let g:tokyonight_style = 'night'
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 " Vison
 " =====

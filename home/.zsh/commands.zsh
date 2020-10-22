@@ -31,6 +31,18 @@ repo() {
     done
 }
 
+zakuro() {
+  cd $GHQ_ROOT/github.com/zakruo9715
+}
+
+github() {
+  cd $GHQ_ROOT/github.cow
+}
+gitlab() {
+  cd $GHQ_ROOT/gitlab.com
+
+}
+
 use-short-prompt() {
   export SHORT_PROMPT='1'
 }

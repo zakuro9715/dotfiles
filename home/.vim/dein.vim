@@ -76,7 +76,8 @@ call dein#begin(s:plugins_root)
   call dein#add('elm-tooling/elm-vim')
 
 " Go
-  call dein#add('mattn/vim-goimports')
+  "call dein#add('mattn/vim-goimports')
+  call dein#add('vim-jp/vim-go-extra')
 
 " javascript
   call dein#add('mxw/vim-jsx')

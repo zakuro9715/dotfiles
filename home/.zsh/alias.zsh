@@ -26,3 +26,6 @@ alias dc="docker-compose"
 alias npm="npm --color=always"
 
 alias s="serve"
+ailas c="git commit"
+alias l="git l"
+alias diff="git diff"

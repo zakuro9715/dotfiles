@@ -82,3 +82,5 @@ serve() {
 
   echo "Failed to server detection"
 }
+
+cargo

@@ -28,6 +28,7 @@
 		"defaults":
 		{
 			// Put settings here that you want to apply to all profiles.
+      "background": "#1a1b26"
 		},
 		"list":
 		[

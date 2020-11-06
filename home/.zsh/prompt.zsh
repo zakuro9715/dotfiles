@@ -5,6 +5,10 @@ PRIMARY_FG=black
 SEGMENT_SEPARATOR=" " #"\u25B6" #"\ue0b0"
 GEAR="⚙" #"\u2699"
 
+yellow=220
+green=78
+blue=69
+red=197
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -38,8 +42,6 @@ prompt_end() {
 
 # Git: branch/detached head, dirty status
 prompt_git() {
-  yellow=228
-  green=42
   local color ref
   is_dirty() {
     test -n "$(git status --porcelain --ignore-submodules)"
@@ -62,8 +64,6 @@ prompt_git() {
 
 # Dir: current working directory
 prompt_dir() {
-  blue=26
-  red=125
   dir=$([[ -n "$SHORT_PROMPT" ]] && echo '%C' || echo '%~')
   prompt_segment "%(?.$blue.$red)" $PRIMARY_FG " $dir "
 }

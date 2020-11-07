@@ -1,6 +1,10 @@
 [user]
   name = zakuro
   email = z@kuro.red
+[init]
+  defaultBranch = main
+[pull]
+  rebase = false
 [core]
   editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore

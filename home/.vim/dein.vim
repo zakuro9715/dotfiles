@@ -18,9 +18,6 @@ call dein#begin(s:plugins_root)
 " ========
 
 " Color scheme
-  call dein#add('fugalh/desert.vim')
-  call dein#add('tomasr/molokai')
-  call dein#add('altercation/vim-colors-solarized')
   call dein#add('ghifarit53/tokyonight-vim')
 
 " Tools
@@ -151,6 +148,7 @@ set termguicolors
 
 let g:tokyonight_style = 'night'
 let g:tokyonight_enable_italic = 1
+let g:tokyonight_transparent_background = 1
 
 colorscheme tokyonight
 

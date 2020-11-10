@@ -9,6 +9,39 @@
   editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore
 	autocrlf = input
+[color "diff"]
+  new = 78
+  newMoved = 78
+  frag = 75
+  old = 204
+  oldMoved = 204
+[color "status"]
+  branch = 78
+  localBranch = 78
+  remoteBranch = 78
+  nobranch = 204
+  added = 78
+  changed = 204
+  untracked = 204
+  unmerged = 204
+[color "interactive"]
+  prompt = 75
+  help = 204
+  error = 204
+[color "advice"]
+  hint = 222
+[color "branch"]
+  current = 78
+  remote = 204
+[color "push"]
+  error = 204
+[color "remote"]
+  success = 78
+  hint = 222
+  error = 204
+[color "transport"]
+  rejected = 204
+
 [alias]
 # shortened format commands
   a    = add
@@ -26,7 +59,7 @@
   dif  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
   dih  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD'
   dib  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD~'
-  l    = log --no-merges --date=short --pretty=format:'%C(yellow)%h %Cgreen%cr %Creset%s %Cred%d %C(cyan)%b'
+  l    = log --no-merges --date=short --pretty=format:'%C(78)%>(14)%cr %C(222)%h%Creset  %<(50,trunc)%s %C(204)%d %C(75)%b'
   me   = merge
   mem  = !git merge ${GIT_DEFAULT_BRANCH:-main}
   ps   = push

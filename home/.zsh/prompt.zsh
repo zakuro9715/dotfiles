@@ -1,14 +1,15 @@
+black=235
+yellow=222
+green=78
+green_fg=159
+blue=75
+red=204
 CURRENT_BG='NONE'
-PRIMARY_FG=black
+PRIMARY_FG="$black"
 
 # Characters
 SEGMENT_SEPARATOR=" " #"\u25B6" #"\ue0b0"
 GEAR="⚙" #"\u2699"
-
-yellow=220
-green=78
-blue=69
-red=197
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,
@@ -49,14 +50,16 @@ prompt_git() {
   ref="$vcs_info_msg_0_"
   if [[ -n "$ref" ]]; then
     if is_dirty; then
-      color=$yellow
+      color_bg=$yellow
+      color_fg=$black
     else
-      color=$green
+      color_bg=$green
+      color_fg=$black
     fi
     if [[ "${ref/.../}" != "$ref" ]]; then
       ref="${ref/.../}"
     fi
-    prompt_segment $color $PRIMARY_FG
+    prompt_segment $color_bg $color_fg
     print -Pn " $ref "
   fi
 }

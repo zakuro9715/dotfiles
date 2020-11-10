@@ -1,4 +1,5 @@
 source "$HOME/.zsh/utils.zsh"
+source "$HOME/.zsh/colors.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/commands.zsh"
 source "$HOME/.zsh/git.zsh"

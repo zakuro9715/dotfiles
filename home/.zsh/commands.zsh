@@ -12,23 +12,52 @@ set-title() {
   echo -ne "\033]0;${title}\a"
 }
 
-repo() {
-  name=$1
-  if [[ -z "$name" ]];
+find-repo() {
+  target="$(echo "/$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
+  ghq list -p | grep --color=never -E "$target$" | head -n1
+}
+
+cd-repo() {
+  repo=$1
+  dir=$(find-repo $repo)
+  if [[ "$dir" == "" ]]
   then
-    echo "Usage: repo NAME" >&2
+    echo "Repository $repo not found" >&2
     return 1
   fi
 
-  find "$GHQ_ROOT" -maxdepth 3 -mindepth 3 -print0 |
-    while IFS= read -r -d '' repo; do
-      if [[ "$name" == "$(basename $repo)" ]]
-      then
-        set-title $name
-        cd $repo
-        return 0
-      fi
-    done
+  set-title "$(basename $dir)"
+  cd $dir
+}
+
+
+get-cd-repo() {
+  repo="$1"
+  dir="$(ghq get --silent -u $repo 2>&1 | grep -oE "$(ghq root)/.+$")"
+  set-title "$(basename $dir)"
+  cd "$dir"
+}
+
+repo() {
+  mode="cd"
+  case "$1" in
+    "cd"  ) shift ;;
+    "get" )
+      mode="get"
+      shift ;;
+  esac
+
+  if [[ -z "$1" ]];
+  then
+    echo "Usage: repo [get|cd] NAME" >&2
+    return 1
+  fi
+
+
+  case "$mode" in
+    "cd"  ) cd-repo "$1" ;;
+    "get" ) get-cd-repo "$1" ;;
+  esac
 }
 
 zakuro() {

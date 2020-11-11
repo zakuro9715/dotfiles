@@ -96,6 +96,3 @@ go-packages-install() {
 apt-packages-install
 go-packages-install
 
-log-info "Installing task"
-curl -sSL https://taskfile.dev/install.sh | sh
-mv bin/task "$HOME/bin/"

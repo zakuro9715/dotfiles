@@ -8,7 +8,12 @@
 [core]
   editor = vim -c \"set fenc=utf-8\"
   excludesfile = ~/.gitignore
-	autocrlf = input
+  autocrlf = input
+
+# red    204
+# green  78
+# blue   75
+# yellow 222
 [color "diff"]
   new = 78
   newMoved = 78
@@ -59,7 +64,8 @@
   dif  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
   dih  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD'
   dib  = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD~'
-  l    = log --no-merges --date=short --pretty=format:'%C(78)%>(14)%cr %C(222)%h%Creset  %<(50,trunc)%s %C(204)%d %C(75)%b'
+  l    = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-log'
+  lg   = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'
   me   = merge
   mem  = !git merge ${GIT_DEFAULT_BRANCH:-main}
   ps   = push

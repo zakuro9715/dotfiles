@@ -11,7 +11,7 @@ then
 fi
 
 zakuro="$HOME/src/github.com/zakuro9715"
-cd "$zakuro" || exit 1
+mkdir -p "$zakuro" && cd "$zakuro" || exit 1
 if ! [ -d "$zakuro/dotfiles" ]
 then
   git clone git@github.com:zakuro9715/dotfiles

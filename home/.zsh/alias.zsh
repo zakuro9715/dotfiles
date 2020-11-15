@@ -1,4 +1,3 @@
-alias ls="ls --color=always"
 alias l="ls"
 
 alias g="git"

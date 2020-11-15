@@ -14,6 +14,10 @@ go=(
   golang.org/x/tools/cmd/goimports
 )
 
+cargo=(
+  watchexec
+)
+
 ghq=(
   git@github.com:zakuro9715/dotfiles
   git@github.com:zakuro9715/z

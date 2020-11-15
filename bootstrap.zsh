@@ -1,9 +1,4 @@
-zsh "scripts/install-symlinks.zsh"
-basedir=$(cd $(dirname $0); pwd)
-source "$basedir/home/.zsh/utils.zsh"
-
-show-welcome-message() {
-  cat << EOS
+cat << EOS
 
       DDDDDDDD      OOOOOOO   TTTTTTTTTTT   FFFFFFFFF  IIIIIIIIIII   LL         EEEEEEEEEE   SSSSSSS
      DD      DD   OO      OO      TT       FF              II       LL         EE          SS
@@ -15,15 +10,15 @@ show-welcome-message() {
 ####################################################################################################
 
 EOS
-}
+
+
+zsh "scripts/install-symlinks.zsh"
+basedir=$(cd $(dirname $0); pwd)
+source "$basedir/home/.zsh/utils.zsh"
+
 
 verify-system() {
-  if ! check-command "go" && check-command 'apt'
-  then
-		install-go-with-apt
-  fi
-
-  local required_commands=('git' 'zsh' 'go')
+  local required_commands=('git' 'zsh')
   local valid=true
   for cmd in ${required_commands[@]}
   do
@@ -52,16 +47,9 @@ do-install() {
   fi
 }
 
-packages() {
-  name=$1
-  filename="./packages/$name.txt"
-  echo $(cat $filename | tr '\n' ' ')
-}
-
 
 source "$HOME/.zshrc"
 for script in $(ls $basedir/installers/* | cat)
 do
-  echo $script
   $script "$basedir"
 done

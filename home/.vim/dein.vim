@@ -22,17 +22,10 @@ call dein#begin(s:plugins_root)
 
 " Tools
   call dein#add('Shougo/dein.vim')
-  call dein#add('Shougo/unite.vim')
 
 " ================
 " Markup Languages
 " ================
-
-" b-html
-  call dein#add('zakuro9715/vim-b-html')
-
-" Jade
-  call dein#add('digitaltoad/vim-jade')
 
 " Markdown
   call dein#add('joker1007/vim-markdown-quote-syntax')
@@ -41,9 +34,6 @@ call dein#begin(s:plugins_root)
 
 " reStrucuturedText
   call dein#add('Rykka/riv.vim')
-
-" slim
-  call dein#add('slim-template/vim-slim')
 
 " vue
   call dein#add('posva/vim-vue')
@@ -54,9 +44,6 @@ call dein#begin(s:plugins_root)
 
 " css
   call dein#add('hail2u/vim-css3-syntax')
-
-" Less
-  call dein#add('groenewege/vim-less')
 
 " stylus
   call dein#add('wavded/vim-stylus')
@@ -80,9 +67,6 @@ call dein#begin(s:plugins_root)
   call dein#add('mxw/vim-jsx')
   call dein#add('pangloss/vim-javascript')
 
-" python
-  call dein#add('davidhalter/jedi-vim')
-
 " Ruby
   call dein#add('vim-ruby/vim-ruby')
 
@@ -100,9 +84,6 @@ call dein#begin(s:plugins_root)
 " JSON
   call dein#add('google/vim-jsonnet')
   call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
-
-" ANTLR
-  call dein#add('jrozner/vim-antlr')
 
 " =====
 " Tools
@@ -124,10 +105,7 @@ call dein#begin(s:plugins_root)
 " Others
 " ======
 
-  call dein#add('tyru/open-browser.vim')
-  call dein#add('scrooloose/syntastic')
   call dein#add('zakuro9715/httpstatus.vim')
-  call dein#add('vim-scripts/Align')
 
 if has('nvim')
   call dein#add('Shougo/deoplete.nvim')
@@ -162,35 +140,10 @@ autocmd BufRead,BufNewFile .eslintrc Vison eslintrc.json
 autocmd BufRead,BufNewFile .babelrc Vison babelrc.json
 
 
-" Syntastic
-" =========
-if exists('SyntasticStatuslineFlag')
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-endif
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_cpp_compiler_options = 'std=c++14'
-
-
 " Deoplete
 " =========
 let g:deoplete#enable_at_startup = 1
 
-
-" Jedi
-" ====
-" don't show docstring
-autocmd FileType python setlocal completeopt-=preview
-
-let g:jedi#completions_enabled = 0
-let g:jedi#auto_vim_configuration = 0
 
 
 " Riv
@@ -208,11 +161,6 @@ let g:lsp_highlights_enabled = 1
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
-
-" golang
-" ======
-let g:go_fmt_command = "goimports"
-let g:goimports_simplify=1
 
 " Others
 " ======

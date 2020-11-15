@@ -17,13 +17,6 @@ show-welcome-message() {
 EOS
 }
 
-install-go-with-apt() {
-  log-info "Installing golang ..."
-  sudo add-apt-repository -y ppa:longsleep/golang-backports
-	sudo apt -yqq update
-  do-install "golang" sudo apt install -yqq golang-go
-}
-
 verify-system() {
   if ! check-command "go" && check-command 'apt'
   then
@@ -59,40 +52,16 @@ do-install() {
   fi
 }
 
-show-welcome-message
-verify-system
-
 packages() {
   name=$1
   filename="./packages/$name.txt"
   echo $(cat $filename | tr '\n' ' ')
 }
 
-apt-packages-install() {
-  if check-command 'apt'
-  then
-    log-info "Installing apt packages"
-    sudo apt update -yqq > /dev/null 2> /dev/null
-    sudo apt install -yqq $(packages 'apt') > /dev/null 2> /dev/null
-    sudo apt full-upgrade -yqq > /dev/null 2> /dev/null
-  else
-    log-warning "apt not found. Skip install apt packages"
-  fi
-}
 
-go-packages-install() {
-  if check-command 'go'
-  then
-    go_packages=($(packages 'go'))
-    for pkg in "${go_packages[@]}"
-    do
-      do-install "$pkg" go get "$pkg"
-    done
-  else
-    log-warning "go not found. Skip install go packages"
-  fi
-}
-
-apt-packages-install
-go-packages-install
-
+source "$HOME/.zshrc"
+for script in $(ls $basedir/installers/* | cat)
+do
+  echo $script
+  $script "$basedir"
+done

@@ -59,9 +59,11 @@ call dein#begin(s:plugins_root)
   call dein#add('andys8/vim-elm-syntax')
   call dein#add('elm-tooling/elm-vim')
 
-" Go
-  "call dein#add('mattn/vim-goimports')
-  call dein#add('vim-jp/vim-go-extra')
+" Golang
+  call dein#add('mattn/vim-goimports')
+  let g:goimports = 1
+  let g:goimports_simplify = 1
+  command Import GoImport
 
 " javascript
   call dein#add('mxw/vim-jsx')

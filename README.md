@@ -10,6 +10,10 @@
 
 `zsh bootstrap.zsh`
 
+or
+
+`curl -sSL za.kuro.red/install.sh` | sh
+
 ## Docker
 
 docker run -it zakuro/dotfiles

@@ -12,6 +12,7 @@ apt=(
 go=(
   github.com/x-motemen/ghq
   golang.org/x/tools/cmd/goimports
+  github.com/mitranim/gow
 )
 
 cargo=(

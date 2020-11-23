@@ -61,7 +61,7 @@ repo() {
 }
 
 zakuro() {
-  cd $GHQ_ROOT/github.com/zakruo9715
+  cd $GHQ_ROOT/github.com/zakuro9715
 }
 
 github() {

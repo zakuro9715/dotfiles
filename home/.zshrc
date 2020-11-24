@@ -121,15 +121,6 @@ else
   echo 'direnv not found'
 fi
 
-# hub
-if check-command hub
-then
-  eval "$(hub alias -s)"
-  compdef hub=git
-else
-  echo 'hub not found'
-fi
-
 do_enter() {
   if [ -n "$BUFFER" ]; then
     zle accept-line

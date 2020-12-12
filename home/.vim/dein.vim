@@ -78,6 +78,7 @@ call dein#begin(s:plugins_root)
 
 " vlang
   call dein#add('cheap-glitch/vim-v')
+  call dein#add('~/src/github.com/zakuro9715/vim-vtools')
 
 " ===============
 " Other Languages

@@ -1,3 +1,6 @@
+call system('source "$HOME/.zsh/utils.zsh"; iswsl')
+let g:iswsl = v:shell_error == 0
+
 set t_Co=256
 
 set nocompatible
@@ -39,8 +42,7 @@ set softtabstop=2
 set autoindent
 set smartindent
 
-set clipboard=unnamed,unnamedplus
-set mouse-=a
+set mouse+=a
 set shellslash
 set iminsert=0
 

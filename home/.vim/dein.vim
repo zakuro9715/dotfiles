@@ -28,7 +28,6 @@ call dein#begin(s:plugins_root)
 " ================
 
 " Markdown
-  call dein#add('joker1007/vim-markdown-quote-syntax')
   call dein#add('plasticboy/vim-markdown')
   call dein#add('kannokanno/previm')  " Markdown Preview
 
@@ -63,7 +62,6 @@ call dein#begin(s:plugins_root)
   call dein#add('mattn/vim-goimports')
   let g:goimports = 1
   let g:goimports_simplify = 1
-  command Import GoImport
 
 " javascript
   call dein#add('mxw/vim-jsx')
@@ -109,10 +107,6 @@ call dein#begin(s:plugins_root)
 " ======
 
   call dein#add('zakuro9715/httpstatus.vim')
-
-if has('nvim')
-  call dein#add('Shougo/deoplete.nvim')
-endif
 
 call dein#end()
 

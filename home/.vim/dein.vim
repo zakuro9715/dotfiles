@@ -102,10 +102,7 @@ call dein#begin(s:plugins_root)
 " editorconfig
   call dein#add('editorconfig/editorconfig-vim')
 
-" ======
-" Others
-" ======
-
+" others
   call dein#add('zakuro9715/httpstatus.vim')
 
 call dein#end()

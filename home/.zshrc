@@ -24,10 +24,12 @@ export SHELL="$(which zsh)"
 export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export GO111MODULE=on
+export VFLAGS='-cc clang'
 export PATH="$GOPATH/bin:$HOME/.cargo/bin:$HOME/.local/bin:$PATH"
 export TERM="xterm-256color"
 export NODE_OPTIONS="--max-old-space-size=4096"
 export COLOR="--color=always"
+
 
 # Color
 # =====

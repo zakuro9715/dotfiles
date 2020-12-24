@@ -17,6 +17,12 @@ eval $(dircolors -b)
 
 export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 
+if iswsl
+then
+  export PATH="$PATH:/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
+  export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin"
+fi
+
 export LANG=ja_JP.UTF-8
 export LC_ALL=ja_JP.UTF-8
 export EDITOR=vim

@@ -31,3 +31,9 @@ alias diff="git diff"
 alias pso="git pso"
 alias psof="git psof"
 alias plom="git plom"
+
+if iswsl
+then
+  alias clip-paste="powershell.exe 'Get-Clipboard'"
+  alias clip="clip.exe"
+fi

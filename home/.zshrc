@@ -7,8 +7,11 @@ source "$HOME/.zsh/shortcuts.zsh"
 source "$HOME/.zsh/prompt.zsh"
 source "$HOME/.zsh/completion.zsh"
 
-bindkey -e  # I'm vimmer but emacs bind is useful more than vim bind.
 bindkey -r "^j"
+bindkey "^[[1;5D" beginning-of-line
+bindkey "^[[1;5C" end-of-line
+bindkey "^[[1;2D" backward-word
+bindkey "^[[1;2C" forward-word
 autoload -Uz add-zsh-hook
 eval $(dircolors -b)
 

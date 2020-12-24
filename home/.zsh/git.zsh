@@ -23,3 +23,46 @@ git-pretty-graph-log() {
     --date='format:%m/%d' --graph \
     --pretty="tformat:%x09$pretty_log_format_base" | less -R
 }
+
+git-clear() {
+  b="$(git-default-branch)"
+  branches=$(git branch | grep -v "$(git-default-branch)" | grep -v '*' | sed 's/ //g')
+  if [ -z "$branches" ]
+  then
+    echo "Nothing to do"
+    return 0
+  fi
+  echo "Following branches will be deleted"
+  echo "$branches" | sed 's/\(.*\)/- \1/g'
+  printf "Are you sure? (y/N): "
+  read c
+  case "$c" in
+    y)
+      git branch -D $(echo $branches)
+      return 0
+      ;;
+    *)
+      echo 'Canceled'
+      return 1
+      ;;
+  esac
+}
+
+git-default-branch() {
+  if [ -n "$GIT_DEFAULT_BRANCH" ]
+  then
+    echo "$GIT_DEFAULT_BRANCH"
+    return
+  fi
+  branches="$(git branch --format='%(refname:lstrip=2)')"
+  defaults=('development' 'dev' 'main' 'master')
+  for b in $defaults
+  do
+    if echo $branches | grep "^$b\$" > /dev/null
+    then
+      echo $b
+      return
+    fi
+  done
+  echo 'main'
+}

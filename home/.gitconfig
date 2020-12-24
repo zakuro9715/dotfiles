@@ -60,9 +60,10 @@
   cam    = commit --amend -m
   co     = checkout
   cob    = checkout -b
-  com    = !git checkout ${GIT_DEFAULT_BRANCH:-main}
+  com    = !zsh -c 'source ~/.zsh/git.zsh && git checkout "$(git-default-branch)"'
+  dif    = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
   cp     = cherry-pick
-  clean  = @git bad $(git ba | grep -v master | grep -v '*')
+  clear  = !zsh -c 'source ~/.zsh/git.zsh && git-clear'
   d      = dif
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff'
   dih    = !zsh -c 'source ~/.zsh/git.zsh && git-less-diff HEAD'
@@ -70,19 +71,19 @@
   l      = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-log'
   lg     = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'
   me     = merge
-  mem    = !git merge ${GIT_DEFAULT_BRANCH:-main}
+  mem    = !zsh -c 'source ~/.zsh/git.zsh && git merge "$(git-default-branch)"'
   ps     = push
   pso    = push origin
   psof   = push origin -f
   pl     = pull
   plo    = pull origin
-  plom   = !git pull origin ${GIT_DEFAULT_BRANCH:-main}
+  plom   = !zsh -c 'source ~/.zsh/git.zsh && git pull origin "$(git-default-branch)"'
   re     = rebase
   rei    = rebase -i
   rea    = rebase --abort
   rec    = rebase --continue
   res    = rebase --skip
-  rem    = !git rebase ${GIT_DEFAULT_BRANCH:-main}
+  rem    = !zsh -c 'source ~/.zsh/git.zsh && git rebase "$(git-default-branch)"'
   s      = status .
   sall   = status
   sa     = stash
@@ -90,7 +91,7 @@
   sal    = stash list
   sap    = stash pop
   sad    = stash drop
-  sync   = !git pull upstream ${GIT_DEFAULT_BRANCH:-main} && git psof
+  sync   = !zsh -c 'source ~/.zsh/git.zsh && git pull upstream "$(git-default-branch)" && git psof'
 
 [push]
   default = current

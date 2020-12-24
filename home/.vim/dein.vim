@@ -18,92 +18,97 @@ call dein#begin(s:plugins_root)
 " ========
 
 " Color scheme
-  call dein#add('ghifarit53/tokyonight-vim')
+call dein#add('ghifarit53/tokyonight-vim')
 
 " Tools
-  call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/dein.vim')
 
 " ================
 " Markup Languages
 " ================
 
 " Markdown
-  call dein#add('plasticboy/vim-markdown')
-  call dein#add('kannokanno/previm')  " Markdown Preview
+call dein#add('plasticboy/vim-markdown')
+call dein#add('kannokanno/previm')  " Markdown Preview
 
 " reStrucuturedText
-  call dein#add('Rykka/riv.vim')
+call dein#add('Rykka/riv.vim')
 
 " vue
-  call dein#add('posva/vim-vue')
+call dein#add('posva/vim-vue')
 
 " ===========
 " Stylesheets
 " ===========
 
 " css
-  call dein#add('hail2u/vim-css3-syntax')
+call dein#add('hail2u/vim-css3-syntax')
 
 " stylus
-  call dein#add('wavded/vim-stylus')
+call dein#add('wavded/vim-stylus')
 
 " =====================
 " Programming Languages
 " =====================
 
 " bash
-  call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
+call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
 
 " elm
-  call dein#add('andys8/vim-elm-syntax')
-  call dein#add('elm-tooling/elm-vim')
+call dein#add('andys8/vim-elm-syntax')
+call dein#add('elm-tooling/elm-vim')
 
 " Golang
-  call dein#add('mattn/vim-goimports')
-  let g:goimports = 1
-  let g:goimports_simplify = 1
+call dein#add('mattn/vim-goimports')
+let g:goimports = 1
+let g:goimports_simplify = 1
 
 " javascript
-  call dein#add('mxw/vim-jsx')
-  call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
+call dein#add('pangloss/vim-javascript')
 
 " Ruby
-  call dein#add('vim-ruby/vim-ruby')
+call dein#add('vim-ruby/vim-ruby')
 
 " typescript
-  call dein#add('leafgarland/typescript-vim')
-  call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install'  })
+call dein#add('leafgarland/typescript-vim')
+call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install'  })
 
 " vlang
-  call dein#add('cheap-glitch/vim-v')
-  call dein#add('~/src/github.com/zakuro9715/vim-vtools')
+"call dein#add('cheap-glitch/vim-v')
+call dein#add('ollykel/v-vim')
+call dein#add('~/src/github.com/zakuro9715/vim-vtools')
+let g:vfmt = 0
 
 " ===============
 " Other Languages
 " ===============
 
 " JSON
-  call dein#add('google/vim-jsonnet')
-  call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
+call dein#add('google/vim-jsonnet')
+call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
 
 " =====
 " Tools
 " =====
 
 " lsp / completion
-  call dein#add('prabirshrestha/async.vim')
-  call dein#add('prabirshrestha/asyncomplete.vim')
-  call dein#add('prabirshrestha/asyncomplete-lsp.vim')
-  call dein#add('prabirshrestha/vim-lsp')
-  call dein#add('mattn/vim-lsp-settings')
-  call dein#add('mattn/vim-lsp-icons')
+call dein#add('prabirshrestha/async.vim')
+call dein#add('prabirshrestha/asyncomplete.vim')
+call dein#add('prabirshrestha/asyncomplete-lsp.vim')
+call dein#add('prabirshrestha/vim-lsp')
+call dein#add('mattn/vim-lsp-settings')
+call dein#add('mattn/vim-lsp-icons')
 
 
 " editorconfig
-  call dein#add('editorconfig/editorconfig-vim')
+call dein#add('editorconfig/editorconfig-vim')
 
 " others
-  call dein#add('zakuro9715/httpstatus.vim')
+call dein#add('zakuro9715/httpstatus.vim')
+call dein#add('preservim/nerdcommenter')
+call dein#add('tpope/vim-commentary')
+call dein#add('thinca/vim-quickrun')
 
 call dein#end()
 
@@ -139,7 +144,6 @@ autocmd BufRead,BufNewFile .babelrc Vison babelrc.json
 let g:deoplete#enable_at_startup = 1
 
 
-
 " Riv
 " ===
 let g:riv_disable_folding = 1
@@ -151,6 +155,12 @@ let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_highlights_enabled = 1
+
+au User lsp_setup call lsp#register_server({
+      \ 'name': 'vls',
+      \ 'cmd': { server_info->['vls'] },
+      \ 'allowlist': ['vlang'],
+      \ })
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

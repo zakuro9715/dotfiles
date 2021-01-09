@@ -17,6 +17,10 @@ go=(
   github.com/mitranim/gow
 )
 
+pip3=(
+  'git+https://github.com/jeffkaufman/icdiff.git'
+)
+
 cargo=(
   watchexec
 )

@@ -17,3 +17,8 @@ setopt list_packed
 setopt magic_equal_subst
 setopt auto_param_slash
 setopt mark_dirs
+
+if check-command v
+then
+  v complete setup zsh | source /dev/stdin
+fi

@@ -156,12 +156,6 @@ let g:lsp_diagnostics_echo_cursor = 1
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_highlights_enabled = 1
 
-au User lsp_setup call lsp#register_server({
-      \ 'name': 'vls',
-      \ 'cmd': { server_info->['vls'] },
-      \ 'allowlist': ['vlang'],
-      \ })
-
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"

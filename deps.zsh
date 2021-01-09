@@ -7,6 +7,8 @@ apt=(
   golang-go
   nodejs
   npm
+  python3
+  python3-pip
 )
 
 go=(

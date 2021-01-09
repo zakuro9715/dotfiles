@@ -26,6 +26,7 @@ alias npm="npm --color=always"
 
 alias s="serve"
 alias g="git"
+alias d="git d"
 alias h="z"
 
 if iswsl

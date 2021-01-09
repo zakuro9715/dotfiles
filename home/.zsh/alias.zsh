@@ -25,12 +25,8 @@ alias dc="docker-compose"
 alias npm="npm --color=always"
 
 alias s="serve"
-alias c="git commit"
-alias l="git l"
-alias diff="git diff"
-alias pso="git pso"
-alias psof="git psof"
-alias plom="git plom"
+alias g="git"
+alias h="z"
 
 if iswsl
 then

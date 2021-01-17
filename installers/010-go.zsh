@@ -5,5 +5,5 @@ source "$basedir/deps.zsh"
 
 for repo in $go
 do
-  go get -u $repo
+  go install -u $repo
 done

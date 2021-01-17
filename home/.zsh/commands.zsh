@@ -123,3 +123,7 @@ serve() {
 
   echo "Failed to server detection"
 }
+
+cd-n() {
+  SHELL_INIT="cd $@" $SHELL
+}

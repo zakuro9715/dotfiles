@@ -1,8 +1,0 @@
-keycode 100 = BackSpace NoSymbol BackSpace
-keycode 101 = BackSpace NoSymbol BackSpace
-keycode 102 = Return NoSymbol Return
-keycode 49 = Zenkaku_Hankaku Zenkaku_Hankaku Zenkaku_Hankaku Zenkaku_Hankaku
-keycode 97 = asciitilde grave
-remove Lock = Caps_Lock
-keysym Caps_Lock = Control_L
-add Control = Control_L

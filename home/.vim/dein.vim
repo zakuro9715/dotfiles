@@ -97,7 +97,7 @@ call dein#add('prabirshrestha/async.vim')
 call dein#add('prabirshrestha/asyncomplete.vim')
 call dein#add('prabirshrestha/asyncomplete-lsp.vim')
 call dein#add('prabirshrestha/vim-lsp')
-call dein#add('~/src/github.com/zakuro9715/vim-lsp-settings')
+call dein#add('mattn/vim-lsp-settings')
 call dein#add('mattn/vim-lsp-icons')
 
 

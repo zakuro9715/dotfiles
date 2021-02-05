@@ -14,6 +14,10 @@ iswindows() {
   iswsl || [[ "$OS" == "Windows_NT" ]]
 }
 
+istmux() {
+  test -n "$TMUX"
+}
+
 os() {
   if iswindows
   then

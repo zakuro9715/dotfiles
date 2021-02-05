@@ -1,1 +1,0 @@
-../../home/.vim/core.vim

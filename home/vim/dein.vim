@@ -58,6 +58,9 @@ call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
 call dein#add('andys8/vim-elm-syntax')
 call dein#add('elm-tooling/elm-vim')
 
+" fish
+call dein#add('dag/vim-fish')
+
 " Golang
 call dein#add('mattn/vim-goimports')
 let g:goimports = 1

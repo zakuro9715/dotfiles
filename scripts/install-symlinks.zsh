@@ -1,5 +1,5 @@
 basedir="$(dirname $(dirname $0))"
-source "$basedir/home/.zsh/utils.zsh"
+source "$basedir/home/zsh/utils.zsh"
 
 create-symlink() {
   link=$1
@@ -26,9 +26,9 @@ create-symlink() {
   fi
 }
 
-for f in home/.[!.]*
+for f in home/*
 do
-  link="$HOME/${f##*/}"
+  link="$HOME/.${f##*/}"
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
   create-symlink $link $target
 done

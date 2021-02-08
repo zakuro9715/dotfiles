@@ -68,6 +68,7 @@ noremap <C-Up> gg
 inoremap <C-Up> <C-O>gg
 noremap <C-Down> G
 inoremap <C-Down> <C-O>G
+nnoremap k v
 
 
 

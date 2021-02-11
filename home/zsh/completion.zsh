@@ -20,5 +20,5 @@ setopt mark_dirs
 
 if check-command v
 then
-  v complete setup zsh | source /dev/stdin
+ #  v complete setup zsh | source /dev/stdin
 fi

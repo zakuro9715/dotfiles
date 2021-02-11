@@ -38,12 +38,24 @@ get-cd-repo() {
   cd "$dir"
 }
 
+create-cd-repo() {
+  repo="$1"
+  dir="$GHQ_ROOT/github.com/zakuro9715"
+  cd $dir
+  gh repo create $repo -y
+  cd $(ls -t | head -n 1)
+  #set-title
+}
+
 repo() {
   mode="cd"
   case "$1" in
     "cd"  ) shift ;;
     "get" )
       mode="get"
+      shift ;;
+    "create")
+      mode="create"
       shift ;;
   esac
 
@@ -55,8 +67,9 @@ repo() {
 
 
   case "$mode" in
-    "cd"  ) cd-repo "$1" ;;
-    "get" ) get-cd-repo "$1" ;;
+    "cd"     ) cd-repo "$1" ;;
+    "get"    ) get-cd-repo "$1" ;;
+    "create" ) create-cd-repo "$1" ;;
   esac
 }
 

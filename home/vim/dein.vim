@@ -162,6 +162,8 @@ let g:lsp_highlights_enabled = 1
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr>    pumvisible() ? "\<C-y>" : "\<cr>"
+imap <S-Tab> <ESC><plug>(lsp-hover) i
+map <Tab> <plug>(lsp-hover)
 
 " Others
 " ======

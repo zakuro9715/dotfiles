@@ -25,8 +25,24 @@ git-pretty-graph-log() {
 }
 
 git-clear() {
-  b="$(git-default-branch)"
-  branches=$(git branch | grep -v "$(git-default-branch)" | grep -v '*' | sed 's/ //g')
+  remote="$1"
+  if [[ "$remote" == "all" ]]
+  then
+    for v in $(git remote)
+    do
+      git-clear "$v"
+    done
+    return
+  fi
+
+  if [[ -z "$remote" ]]
+  then
+    branches=$(git branch)
+  else
+    branches=$(git branch --remote | grep "$remote/")
+  fi
+  branches=$(echo $branches | grep -v "$(git-default-branch)" | grep -v "HEAD" | sed 's/ //g')
+
   if [ -z "$branches" ]
   then
     echo "Nothing to do"
@@ -38,7 +54,12 @@ git-clear() {
   read c
   case "$c" in
     y)
-      git branch -D $(echo $branches)
+      if [[ -z "$remote" ]]
+      then
+        git branch -D $(echo $branches)
+      else
+        git push -d $remote $(echo $branches | sed 's#origin/##g')
+      fi
       return 0
       ;;
     *)

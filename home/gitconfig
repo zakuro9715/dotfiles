@@ -62,7 +62,8 @@
   cob    = checkout -b
   com    = !zsh -c 'source ~/.zsh/git.zsh && git checkout "$(git-default-branch)"'
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
-  clear  = !zsh -c 'source ~/.zsh/git.zsh && git-clear'
+  clear        = !zsh -c 'source ~/.zsh/git.zsh && git-clear'
+  clear-origin = !zsh -c 'source ~/.zsh/git.zsh && git-clear origin'
   d      = dif
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
   dih    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD'

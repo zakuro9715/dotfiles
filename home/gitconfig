@@ -62,7 +62,6 @@
   cob    = checkout -b
   com    = !zsh -c 'source ~/.zsh/git.zsh && git checkout "$(git-default-branch)"'
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
-  cp     = cherry-pick
   clear  = !zsh -c 'source ~/.zsh/git.zsh && git-clear'
   d      = dif
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
@@ -72,6 +71,8 @@
   lg     = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'
   me     = merge
   mem    = !zsh -c 'source ~/.zsh/git.zsh && git merge "$(git-default-branch)"'
+  pk     = cherry-pick
+  pick   = cherry-pick
   ps     = push
   pso    = push origin
   psof   = push origin -f

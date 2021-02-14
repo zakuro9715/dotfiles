@@ -112,6 +112,7 @@ call dein#add('zakuro9715/httpstatus.vim')
 call dein#add('preservim/nerdcommenter')
 call dein#add('tpope/vim-commentary')
 call dein#add('thinca/vim-quickrun')
+call dein#add('wakatime/vim-wakatime')
 
 call dein#end()
 

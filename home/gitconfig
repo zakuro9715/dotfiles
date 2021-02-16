@@ -67,6 +67,7 @@
   d      = dif
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
   dih    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD'
+  dis    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff --staged'
   dib    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD~'
   l      = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-log'
   lg     = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'

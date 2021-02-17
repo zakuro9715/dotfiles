@@ -1,3 +1,11 @@
+truthy() {
+  ! falsy $1
+}
+
+falsy() {
+  [[ -z "$1" ]] || [[ "$1" == "false" ]] || [[ "$1" == "0" ]]
+}
+
 check-command() {
   type $1 &> /dev/null;
 }

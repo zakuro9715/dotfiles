@@ -154,3 +154,12 @@ serve() {
 cd-n() {
   SHELL_INIT="cd $@" $SHELL
 }
+
+v-wrapper() {
+  if truthy "$VMASTER"
+  then
+    $VREPO/vmaster "$@"
+  else
+    $VREPO/v "$@"
+  fi
+}

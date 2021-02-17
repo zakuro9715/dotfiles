@@ -12,9 +12,22 @@ set-title() {
   echo -ne "\033]0;${title}\a"
 }
 
+list-repo() {
+  # ghq list
+  # | prepend number to sort
+  # | update number of zakuro's repository
+  # | sort
+  # | remove prefix number
+  ghq list -p \
+    | sed 's/^/100 /g' \
+    | sed -E 's#^(100) (.*/)(zakuro9715)(/.*)$#000 \2\3\4#g' \
+    | sort \
+    | sed -E 's/^.{4}//g'
+}
+
 find-repo() {
   target="$(echo "/$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
-  ghq list -p | grep --color=never -E "$target$" | head -n1
+  list-repo | grep -E "$target$" | head -n1
 }
 
 cd-repo() {

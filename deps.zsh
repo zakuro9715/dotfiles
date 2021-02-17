@@ -29,5 +29,6 @@ ghq=(
   git@github.com:zakuro9715/dotfiles
   git@github.com:zakuro9715/z
   git@github.com:zakuro9715/v
+  git@github.com:zakuro9715/v-zconfig
   git@github.com:tmux-plugins/tpm
 )

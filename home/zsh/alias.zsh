@@ -28,6 +28,7 @@ alias s="serve"
 alias g="git"
 alias d="git d"
 alias h="z"
+alias v="z --config=$(find-repo v-zconfig)/z.yaml"
 
 if iswsl
 then

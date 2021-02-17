@@ -1,3 +1,4 @@
+source "$HOME/.zsh/utils.zsh"
 reload() {
   source ~/.zshrc
   tmux source ~/.tmux.conf

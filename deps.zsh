@@ -22,6 +22,7 @@ pip3=(
 )
 
 cargo=(
+  ripgrep
   watchexec
 )
 

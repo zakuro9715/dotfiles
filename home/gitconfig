@@ -72,6 +72,8 @@
   l      = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-log'
   lg     = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'
   me     = merge
+  mea    = merge --abort
+  mec    = merge --continue
   mem    = !zsh -c 'source ~/.zsh/git.zsh && git merge "$(git-default-branch)"'
   pk     = cherry-pick
   pick   = cherry-pick

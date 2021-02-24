@@ -57,8 +57,8 @@ create-cd-repo() {
   dir="$GHQ_ROOT/github.com/zakuro9715"
   cd $dir
   gh repo create $repo -y
-  cd $(ls -t | head -n 1)
-  #set-title
+  cd $repo
+  set-title
 }
 
 repo() {

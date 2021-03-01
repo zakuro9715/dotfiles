@@ -151,6 +151,13 @@ serve() {
   echo "Failed to server detection"
 }
 
+open-localhost() {
+  port=$([[ -n "$1" ]] && echo "$1" || echo '8000')
+  open "http://localhost:$port"
+}
+
+alias openlh="open-localhost"
+
 cd-n() {
   SHELL_INIT="cd $@" $SHELL
 }

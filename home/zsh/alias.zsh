@@ -34,4 +34,5 @@ if iswsl
 then
   alias clip-paste="powershell.exe 'Get-Clipboard'"
   alias clip="clip.exe"
+  alias open="powershell.exe /c start"
 fi

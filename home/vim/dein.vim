@@ -54,6 +54,9 @@ call dein#add('wavded/vim-stylus')
 " bash
 call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
 
+" C#
+call dein#add('OmniSharp/omnisharp-vim')
+
 " elm
 call dein#add('andys8/vim-elm-syntax')
 call dein#add('elm-tooling/elm-vim')

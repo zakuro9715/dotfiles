@@ -31,6 +31,16 @@ find-repo() {
   list-repo | grep -E "$target$" | head -n1
 }
 
+cd-set-title-tmux() {
+  dir=$1
+  cd $dir
+  set-title
+  if [ -z "$TMUX" ]
+  then
+    tmux
+  fi
+}
+
 cd-repo() {
   repo=$1
   dir=$(find-repo $repo)
@@ -39,17 +49,14 @@ cd-repo() {
     echo "Repository $repo not found" >&2
     return 1
   fi
-
-  set-title "$(basename $dir)"
-  cd $dir
+  cd-set-title-tmux "$dir"
 }
 
 
 get-cd-repo() {
   repo="$1"
   dir="$(ghq get --silent -u $repo 2>&1 | grep -oE "$(ghq root)/.+$")"
-  set-title "$(basename $dir)"
-  cd "$dir"
+  cd-set-title-tmux "$dir"
 }
 
 create-cd-repo() {
@@ -57,8 +64,7 @@ create-cd-repo() {
   dir="$GHQ_ROOT/github.com/zakuro9715"
   cd $dir
   gh repo create $repo -y
-  cd $repo
-  set-title
+  cd-set-title-tmux "$repo"
 }
 
 repo() {

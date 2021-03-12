@@ -110,6 +110,9 @@ call dein#add('mattn/vim-lsp-icons')
 " editorconfig
 call dein#add('editorconfig/editorconfig-vim')
 
+" git
+call dein#add('tpope/vim-fugitive')
+
 " others
 call dein#add('zakuro9715/httpstatus.vim')
 call dein#add('preservim/nerdcommenter')

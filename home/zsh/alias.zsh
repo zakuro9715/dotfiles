@@ -24,9 +24,12 @@ alias dc="docker-compose"
 
 alias npm="npm --color=always"
 
-alias s="serve"
+alias s="git s"
 alias g="git"
 alias d="git d"
+alias ba="git ba"
+alias ad="git ad"
+alias add="git add"
 alias h="z"
 alias vv="z --config=$(find-repo v-zconfig)/z.yaml"
 alias t="z test"

@@ -1,11 +1,4 @@
 alias l="ls"
-
-alias g="git"
-alias gi="git"
-alias gis="git status"
-alias gid="git diff"
-alias gil="git log"
-
 alias mkdir="mkdir -p"
 alias grep="grep --color"
 
@@ -24,6 +17,7 @@ alias dc="docker-compose"
 
 alias npm="npm --color=always"
 
+alias c="git c"
 alias s="git s"
 alias g="git"
 alias d="git d"

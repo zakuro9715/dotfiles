@@ -1,6 +1,7 @@
 alias l="ls"
+alias grep="rg"
+alias gp="grep"
 alias mkdir="mkdir -p"
-alias grep="grep --color"
 
 alias rm="rm -r"
 alias cp="cp -R"

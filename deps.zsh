@@ -15,6 +15,7 @@ go=(
   github.com/x-motemen/ghq
   golang.org/x/tools/cmd/goimports
   github.com/mitranim/gow
+  github.com/motemen/gore/cmd/gore
 )
 
 pip3=(

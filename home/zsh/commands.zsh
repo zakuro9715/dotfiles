@@ -28,7 +28,7 @@ list-repo() {
 
 find-repo() {
   target="$(echo "/$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
-  list-repo | grep -E "$target$" | head -n1
+  list-repo | grep "$target$" | head -n1
 }
 
 cd-set-title-tmux() {
@@ -55,7 +55,7 @@ cd-repo() {
 
 get-cd-repo() {
   repo="$1"
-  dir="$(ghq get --silent -u $repo 2>&1 | grep -oE "$(ghq root)/.+$")"
+  dir="$(ghq get --silent -u $repo 2>&1 | grep "$(ghq root)/.+$")"
   cd-set-title-tmux "$dir"
 }
 

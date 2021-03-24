@@ -41,7 +41,7 @@ git-clear() {
   else
     branches=$(git branch --remote | grep "$remote/")
   fi
-  branches=$(echo $branches | grep -v "$(git-default-branch)" | grep -v "HEAD" | sed 's/ //g')
+  branches=$(echo $branches | grep -v "$(git-default-branch)" | grep -v "HEAD" | grep -v '*' | sed 's/ //g')
 
   if [ -z "$branches" ]
   then

@@ -51,6 +51,7 @@
 # shortened format commands
   a      = add
   ad     = add .
+  ap     = add -p
   ba     = branch
   bad    = branch -D
   bam    = branch -m

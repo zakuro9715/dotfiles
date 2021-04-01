@@ -57,8 +57,6 @@
   bam    = branch -m
   c      = commit
   ca     = commit --amend
-  cm     = commit -m
-  cam    = commit --amend -m
   co     = checkout
   cob    = checkout -b
   com    = !zsh -c 'source ~/.zsh/git.zsh && git checkout "$(git-default-branch)"'

@@ -1,5 +1,9 @@
 source "$HOME/.zsh/commands.zsh"
 
+git-install-hooks() {
+  ln -sf ~/.git_template/hooks/* "$(git root)/.git/hooks/"
+}
+
 git-custom-diff() {
   git diff "$@" -- ':!package-lock.json' ':!**/package-lock.json'
 }

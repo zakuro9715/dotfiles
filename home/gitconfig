@@ -3,10 +3,11 @@
   email = z@kuro.red
 [init]
   defaultBranch = main
+  templatedir = ~/.git_template
 [pull]
   rebase = false
 [core]
-  editor = vim
+  editor = vim -c 'normal $' # Move cursor after commit message template
   excludesfile = ~/.gitignore
   autocrlf = input
 
@@ -69,6 +70,7 @@
   dih    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD'
   dis    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff --staged'
   dib    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD~'
+  install-hooks = !zsh -c 'source ~/.zsh/git.zsh && git-install-hooks'
   l      = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-log'
   lg     = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'
   me     = merge

@@ -15,7 +15,7 @@ islinux() {
 }
 
 iswsl() {
-  uname -a | grep "microsoft" > /dev/null
+  [[ "$(uname -a)" =~ "microsoft" ]]
 }
 
 iswindows() {

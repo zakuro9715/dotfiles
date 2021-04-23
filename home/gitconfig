@@ -6,7 +6,7 @@
 [pull]
   rebase = false
 [core]
-  editor = vim -c \"set fenc=utf-8\"
+  editor = vim
   excludesfile = ~/.gitignore
   autocrlf = input
 

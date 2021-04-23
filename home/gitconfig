@@ -56,6 +56,9 @@
   ba     = branch
   bad    = branch -D
   bam    = branch -m
+  back      = soft-back
+  soft-back = reset --soft HEAD~
+  hard-back = reset --hard HEAD~
   c      = commit -v
   ca     = commit --amend -v
   co     = checkout

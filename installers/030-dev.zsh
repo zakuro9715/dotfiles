@@ -9,3 +9,8 @@ make
 sudo ./v symlink
 
 ln -sf "$(pwd)/../v-zconfig/z.yaml" "$vdir/z.yaml"
+
+zdir=$(ghq root)/github.com/zakuro9715/z
+cd $zdir
+go build
+./z symlink

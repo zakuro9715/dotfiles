@@ -13,10 +13,10 @@ apt=(
 )
 
 go=(
-  github.com/x-motemen/ghq
-  golang.org/x/tools/cmd/goimports
-  github.com/mitranim/gow
-  github.com/motemen/gore/cmd/gore
+  github.com/x-motemen/ghq@latest
+  golang.org/x/tools/cmd/goimports@latest
+  github.com/mitranim/gow@latest
+  github.com/motemen/gore/cmd/gore@latest
 )
 
 pip3=(

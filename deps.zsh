@@ -6,6 +6,7 @@ ppa=(
 )
 
 apt=(
+  language-pack-ja
   tmux
   golang-go
   nodejs

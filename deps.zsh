@@ -1,3 +1,6 @@
+source "$HOME/.zsh/utils.zsh"
+source "$HOME/.zsh/env.zsh"
+
 ppa=(
   ppa:longsleep/golang-backports
 )

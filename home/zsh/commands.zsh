@@ -55,7 +55,8 @@ cd-repo() {
 
 get-cd-repo() {
   repo="$1"
-  dir="$(ghq get --silent -u $repo 2>&1 | grep "$(ghq root)/.+$")"
+  ghq get -u -p $repo
+  dir=$(find-repo $repo)
   cd-set-title-tmux "$dir"
 }
 

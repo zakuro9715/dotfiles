@@ -49,7 +49,6 @@ do-install() {
 }
 
 
-source "$HOME/.zshrc"
 for script in $(ls $basedir/installers/* | cat)
 do
   $script "$basedir"

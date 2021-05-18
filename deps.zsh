@@ -28,7 +28,7 @@ pip3=(
 
 cargo=(
   ripgrep
-  watchexec
+  watchexec-cli
 )
 
 ghq=(

@@ -8,4 +8,4 @@ cd $vdir
 make
 sudo ./v symlink
 
-ln -s $(pwd)/../v-zconfig/z.yaml
+ln -sf "$(pwd)/../v-zconfig/z.yaml" "$vdir/z.yaml"

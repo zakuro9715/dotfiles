@@ -15,6 +15,7 @@ EOS
 zsh "scripts/install-symlinks.zsh"
 basedir=$(cd $(dirname $0); pwd)
 source "$basedir/home/zsh/utils.zsh"
+source "$basedir/home/zsh/env.zsh"
 
 
 verify-system() {

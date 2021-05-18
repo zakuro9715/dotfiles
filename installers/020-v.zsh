@@ -1,6 +1,10 @@
 #/usr/bin/env zsh
 
-cd $(ghq root)/github.com/zakuro9715/v
+basedir="$1"
+source "$basedir/deps.zsh"
+
+vdir=$(ghq root)/github.com/zakuro9715/v
+cd $vdir
 make
 sudo v symlink
 

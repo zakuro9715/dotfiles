@@ -8,6 +8,7 @@ ppa=(
 apt=(
   language-pack-ja
   tmux
+  direnv
   golang-go
   nodejs
   npm

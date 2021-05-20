@@ -5,6 +5,7 @@
 .env.local
 .bin
 .vimrc.local
+vls.log
 
 .idea
 *.iml

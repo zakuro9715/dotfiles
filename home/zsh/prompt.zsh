@@ -67,7 +67,6 @@ prompt_git() {
     fi
   fi
 }
-  echo $RETVAL
 
 # Dir: current working directory
 prompt_dir() {

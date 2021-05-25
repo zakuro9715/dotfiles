@@ -50,16 +50,14 @@ prompt_git() {
   ref="$vcs_info_msg_0_"
   if [[ -n "$ref" ]]; then
     if is_dirty; then
-      color_bg=$yellow
-      color_fg=$black
+      ref_bg=$yellow
     else
-      color_bg=$green
-      color_fg=$black
+      ref_bg=$green
     fi
     if [[ "${ref/.../}" != "$ref" ]]; then
       ref="${ref/.../}"
     fi
-    prompt_segment $color_bg $color_fg
+    prompt_segment $ref_bg $black
     print -Pn " $ref "
   fi
 }

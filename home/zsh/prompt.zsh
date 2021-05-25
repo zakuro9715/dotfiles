@@ -59,6 +59,12 @@ prompt_git() {
     fi
     prompt_segment $ref_bg $black
     print -Pn " $ref "
+
+    stash_n="$(git stash list | wc -l)"
+    if [[ "$stash_n" -gt "0" ]]
+    then
+      print -Pn "| stash:$stash_n "
+    fi
   fi
 }
   echo $RETVAL

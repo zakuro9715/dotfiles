@@ -49,7 +49,7 @@ do-install() {
 }
 
 
-for script in $(ls $basedir/installers/* | cat)
+for script in $basedir/installers/*
 do
-  $script "$basedir"
+  "$script"
 done

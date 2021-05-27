@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-basedir="$1"
+basedir="$(cd $(dirname $0)/..; pwd)"
 source "$basedir/deps.zsh"
 for v in $ghq
 do

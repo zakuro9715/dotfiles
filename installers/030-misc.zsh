@@ -1,6 +1,6 @@
 #/usr/bin/env zsh
 
-basedir="$1"
+basedir="$(cd $(dirname $0)/..; pwd)"
 source "$basedir/deps.zsh"
 
 vdir=$(ghq root)/github.com/zakuro9715/v

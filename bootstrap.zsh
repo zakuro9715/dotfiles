@@ -48,8 +48,8 @@ do-install() {
   fi
 }
 
-
 for script in $basedir/installers/*
 do
+  echo "Running installer: $(basename $script)"
   "$script"
 done

@@ -64,6 +64,7 @@
   co     = checkout
   cob    = checkout -b
   com    = !zsh -c 'source ~/.zsh/git.zsh && git checkout "$(git-default-branch)"'
+  ci     = !gh workflow view ci
   dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
   clear        = !zsh -c 'source ~/.zsh/git.zsh && git-clear'
   clear-origin = !zsh -c 'source ~/.zsh/git.zsh && git-clear origin'

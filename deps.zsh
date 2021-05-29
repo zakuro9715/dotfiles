@@ -15,6 +15,7 @@ apt=(
   clang
   python3
   python3-pip
+  ubuntu-wsl
 )
 
 go=(

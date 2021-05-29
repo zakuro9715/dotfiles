@@ -121,8 +121,13 @@ call dein#add('zakuro9715/httpstatus.vim')
 call dein#add('preservim/nerdcommenter')
 call dein#add('tpope/vim-commentary')
 call dein#add('thinca/vim-quickrun')
-call dein#add('tyru/open-browser.vim')
 call dein#add('wakatime/vim-wakatime')
+
+call dein#add('tyru/open-browser.vim')
+let g:openbrowser_browser_commands = [
+\   { "name": "wslview", "args": ["{browser}", "{uri}"] },
+\   { "name": "xdg-open", "args": ["{browser}", "{uri}"] },
+\ ]
 
 call dein#end()
 

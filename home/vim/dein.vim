@@ -31,6 +31,7 @@ call dein#add('Shougo/dein.vim')
 call dein#add('plasticboy/vim-markdown')
 call dein#add('kannokanno/previm')  " Markdown Preview
 call dein#add('skanehira/preview-markdown.vim')
+let g:preview_markdown_auto_update=1
 
 " reStrucuturedText
 call dein#add('Rykka/riv.vim')

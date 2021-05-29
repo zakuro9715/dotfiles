@@ -22,6 +22,7 @@ go=(
   golang.org/x/tools/cmd/goimports@latest
   github.com/mitranim/gow@latest
   github.com/motemen/gore/cmd/gore@latest
+  github.com/charmbracelet/glow@latest
 )
 
 pip3=(

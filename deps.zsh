@@ -23,6 +23,7 @@ go=(
   github.com/mitranim/gow@latest
   github.com/motemen/gore/cmd/gore@latest
   github.com/charmbracelet/glow@latest
+  github.com/MichaelMure/mdr@latest
 )
 
 pip3=(

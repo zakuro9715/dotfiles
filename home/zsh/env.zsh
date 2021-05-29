@@ -4,6 +4,7 @@ if iswsl
 then
   export PATH="$PATH:/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
   export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin"
+  export BROWSER="powershell.exe /c open"
 fi
 
 export LANG=ja_JP.UTF-8

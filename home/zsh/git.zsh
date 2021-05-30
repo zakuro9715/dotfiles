@@ -117,7 +117,7 @@ git-pretty-stash() {
   name="$1"
   if [ -z "$name" ]
   then
-    git stash "$command"
+    git stash "$command" "${flags[@]}"
     return
   fi
 

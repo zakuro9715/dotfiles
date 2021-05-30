@@ -8,8 +8,7 @@ CURRENT_BG='NONE'
 PRIMARY_FG="$black"
 
 # Characters
-SEGMENT_SEPARATOR=" " #"\u25B6" #"\ue0b0"
-GEAR="⚙" #"\u2699"
+SEGMENT_SEPARATOR=" "
 
 # Begin a segment
 # Takes two arguments, background and foreground. Both can be omitted,

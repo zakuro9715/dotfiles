@@ -1,7 +1,7 @@
 source "$HOME/.zsh/commands.zsh"
 
 git-install-hooks() {
-  ln -sf ~/.git_template/hooks/* "$(git root)/.git/hooks/"
+  ln -sf ~/.git_hooks/* "$(git root)/.git/hooks/"
 }
 
 git-custom-diff() {

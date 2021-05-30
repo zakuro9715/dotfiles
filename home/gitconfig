@@ -109,7 +109,7 @@
   sal    = stash list
   sap    = stash pop
   sad    = stash drop
-  sync   = !zsh -c 'source ~/.zsh/git.zsh && git pull upstream "$(git-default-branch)" && git psof'
+  sync   = !git plus && git psof
 
 [push]
   default = current

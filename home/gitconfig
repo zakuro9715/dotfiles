@@ -49,6 +49,7 @@
   rejected = 204
 
 [alias]
+  default-branch = !zsh -c 'source ~/.zsh/git.zsh && git-default-branch'
 # shortened format commands
   a      = add
   ad     = add .

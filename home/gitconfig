@@ -49,7 +49,11 @@
   rejected = 204
 
 [alias]
+# utils
   default-branch = !zsh -c 'source ~/.zsh/git.zsh && git-default-branch'
+  # !git zsh commmand
+  zsh = !zsh -c 'source ~/.zsh/git.zsh && $@' git
+
 # shortened format commands
   a      = add
   ad     = add .
@@ -64,24 +68,24 @@
   ca     = commit --amend -v
   co     = checkout
   cob    = checkout -b
-  com    = !zsh -c 'source ~/.zsh/git.zsh && git checkout "$(git-default-branch)"'
+  com    = !git zsh git checkout "$(git default-branch)"
   ci     = !gh workflow view ci
-  dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
-  clear        = !zsh -c 'source ~/.zsh/git.zsh && git-clear'
-  clear-origin = !zsh -c 'source ~/.zsh/git.zsh && git-clear origin'
-  clear-all    = !zsh -c 'source ~/.zsh/git.zsh && git-clear && git-clear origin'
+  dif    = !git zsh git-custom-diff
+  clear        = !git zsh git-clear
+  clear-origin = !git zsh git-clear origin
+  clear-all    = !git zsh git-clear origin
   d      = dif
-  dif    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff'
-  dih    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD'
-  dis    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff --staged'
-  dib    = !zsh -c 'source ~/.zsh/git.zsh && git-custom-diff HEAD~'
-  install-hooks = !zsh -c 'source ~/.zsh/git.zsh && git-install-hooks'
-  l      = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-log'
-  lg     = !zsh -c 'source ~/.zsh/git.zsh && git-pretty-graph-log'
+  dif    = !git zsh git-custom-diff
+  dih    = !git zsh git-custom-diff HEAD
+  dis    = !git zsh git-custom-diff --staged
+  dib    = !git zsh git-custom-diff HEAD~
+  install-hooks = !git zsh git-install-hooks
+  l      = !git zsh git-pretty-log
+  lg     = !git zsh git-pretty-graph-log
   me     = merge
   mea    = merge --abort
   mec    = merge --continue
-  mem    = !zsh -c 'source ~/.zsh/git.zsh && git merge "$(git-default-branch)"'
+  mem    = !git zsh git merge "$(git default-branch)"
   pk     = cherry-pick
   pick   = cherry-pick
   ps     = push
@@ -89,13 +93,13 @@
   psof   = push origin -f
   pl     = pull
   plo    = pull origin
-  plom   = !zsh -c 'source ~/.zsh/git.zsh && git pull origin "$(git-default-branch)"'
+  plom   = !git zsh git pull origin "$(git default-branch)"
   re     = rebase
   rei    = rebase -i
   rea    = rebase --abort
   rec    = rebase --continue
   res    = rebase --skip
-  rem    = !zsh -c 'source ~/.zsh/git.zsh && git rebase "$(git-default-branch)"'
+  rem    = !git zsh git rebase "$(git default-branch)"
   root   = rev-parse --show-toplevel
   s      = status .
   sall   = status

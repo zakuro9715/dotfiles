@@ -29,8 +29,6 @@ os_specific_file="$HOME/.zsh/$(os).zsh"
 if [[ -f "$os_specific_file" ]]
 then
   source "$os_specific_file"
-else
-  echo "WARNING: $os_specific_file not found"
 fi
 
 
@@ -41,8 +39,6 @@ host_specific_file="$HOME/.zsh/$(hostname).zsh"
 if [[ -f "$host_specific_file" ]]
 then
   source "$host_specific_file"
-else
-  echo "WARNING: $host_specific_file not found"
 fi
 
 

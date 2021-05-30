@@ -29,6 +29,7 @@ go=(
 )
 
 go_get=(
+  github.com/wagoodman/dive
 )
 
 pip3=(

@@ -1,7 +1,6 @@
 home/zsh/secret.zsh
-home/tmux/plugins/
-home/git_template/hooks
-!home/tmux/plugins/.gitkeep
+home/tmux/plugins/*
+!**/*.gitkeep
 
 .bundle
 /vendor/bundle

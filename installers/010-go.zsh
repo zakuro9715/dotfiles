@@ -7,3 +7,8 @@ for repo in $go
 do
   go install "$repo"
 done
+
+for repo in $go_get
+do
+  go get -u "$repo"
+done

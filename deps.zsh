@@ -28,6 +28,9 @@ go=(
   github.com/MichaelMure/mdr@latest
 )
 
+go_get=(
+)
+
 pip3=(
   'git+https://github.com/jeffkaufman/icdiff.git'
 )

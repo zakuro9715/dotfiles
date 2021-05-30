@@ -5,15 +5,11 @@ source "$HOME/.zsh/commands.zsh"
 source "$HOME/.zsh/alias.zsh"
 source "$HOME/.zsh/git.zsh"
 source "$HOME/.zsh/tmux.zsh"
+source "$HOME/.zsh/keybind.zsh"
 source "$HOME/.zsh/shortcuts.zsh"
 source "$HOME/.zsh/prompt.zsh"
 source "$HOME/.zsh/completion.zsh"
 
-bindkey -r "^j"
-bindkey "^[[1;5D" beginning-of-line
-bindkey "^[[1;5C" end-of-line
-bindkey "^[[1;2D" backward-word
-bindkey "^[[1;2C" forward-word
 autoload -Uz add-zsh-hook
 eval $(dircolors -b)
 

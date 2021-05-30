@@ -91,3 +91,53 @@ git-default-branch() {
   done
   echo 'main'
 }
+
+git-pretty-stash() {
+  command="$1"
+  case "$1" in
+    'list' )
+       shift
+       git stash list $@ | sed 's/\(stash@[^:]*\).*name:\(.*\)/\1: \2/'
+       return
+      ;;
+    'show' | 'push' | 'apply' | 'pop' | 'drop' )
+      shift
+      ;;
+    * )
+      command='push'
+  esac
+
+  flags=()
+  while echo "$1" | grep "^-" > /dev/null
+  do
+    flags=($flags "$1")
+    shift
+  done
+
+  name="$1"
+  if [ -z "$name" ]
+  then
+    git stash "$command"
+    return
+  fi
+
+  msg="name:$name"
+  shift
+  case "$command" in
+    'push' )
+      git stash "$command" -m "$msg" "${flags[@]}" $@
+      ;;
+    'pop' | 'apply' | 'drop' | 'show' )
+      id="$(git stash list | grep "$msg\$" | cut -d ':' -f 1)"
+      if [ -z "$id" ]
+      then
+        echo "`name:$name` does not exist in stash" 1>&2
+        return 1
+      fi
+      git stash "$command" "${flags[@]}" "$id"
+      ;;
+    * )
+      git stash "$command" "${flags[@]}" $@
+      ;;
+  esac
+}

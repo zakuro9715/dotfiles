@@ -104,11 +104,11 @@
   root   = rev-parse --show-toplevel
   s      = status .
   sall   = status
-  sa     = stash
-  sak    = stash -k
-  sal    = stash list
-  sap    = stash pop
-  sad    = stash drop
+  sa     = !git zsh git-pretty-stash push
+  sak    = !git zsh git-pretty-stash push -k
+  sal    = !git zsh git-pretty-stash list
+  sap    = !git zsh git-pretty-stash pop
+  sad    = !git zsh git-pretty-stash drop
   sync   = !git plus && git psof
 
 [push]

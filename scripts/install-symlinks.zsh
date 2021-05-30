@@ -40,3 +40,5 @@ do
   target="$(cd $(dirname $f) && pwd)/$(basename $f)"
   create-symlink $target $link
 done
+
+create-symlink "$HOME/.git_hooks" "$HOME/.git_template/hooks"

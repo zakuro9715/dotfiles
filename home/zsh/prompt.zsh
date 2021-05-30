@@ -98,8 +98,8 @@ prompt_zakuro_main() {
 prompt_zakuro_precmd() {
   vcs_info
   PROMPT="\
- %{%f%b%k%}$(prompt_zakuro_main)
- > "
+┏ %{%f%b%k%}$(prompt_zakuro_main)
+┗━━⮞ "
 }
 
 prompt_zakuro_setup() {

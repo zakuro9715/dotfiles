@@ -9,10 +9,10 @@ then
   exit 0
 fi
 
-STATUS=$(git status -s | grep '^[MA]')
+STATUS=$(git status -s | grep '^[MAD]')
 if [ "$(echo "$STATUS" | wc -l)" -eq "1" ]
 then
-  MSG="$(echo "$STATUS" | sed 's/^M /Update/' | sed 's/^A /Add/')"
+  MSG="$(echo "$STATUS" | sed 's/^M /Update/' | sed 's/^A /Add/' | sed 's/^D /Delete/g')"
 fi
 ORIGINAL_CONTENT=$(cat $COMMIT_MSG_FILE)
 echo "$MSG$ORIGINAL_CONTENT" > "$COMMIT_MSG_FILE"

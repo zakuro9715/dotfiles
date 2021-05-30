@@ -94,6 +94,7 @@
   pl     = pull
   plo    = pull origin
   plom   = !git zsh git pull origin "$(git default-branch)"
+  plus   = !git zsh git pull upstream "$(git default-branch)"
   re     = rebase
   rei    = rebase -i
   rea    = rebase --abort

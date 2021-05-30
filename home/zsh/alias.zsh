@@ -15,6 +15,7 @@ alias berc="bundle exec rails c"
 alias bers="bundle exec rails s"
 
 alias dc="docker-compose"
+alias docker-dive="dive"
 
 alias npm="npm --color=always"
 

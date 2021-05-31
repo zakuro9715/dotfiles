@@ -109,6 +109,8 @@
   sal    = !git zsh git-pretty-stash list
   sap    = !git zsh git-pretty-stash pop
   sad    = !git zsh git-pretty-stash drop
+  sas    = !git zsh git-pretty-stash show
+  sasd   = !git zsh git-pretty-stash show -p
   sync   = !git plus && git psof
 
 [push]

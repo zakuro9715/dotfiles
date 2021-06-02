@@ -37,6 +37,9 @@ pip3=(
   'git+https://github.com/jeffkaufman/icdiff.git'
 )
 
+npm=(
+)
+
 cargo=(
   ripgrep
   watchexec-cli

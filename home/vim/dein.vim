@@ -87,6 +87,7 @@ call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install'  })
 call dein#add('ollykel/v-vim')
 call dein#add('~/src/github.com/zakuro9715/vim-vtools')
 let g:vfmt = 1
+let g:vtools_use_vls = 0
 
 " ===============
 " Other Languages

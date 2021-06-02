@@ -38,6 +38,7 @@ pip3=(
 )
 
 npm=(
+  n
 )
 
 cargo=(

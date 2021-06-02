@@ -14,3 +14,5 @@ zdir=$(ghq root)/github.com/zakuro9715/z
 cd $zdir
 go build
 ./z symlink
+
+sudo n latest

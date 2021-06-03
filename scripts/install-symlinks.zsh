@@ -42,3 +42,9 @@ do
 done
 
 create-symlink "$HOME/.git_hooks" "$HOME/.git_template/hooks"
+
+
+if iswsl
+then
+  # TODO: powershell.exe Start-Process -Verb runas -FilePath powershell.exe install-symlinks.ps1
+fi

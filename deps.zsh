@@ -44,6 +44,7 @@ npm=(
 cargo=(
   ripgrep
   watchexec-cli
+  git-delta
 )
 
 ghq=(

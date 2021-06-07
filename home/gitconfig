@@ -10,6 +10,18 @@
   editor = vim -c 'normal $' # Move cursor after commit message template
   excludesfile = ~/.gitignore
   autocrlf = input
+[pager]
+  diff = delta
+  log = delta
+  reflog = delta
+  show = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  diff-highlight = true
+  line-numbers = true
+  hunk-header-style = 75
+  file-style = reverse 75
 
 # red    204
 # green  78

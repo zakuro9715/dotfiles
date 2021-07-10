@@ -19,6 +19,7 @@ apt=(
   grip
   ubuntu-wsl
   bat
+  unzip
 )
 
 go=(

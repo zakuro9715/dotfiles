@@ -2,6 +2,7 @@ alias l="ls"
 alias grep="rg"
 alias gp="grep"
 alias mkdir="mkdir -p"
+alias bat="batcat"
 
 alias rm="rm -r"
 alias cp="cp -R"

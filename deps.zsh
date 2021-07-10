@@ -18,6 +18,7 @@ apt=(
   python3-pip
   grip
   ubuntu-wsl
+  bat
 )
 
 go=(

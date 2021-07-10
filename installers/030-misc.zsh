@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 
 basedir="$(cd $(dirname $0)/..; pwd)"
+echo "$basedir/deps.zsh"
 source "$basedir/deps.zsh"
 
 vdir=$(ghq root)/github.com/zakuro9715/v
@@ -16,3 +17,5 @@ go build
 ./z symlink
 
 sudo n latest
+
+curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh

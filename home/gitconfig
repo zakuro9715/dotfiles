@@ -3,7 +3,6 @@
   email = z@kuro.red
 [init]
   defaultBranch = main
-  templatedir = ~/.git_template
 [pull]
   rebase = false
 [core]

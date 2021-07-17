@@ -39,6 +39,9 @@ call dein#add('Rykka/riv.vim')
 " vue
 call dein#add('posva/vim-vue')
 
+" svelete
+call dein#add('evanleck/vim-svelte')
+
 " ===========
 " Stylesheets
 " ===========

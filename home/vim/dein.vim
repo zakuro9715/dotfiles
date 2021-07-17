@@ -92,6 +92,9 @@ call dein#add('~/src/github.com/zakuro9715/vim-vtools')
 let g:vfmt = 1
 let g:vtools_use_vls = 0
 
+" Cotowali
+call dein#add('~/src/github.com/cotowali/vim-cotowali')
+
 " ===============
 " Other Languages
 " ===============

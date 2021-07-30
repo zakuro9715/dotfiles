@@ -70,7 +70,17 @@ noremap <C-Down> G
 inoremap <C-Down> <C-O>G
 nnoremap k v
 
+" Move by:
+"     I
+"    JKL
+" In dvorak
+"     C
+"    HTN
 
+nnoremap c <Up>
+nnoremap h <Left>
+nnoremap t <Down>
+nnoremap n <Right>
 
 
 augroup vimrc-local

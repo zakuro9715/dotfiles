@@ -52,37 +52,6 @@ set history=10000
 set visualbell t_vb=
 set noerrorbells
 
-noremap <S-Left> b
-inoremap <S-Left> <C-O>b
-noremap <C-Left> ^
-inoremap <C-Left> <C-O>^
-noremap <S-Right> w
-inoremap <S-Right> <C-O>w
-noremap <C-Right> $
-inoremap <C-Right> <C-O>$
-noremap <S-Up> <C-u>
-inoremap <S-Up> <C-O><C-u>
-noremap <S-Down> <C-d>
-inoremap <S-Down> <C-O><C-d>
-noremap <C-Up> gg
-inoremap <C-Up> <C-O>gg
-noremap <C-Down> G
-inoremap <C-Down> <C-O>G
-nnoremap k v
-
-" Move by:
-"     I
-"    JKL
-" In dvorak
-"     C
-"    HTN
-
-nnoremap c <Up>
-nnoremap h <Left>
-nnoremap t <Down>
-nnoremap n <Right>
-
-
 augroup vimrc-local
   autocmd!
   autocmd BufNewFile,BufReadPost * call s:vimrc_local(expand('<afile>:p:h'))

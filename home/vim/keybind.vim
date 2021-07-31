@@ -54,4 +54,6 @@ nnoremap <ESC><C-k> <C-O>G
 " qwerty: v
 nnoremap k v
 
-
+" save by ctrl-s
+inoremap <C-s> <C-O>:w<CR>
+noremap <C-s> :w<CR>

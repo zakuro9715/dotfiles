@@ -57,3 +57,6 @@ nnoremap k v
 " save by ctrl-s
 inoremap <C-s> <C-O>:w<CR>
 noremap <C-s> :w<CR>
+" exit by ctrl-x
+inoremap <C-x> <C-O>:q<CR>
+noremap <C-x> :q<CR>

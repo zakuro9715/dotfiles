@@ -50,6 +50,8 @@ inoremap <C-Down> <C-O>G
 nnoremap <C-k> G
 nnoremap <ESC><C-k> <C-O>G
 
+" dvorak: k
+" qwerty: v
 nnoremap k v
 
 

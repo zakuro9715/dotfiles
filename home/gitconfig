@@ -1,6 +1,12 @@
 [user]
   name = zakuro
   email = z@kuro.red
+  signingkey = 42958771DD3E13B5F8F74E1DAA579A0BDF319A87
+  #signingkey = AA579A0BDF319A87
+[commit]
+  gpgsign = true
+[gpg]
+  program = gpg2
 [init]
   defaultBranch = main
 [pull]
@@ -126,3 +132,5 @@
 
 [push]
   default = current
+[gpg]
+	program = gpg2

@@ -6,7 +6,7 @@ alias bat="batcat"
 
 alias rm="rm -r"
 alias cp="cp -R"
-alias diff="colordiff -u"
+alias diff="delta"
 alias less="less -R"
 
 alias bnudle="bundle"

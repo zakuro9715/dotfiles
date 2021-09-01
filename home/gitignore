@@ -2,6 +2,7 @@
 .python-version
 .nvmrc
 .envrc
+.direnv
 .env.local
 .bin
 .vimrc.local

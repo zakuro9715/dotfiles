@@ -46,9 +46,12 @@ prompt_git() {
   is_dirty() {
     test -n "$(git status --porcelain --ignore-submodules)"
   }
+  is_wip() {
+    git log -1 --pretty='%B' | grep -i '^wip' > /dev/null
+  }
   ref="$vcs_info_msg_0_"
   if [[ -n "$ref" ]]; then
-    if is_dirty; then
+    if is_dirty || is_wip; then
       ref_bg=$yellow
     else
       ref_bg=$green
@@ -58,6 +61,10 @@ prompt_git() {
     fi
     prompt_segment $ref_bg $black
     print -Pn " $ref "
+    if is_wip
+    then
+      print -n "| WIP "
+    fi
 
     stash_n="$(git stash list | wc -l)"
     if [[ "$stash_n" -gt "0" ]]

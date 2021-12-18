@@ -96,6 +96,9 @@ let g:vtools_use_vls = 0
 " Cotowali
 call dein#add('~/src/github.com/cotowali/vim-cotowali')
 
+"pwsh
+call dein#add('PProvost/vim-ps1')
+
 " ===============
 " Other Languages
 " ===============

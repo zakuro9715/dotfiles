@@ -18,7 +18,7 @@ call dein#begin(s:plugins_root)
 " ========
 
 " Color scheme
-call dein#add('ghifarit53/tokyonight-vim')
+call dein#add('~/src/github.com/zakuro9715/nightakashi-vim')
 
 " Tools
 call dein#add('Shougo/dein.vim')

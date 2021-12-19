@@ -54,5 +54,10 @@ ghq=(
   git@github.com:zakuro9715/z
   git@github.com:zakuro9715/v
   git@github.com:zakuro9715/v-zconfig
+  git@github.com:zakuro9715/v-vim
+  git@github.com:zakuro9715/vim-vtools
+  git@github.com:zakuro9715/nightakashi-vim
+  git@github.com:cotowali/cotowali
+  git@github.com:cotowali/vim-cotowali
   git@github.com:tmux-plugins/tpm
 )

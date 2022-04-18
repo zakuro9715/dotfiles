@@ -41,6 +41,7 @@ pip3=(
 
 npm=(
   n
+  pnpm
 )
 
 cargo=(

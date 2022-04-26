@@ -48,6 +48,7 @@ cargo=(
   ripgrep
   watchexec-cli
   git-delta
+  cargo-edit
 )
 
 ghq=(

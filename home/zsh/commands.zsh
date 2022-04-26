@@ -179,8 +179,7 @@ v-wrapper() {
 }
 
 repl() {
-  lang="$1"
-  if [ -z "$lang" ]
+  if [ "$#" -lt 1 ] || [ "${1:0:1}" = '-' ]
   then
     if [ -f "go.mod" ]
     then
@@ -193,6 +192,7 @@ repl() {
       return 1
     fi
   else
+    lang="$1"
     shift
   fi
 

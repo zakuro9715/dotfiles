@@ -187,6 +187,9 @@ repl() {
     elif [ -f "Cargo.toml" ]
     then
       lang="rust"
+    elif [ -f "v.mod" ]
+    then
+      lang="v"
     else
       echo "Cannot detect language" >&2
       return 1
@@ -199,6 +202,7 @@ repl() {
   case "$lang" in
     go  ) gore $@;;
     rust) evcxr $@;;
+    v   ) v repl $@;;
     *   )
       echo "No repl for $lang" >&2
       return 1;;

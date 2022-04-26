@@ -177,3 +177,30 @@ v-wrapper() {
     $VREPO/v "$@"
   fi
 }
+
+repl() {
+  lang="$1"
+  if [ -z "$lang" ]
+  then
+    if [ -f "go.mod" ]
+    then
+      lang="go"
+    elif [ -f "Cargo.toml" ]
+    then
+      lang="rust"
+    else
+      echo "Cannot detect language" >&2
+      return 1
+    fi
+  else
+    shift
+  fi
+
+  case "$lang" in
+    go  ) gore $@;;
+    rust) evcxr $@;;
+    *   )
+      echo "No repl for $lang" >&2
+      return 1;;
+  esac
+}

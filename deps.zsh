@@ -49,6 +49,7 @@ cargo=(
   watchexec-cli
   git-delta
   cargo-edit
+  evcxr_repl
 )
 
 ghq=(

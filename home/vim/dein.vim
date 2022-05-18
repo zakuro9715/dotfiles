@@ -74,6 +74,10 @@ call dein#add('mattn/vim-goimports')
 let g:goimports = 1
 let g:goimports_simplify = 1
 
+" Rust
+call dein#add('rust-lang/rust.vim')
+let g:rustfmt_autosave = 1
+
 " javascript
 call dein#add('mxw/vim-jsx')
 call dein#add('pangloss/vim-javascript')

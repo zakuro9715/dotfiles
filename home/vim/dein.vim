@@ -131,6 +131,9 @@ call dein#add('editorconfig/editorconfig-vim')
 " git
 call dein#add('tpope/vim-fugitive')
 
+" speell
+call dein#add('kamykn/spelunker.vim')
+
 " others
 call dein#add('zakuro9715/httpstatus.vim')
 call dein#add('preservim/nerdcommenter')

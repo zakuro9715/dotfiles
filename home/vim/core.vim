@@ -15,6 +15,7 @@ set cmdheight=3
 set showmatch
 set helpheight=999
 set nolist
+set colorcolumn=100
 
 set backspace=indent,eol,start
 set whichwrap=b,s,h,l,<,>,[,]

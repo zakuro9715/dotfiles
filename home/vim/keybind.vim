@@ -6,8 +6,9 @@
 "    HTN
 
 
+" left: qwerty: j, dvorac h
 nnoremap h <Left>
-inoremap <ESC>j <Left>
+inoremap <C-j> <Left>
 noremap <S-Left> b
 inoremap <S-Left> <C-O>b
 noremap <S-h> b
@@ -17,8 +18,9 @@ inoremap <C-Left> <C-O>^
 noremap <C-j> ^
 inoremap <ESC><C-j> <C-O>^
 
+" right: qwerty: l, dvorac n
 nnoremap n <Right>
-inoremap <ESC>l <Right>
+inoremap <C-l> <Right>
 noremap <S-Right> w
 inoremap <S-Right> <C-O>w
 noremap <S-l> w
@@ -28,8 +30,10 @@ inoremap <C-Right> <C-O>$
 noremap <C-n> ^
 inoremap <ESC><C-n> <C-O>^
 
-nnoremap c <Up>
-inoremap <ESC>i <Up>
+" up: qwerty: i, dvorac c
+nnoremap <Up> g<Up>
+nnoremap c g<Up>
+inoremap <C-i> <C-O>g<Up>
 noremap <S-Up> <C-u>
 inoremap <S-Up> <C-O><C-u>
 noremap <S-c> <C-u>
@@ -39,8 +43,10 @@ inoremap <C-Up> <C-O>gg
 nnoremap <C-i> gg
 nnoremap <ESC><C-i> <C-O>gg
 
-nnoremap t <Down>
-inoremap <ESC>k <Down>
+" down: qwerty: k, dvorac t
+nnoremap <Down> g<Down>
+nnoremap t g<Down>
+inoremap <C-k> <C-O>g<Down>
 noremap <S-Down> <C-d>
 inoremap <S-Down> <C-O><C-d>
 noremap <S-t> <C-d>

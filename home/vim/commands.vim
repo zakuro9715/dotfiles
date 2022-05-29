@@ -10,3 +10,4 @@ endfunction
 :command! NpmLint call s:npm_lint()
 
 :command! Reload :source ~/.vimrc
+:command! T Test

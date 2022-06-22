@@ -190,6 +190,7 @@ let g:riv_disable_folding = 1
 let g:lsp_signs_enabled = 1
 let g:lsp_diagnostics_enabled = 1
 let g:lsp_diagnostics_float_cursor = 1
+let g:lsp_diagnostics_virtual_text_prefix = "---- LSP: "
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_highlights_enabled = 1
 

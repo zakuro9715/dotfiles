@@ -29,12 +29,6 @@ call dein#add('Shougo/dein.vim')
 
 " Markdown
 call dein#add('plasticboy/vim-markdown')
-call dein#add('kannokanno/previm')  " Markdown Preview
-call dein#add('skanehira/preview-markdown.vim')
-let g:preview_markdown_auto_update=1
-
-" reStrucuturedText
-call dein#add('Rykka/riv.vim')
 
 " vue
 call dein#add('posva/vim-vue')
@@ -49,17 +43,10 @@ call dein#add('evanleck/vim-svelte')
 " css
 call dein#add('hail2u/vim-css3-syntax')
 
-" stylus
-call dein#add('wavded/vim-stylus')
-
 " =====================
 " Programming Languages
 " =====================
 
-" bash
-call dein#add('rosstimson/bats.vim')  " Bats (Bash Automated Testing System)
-
-" C#
 call dein#add('OmniSharp/omnisharp-vim')
 
 " elm
@@ -128,24 +115,8 @@ call dein#add('mattn/vim-lsp-icons')
 " editorconfig
 call dein#add('editorconfig/editorconfig-vim')
 
-" git
-call dein#add('tpope/vim-fugitive')
-
-" speell
+" spell
 call dein#add('kamykn/spelunker.vim')
-
-" others
-call dein#add('zakuro9715/httpstatus.vim')
-call dein#add('preservim/nerdcommenter')
-call dein#add('tpope/vim-commentary')
-call dein#add('thinca/vim-quickrun')
-call dein#add('wakatime/vim-wakatime')
-
-call dein#add('tyru/open-browser.vim')
-let g:openbrowser_browser_commands = [
-\   { "name": "wslview", "args": ["{browser}", "{uri}"] },
-\   { "name": "xdg-open", "args": ["{browser}", "{uri}"] },
-\ ]
 
 call dein#end()
 

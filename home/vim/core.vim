@@ -61,3 +61,39 @@ function! s:vimrc_local(local)
     source `=i`
   endfor
 endfunction
+
+" === statusline ==="
+" Based on https://unix.stackexchange.com/a/518439
+set statusline=
+
+"               +-filename
+"               |   +-[help]
+"               |   | +-[preview]
+"               |   | | +-[+]
+"               |   | | | +-[readonly]
+set statusline+=%f\ %h%w%m%r
+
+function! StatuslineLspDiag(kind) abort
+  let n = lsp#get_buffer_diagnostics_counts()[a:kind]
+  if n == 0
+    return ''
+  endif
+  "                      10 (error|warn)s
+  return printf(' %d %s ', n, a:kind     . 's')
+endfunction
+
+set statusline+=%#BgRed#%{StatuslineLspDiag('error')}%##
+set statusline+=%#BgYellow#%{StatuslineLspDiag('warning')}%##
+
+" --- end left ---
+set statusline+=%=
+" --- begin right ---
+
+"               +- miminal field width
+"               |       +- line
+"               |       |  +-column
+"               |       |  |  +-virtual column
+"               |       |  |  |    +-xx%(Percentage)
+set statusline+=%=%-14.(%l,%c%V%)\ %P
+
+" === end status line "

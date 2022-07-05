@@ -2,7 +2,12 @@ if &compatible
   set nocompatible
 endif
 
-let s:plugins_root = expand('~/.cache/dein')
+
+if has('nvim')
+  let s:plugins_root = expand('~/.cache/dein-nvim')
+else
+  let s:plugins_root = expand('~/.cache/dein-vim')
+endif
 let s:dein_root = s:plugins_root . '/repos/github.com/Shougo/dein.vim'
 
 if !isdirectory(s:dein_root)

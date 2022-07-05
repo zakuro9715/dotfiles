@@ -1,6 +1,3 @@
-call system('source "$HOME/.zsh/utils.zsh"; iswsl')
-let g:iswsl = v:shell_error == 0
-
 set t_Co=256
 
 set nocompatible

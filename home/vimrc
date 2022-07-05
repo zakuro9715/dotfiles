@@ -1,8 +1,9 @@
 ﻿filetype off
 syntax on
 
+source $HOME/.vim/env.vim
 source $HOME/.vim/core.vim
-if g:iswsl
+if g:is_wsl
   source $HOME/.vim/wsl.vim
 endif
 source $HOME/.vim/dein.vim

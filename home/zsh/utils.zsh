@@ -14,12 +14,12 @@ islinux() {
   [[ "$(uname)" == "Linux" ]]
 }
 
-iswsl() {
+is_wsl() {
   [[ "$(uname -a)" =~ "microsoft" ]]
 }
 
 iswindows() {
-  iswsl || [[ "$OS" == "Windows_NT" ]]
+  is_wsl || [[ "$OS" == "Windows_NT" ]]
 }
 
 istmux() {

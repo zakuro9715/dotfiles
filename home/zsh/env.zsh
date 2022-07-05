@@ -1,6 +1,6 @@
 export PATH="/usr/local/bin:/usr/bin:/bin"  # Reset PATH
 
-if iswsl
+if is_wsl
 then
   export PATH="$PATH:/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0"
   export PATH="$PATH:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin"

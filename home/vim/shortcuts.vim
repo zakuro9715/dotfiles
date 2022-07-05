@@ -1,3 +1,21 @@
+:command! Error LspNextError
+noremap e <Plug>(lsp-next-error)
+inoremap <C-d> <C-O><Plug>(lsp-next-error)
+:command! Warn LspNextWarning
+:command! Diag LspNextDiagnostic
+:command! Hover LspHoveri
+noremap <C-tab> <Plug>(lsp-hover)
+inoremap <C-tab> <C-O><Plug>(lsp-hover)
+
+function! s:npm_lint()
+  call system('npm run lint -- ' . expand('%'))
+  execute ':e'
+endfunction
+:command! NpmLint call s:npm_lint()
+
+:command! Reload :source ~/.vimrc
+:command! T Test
+
 " Move by:
 "     I
 "    JKL

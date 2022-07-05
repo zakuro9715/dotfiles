@@ -8,7 +8,6 @@ if g:is_wsl
 endif
 source $HOME/.vim/dein.vim
 source $HOME/.vim/fmt.vim
-source $HOME/.vim/keybind.vim
-source $HOME/.vim/commands.vim
+source $HOME/.vim/shortcuts.vim
 
 filetype indent plugin on

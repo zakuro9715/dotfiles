@@ -74,7 +74,11 @@ set statusline=
 set statusline+=%f\ %h%w%m%r
 
 function! StatuslineLspDiag(kind) abort
-  let n = lsp#get_buffer_diagnostics_counts()[a:kind]
+  try
+    let n = lsp#get_buffer_diagnostics_counts()[a:kind]
+  catch
+    return ''
+  endtry
   if n == 0
     return ''
   endif

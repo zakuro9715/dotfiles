@@ -12,6 +12,7 @@ apt=(
   golang-go
   nodejs
   npm
+  gnupg2
   jq
   clang
   python3

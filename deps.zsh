@@ -42,6 +42,7 @@ pip3=(
 npm=(
   n
   pnpm
+  @devcontainers/cli
 )
 
 cargo=(

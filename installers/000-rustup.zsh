@@ -1,1 +1,1 @@
-curl -sSL sh.rustup.rs | sh
+curl -sSL sh.rustup.rs | sh -s -- -y

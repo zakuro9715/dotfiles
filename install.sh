@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt -yqq update
+
 if ! which zsh > /dev/null
 then
   sudo apt install -yqq zsh

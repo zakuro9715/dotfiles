@@ -3,7 +3,7 @@ noremap e <Plug>(lsp-next-error)
 inoremap <C-d> <C-O><Plug>(lsp-next-error)
 :command! Warn LspNextWarning
 :command! Diag LspNextDiagnostic
-:command! Hover LspHoveri
+:command! Hover LspHover
 noremap <C-tab> <Plug>(lsp-hover)
 inoremap <C-tab> <C-O><Plug>(lsp-hover)
 

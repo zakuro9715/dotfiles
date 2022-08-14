@@ -7,6 +7,10 @@ inoremap <C-d> <C-O><Plug>(lsp-next-error)
 noremap <C-tab> <Plug>(lsp-hover)
 inoremap <C-tab> <C-O><Plug>(lsp-hover)
 
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
+
 function! s:npm_lint()
   call system('npm run lint -- ' . expand('%'))
   execute ':e'

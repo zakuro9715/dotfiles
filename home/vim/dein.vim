@@ -70,6 +70,9 @@ let g:goimports_simplify = 1
 call dein#add('rust-lang/rust.vim')
 let g:rustfmt_autosave = 1
 
+" f#
+call dein#add('adelarsq/neofsharp.vim')
+
 " javascript
 call dein#add('mxw/vim-jsx')
 call dein#add('pangloss/vim-javascript')

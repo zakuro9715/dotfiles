@@ -55,7 +55,7 @@ inoremap <ESC><C-n> <C-O>^
 " up: qwerty: i, dvorac c
 nnoremap <Up> g<Up>
 nnoremap c g<Up>
-inoremap <ESC>i <C-O>g<Up>
+inoremap <Up> <C-O>g<Up>
 noremap <S-Up> <C-u>
 inoremap <S-Up> <C-O><C-u>
 noremap <S-c> <C-u>
@@ -68,7 +68,7 @@ nnoremap <ESC><C-i> <C-O>gg
 " down: qwerty: k, dvorac t
 nnoremap <Down> g<Down>
 nnoremap t g<Down>
-inoremap <ESC>k <C-O>g<Down>
+inoremap <Down> <C-O>g<Down>
 noremap <S-Down> <C-d>
 inoremap <S-Down> <C-O><C-d>
 noremap <S-t> <C-d>

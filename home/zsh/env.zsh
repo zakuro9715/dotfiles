@@ -20,7 +20,7 @@ export GITHUB_USER="zakuro9715"
 export GO111MODULE=on
 export VFLAGS='-cc clang'
 export VREPO="$GHQ_ZAKURO/v"
-export PATH="$GOPATH/bin:$HOME/.cargo/bin:$HOME/.dotnet:$HOME/.local/bin:$HOME/.local/share/pnpm:$PATH"
+export PATH="$GOPATH/bin:$HOME/.cargo/bin:$HOME/.dotnet:$HOME/.local/bin:$HOME/.local/share/pnpm:$HOME/.opam/default/bin:$PATH"
 export TERM="xterm-256color"
 export NODE_OPTIONS="--max-old-space-size=4096"
 export COLOR="--color=always"

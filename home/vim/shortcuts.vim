@@ -4,8 +4,7 @@ inoremap <C-d> <C-O><Plug>(lsp-next-error)
 :command! Warn LspNextWarning
 :command! Diag LspNextDiagnostic
 :command! Hover LspHover
-noremap <C-tab> <Plug>(lsp-hover)
-inoremap <C-tab> <C-O><Plug>(lsp-hover)
+noremap <tab> :LspHover<CR>
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -62,8 +61,6 @@ noremap <S-c> <C-u>
 inoremap <ESC><S-i> <C-O><C-u>
 noremap <C-Up> gg
 inoremap <C-Up> <C-O>gg
-nnoremap <C-i> gg
-nnoremap <ESC><C-i> <C-O>gg
 
 " down: qwerty: k, dvorac t
 nnoremap <Down> g<Down>
@@ -75,8 +72,6 @@ noremap <S-t> <C-d>
 inoremap <ESC><S-k> <C-O><C-d>
 noremap <C-Down> G
 inoremap <C-Down> <C-O>G
-nnoremap <C-k> G
-nnoremap <ESC><C-k> <C-O>G
 
 " dvorak: k
 " qwerty: v

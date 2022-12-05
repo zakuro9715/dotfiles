@@ -16,6 +16,7 @@ export GOPATH="$HOME"
 export GHQ_ROOT="$HOME/src"
 export GHQ_GITHUB="$GHQ_ROOT/github.com"
 export GHQ_ZAKURO="$GHQ_ROOT/github.com/zakuro9715"
+export GITHUB_USER="zakuro9715"
 export GO111MODULE=on
 export VFLAGS='-cc clang'
 export VREPO="$GHQ_ZAKURO/v"

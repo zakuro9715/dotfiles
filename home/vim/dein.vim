@@ -122,9 +122,9 @@ call dein#add('mattn/vim-lsp-icons')
 
 " editorconfig
 call dein#add('editorconfig/editorconfig-vim')
-
 " spell
 call dein#add('kamykn/spelunker.vim')
+execute 'set spellfile=' . printf('%s/%s.utf-8.add', expand('~/.vim/spell'), &spelllang)
 
 call dein#end()
 

@@ -126,3 +126,8 @@ fi
 
 eval $SHELL_INIT
 export SHELL_INIT=
+
+# pnpm
+export PNPM_HOME="/home/zakuro/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end

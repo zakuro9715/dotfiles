@@ -110,6 +110,9 @@ call dein#add('Quramy/vison') " Completion JSON files with JSON Schema
 " Tools
 " =====
 
+" Copilot
+call dein#add('github/copilot.vim')
+
 " lsp / completion
 call dein#add('prabirshrestha/async.vim')
 call dein#add('prabirshrestha/asyncomplete.vim')

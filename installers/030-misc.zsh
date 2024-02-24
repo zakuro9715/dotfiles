@@ -1,18 +1,17 @@
 #!/usr/bin/env zsh
 
 basedir="$(cd $(dirname $0)/..; pwd)"
-echo "$basedir/deps.zsh"
+github_dir="$(ghq root)/github.com"
+zakuro="$github_dir/zakuro9715"
 source "$basedir/deps.zsh"
 
-vdir=$(ghq root)/github.com/zakuro9715/v
-cd $vdir
+cd "$zakuro/v"
 make
 sudo ./v symlink
 
-ln -sf "$(pwd)/../v-zconfig/z.yaml" "$vdir/z.yaml"
+ln -sf "$(pwd)/../v-zconfig/z.yaml" "$zakuro/v/z.yaml"
 
-zdir=$(ghq root)/github.com/zakuro9715/z
-cd $zdir
+cd "$zakuro/z"
 go build
 ./z symlink
 

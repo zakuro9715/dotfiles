@@ -41,6 +41,8 @@ do
   create-symlink $target $link
 done
 
+create-symlink "$(pwd)/home-scripts" "$HOME/scripts"
+
 if is_wsl
 then
   # TODO: powershell.exe Start-Process -Verb runas -FilePath powershell.exe install-symlinks.ps1

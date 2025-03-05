@@ -37,3 +37,5 @@ then
   alias clip="clip.exe"
   alias open="powershell.exe /c start"
 fi
+
+alias nuxi="pnpx nuxi@latest"

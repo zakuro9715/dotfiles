@@ -1,6 +1,8 @@
 ﻿filetype off
 syntax on
 
+let g:pymode_python = 'python3'
+
 source $HOME/.vim/env.vim
 source $HOME/.vim/core.vim
 if g:is_wsl
@@ -11,3 +13,10 @@ source $HOME/.vim/fmt.vim
 source $HOME/.vim/shortcuts.vim
 
 filetype indent plugin on
+
+let g:copilot_filetypes = #{
+  \   gitcommit: v:true,
+  \   markdown: v:true,
+  \   text: v:true,
+  \   ddu-ff-filter: v:false,
+  \ }

@@ -81,8 +81,8 @@ call dein#add('pangloss/vim-javascript')
 call dein#add('vim-ruby/vim-ruby')
 
 " typescript
-call dein#add('leafgarland/typescript-vim')
-call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install'  })
+"call dein#add('leafgarland/typescript-vim')
+"call dein#add('clausreinke/typescript-tools.vim', { 'build': 'npm install'  })
 
 " vlang
 "call dein#add('cheap-glitch/vim-v')

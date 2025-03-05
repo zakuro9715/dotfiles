@@ -83,6 +83,7 @@
   hard-back = reset --hard HEAD~
   c      = commit -v
   ca     = commit --amend -v
+  cac    = commit --amend --no-edit -v
   co     = checkout
   cob    = checkout -b
   com    = !git zsh git checkout "$(git default-branch)"

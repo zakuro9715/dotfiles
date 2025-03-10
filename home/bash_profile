@@ -1,0 +1,2 @@
+export PNPM_HOME="/home/zakuro/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"

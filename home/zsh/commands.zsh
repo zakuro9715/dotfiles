@@ -99,7 +99,7 @@ zakuro() {
 }
 
 github() {
-  cd $GHQ_ROOT/github.cow
+  cd $GHQ_ROOT/github.com
 }
 gitlab() {
   cd $GHQ_ROOT/gitlab.com

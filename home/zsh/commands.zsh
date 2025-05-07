@@ -13,6 +13,10 @@ set-title() {
   echo -ne "\033]0;${title}\a"
 }
 
+list-win-repo() {
+  find /mnt/e/src -name .git | sed 's#/.git$##'
+}
+
 list-repo() {
   # ghq list
   # | prepend number to sort
@@ -27,8 +31,17 @@ list-repo() {
 }
 
 find-repo() {
-  target="$(echo "/$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
-  list-repo | grep "$target$" | head -n1
+  local target="$(echo "/$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
+  local repo="$(list-repo | grep "$target$" | head -n1)"
+  if [[ -n "$repo" ]]
+  then
+    echo "$repo"
+    return 0
+  fi
+
+  echo "Not found on Linux" >&2
+  echo "Searching on windows. Wait a minute." >&2
+  list-win-repo | grep "$target$" | head -n1
 }
 
 cd-set-title-tmux() {

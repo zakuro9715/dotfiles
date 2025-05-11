@@ -1,3 +1,4 @@
 basedir="$(cd $(dirname $0); pwd)"
 source "$basedir/paths.zsh"
 cp "$(terminalSettingsBackupPath)" "$(terminalSettingsPath)"
+cp "$(vscodeSettingsBackupPath)" "$(vscodeSettingsPath)"

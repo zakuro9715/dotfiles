@@ -1,0 +1,84 @@
+{
+    "editor.wordWrap": "on",
+    "settingsSync.keybindingsPerPlatform": false,
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
+    "cotowali.kuqi.path": "D:\\dev\\cotowali\\.bin\\kuqi.exe",
+    "rust-client.engine": "rust-analyzer",
+    "rust-client.rustupPath": "rustup",
+    "rust.rust-analyzer.path": "",
+    "volar.takeOverMode.enabled": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.bracketPairColorization.enabled": false,
+    "editor.codeActionsOnSave": {
+
+    },
+    "github.copilot.editor.enableAutoCompletions": true,
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-s>": false,
+        "<C-z>": false,
+        "<C-y>": false,
+        "<C-f>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-a>": false,
+        "<C-x>": false,
+    },
+    "vim.normalModeKeyBindings": [
+        {"before": "<C-q>", "after": ["<C-v>"]}
+    ],
+    "geminicodeassist.codeGenerationPaneViewEnabled": false,
+    "remote.autoForwardPortsSource": "hybrid",
+    "diffEditor.codeLens": true,
+    "files.insertFinalNewline": true,
+    "typescript.updateImportsOnFileMove.enabled": "never",
+    "dart.flutterSdkPath": "C:\\Users\\z\\flutter",
+    "vim.visualModeKeyBindings": [
+
+    ],
+    "dart.additionalAnalyzerFileExtensions": [
+        "drift"
+    ],
+    "lcov.path": "coverage/lcov.info",
+    "vim.insertModeKeyBindings": [],
+    "files.autoSave": "onFocusChange",
+    "editor.formatOnSave": true,
+    "geminicodeassist.project": "gen-lang-client-0965465178",
+    "dotnetAcquisitionExtension.allowInvalidPaths": true,
+    "git.enableCommitSigning": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "github.copilot.chat.commitMessageGeneration.instructions": [{
+        "text": "Use simple english",
+    }],
+    "cSpell.overrides": [
+
+    ],
+    "terminal.integrated.profiles.windows": {
+        "Ubuntu-22.04 (WSL)": {
+            "path": "C:\\Windows\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu-22.04",
+                "zsh"
+            ],
+            "icon": "terminal-linux"
+        }
+    },
+    "github.copilot.nextEditSuggestions.fixes": true,
+}

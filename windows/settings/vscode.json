@@ -1,26 +1,27 @@
 {
     "editor.wordWrap": "on",
     "settingsSync.keybindingsPerPlatform": false,
-    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
-    "cotowali.kuqi.path": "D:\\dev\\cotowali\\.bin\\kuqi.exe",
-    "rust-client.engine": "rust-analyzer",
-    "rust-client.rustupPath": "rustup",
-    "rust.rust-analyzer.path": "",
-    "volar.takeOverMode.enabled": true,
     "editor.tabSize": 2,
     "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.flutter",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "always"
+        }
+    },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[css]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
     "security.workspace.trust.untrustedFiles": "open",
     "editor.bracketPairColorization.enabled": false,
-    "editor.codeActionsOnSave": {
-
-    },
-    "github.copilot.editor.enableAutoCompletions": true,
     "vim.commandLineModeKeyBindingsNonRecursive": [],
     "vim.handleKeys": {
         "<C-d>": true,
@@ -34,7 +35,12 @@
         "<C-x>": false,
     },
     "vim.normalModeKeyBindings": [
-        {"before": "<C-q>", "after": ["<C-v>"]}
+        {
+            "before": "<C-q>",
+            "after": [
+                "<C-v>"
+            ]
+        }
     ],
     "geminicodeassist.codeGenerationPaneViewEnabled": false,
     "remote.autoForwardPortsSource": "hybrid",
@@ -42,17 +48,13 @@
     "files.insertFinalNewline": true,
     "typescript.updateImportsOnFileMove.enabled": "never",
     "dart.flutterSdkPath": "C:\\Users\\z\\flutter",
-    "vim.visualModeKeyBindings": [
-
-    ],
+    "vim.visualModeKeyBindings": [],
     "dart.additionalAnalyzerFileExtensions": [
         "drift"
     ],
     "lcov.path": "coverage/lcov.info",
     "vim.insertModeKeyBindings": [],
     "files.autoSave": "onFocusChange",
-    "editor.formatOnSave": true,
-    "geminicodeassist.project": "gen-lang-client-0965465178",
     "dotnetAcquisitionExtension.allowInvalidPaths": true,
     "git.enableCommitSigning": true,
     "github.copilot.nextEditSuggestions.enabled": true,
@@ -63,12 +65,12 @@
         "markdown": true,
         "scminput": false
     },
-    "github.copilot.chat.commitMessageGeneration.instructions": [{
-        "text": "Use simple english",
-    }],
-    "cSpell.overrides": [
-
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use simple english",
+        }
     ],
+    "cSpell.overrides": [],
     "terminal.integrated.profiles.windows": {
         "Ubuntu-22.04 (WSL)": {
             "path": "C:\\Windows\\System32\\wsl.exe",

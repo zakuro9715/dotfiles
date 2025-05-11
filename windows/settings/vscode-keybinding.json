@@ -34,5 +34,19 @@
 		"key": "ctrl+p",
 		"command": "-extension.vim_ctrl+p",
 		"when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-cloudcode.duetAI.showinEditor",
+		"when": "authLoggedIn && config.geminicodeassist.enable && editorTextFocus && shouldRegisterInEditorCommand && !inGeminiDiffView && !isInDiffEditor"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "-extension.vim_ctrl+i",
+		"when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+i ctrl+i",
+		"command": "-v.fmt"
 	}
 ]

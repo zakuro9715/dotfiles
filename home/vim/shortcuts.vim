@@ -83,3 +83,6 @@ noremap <C-s> :w<CR>
 " exit by ctrl-x
 inoremap <C-x> <C-O>:q<CR>
 noremap <C-x> :q<CR>
+
+" visual-block by ctrl-q
+noremap <C-q> <C-v>

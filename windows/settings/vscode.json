@@ -6,7 +6,7 @@
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "modificationsIfAvailable",
     "[dart]": {
-        "editor.defaultFormatter": "Dart-Code.flutter",
+        "editor.defaultFormatter": "Dart-Code.dart-code",
         "editor.codeActionsOnSave": {
             "source.fixAll": "always"
         }

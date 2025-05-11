@@ -1,0 +1,38 @@
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
+[
+	{
+		"key": "ctrl+enter",
+		"command": "git.stage",
+		"when": "scmProvider == 'git' && scmResourceGroup == 'workingTree'"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "git.diff.stageHunk",
+		"when": "diffEditorOriginalUri =~ /^git\\:.*%22ref%22%3A%22~%22%7D$/"
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "git.stageSelectedRanges",
+		"when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+	},
+	{
+		"key": "ctrl+k ctrl+alt+s",
+		"command": "-git.stageSelectedRanges",
+		"when": "editorTextFocus && !operationInProgress && resourceScheme == 'file'"
+	},
+	{
+		"key": "ctrl+backspace",
+		"command": "git.unstageSelectedRanges",
+		"when": "editorTextFocus && isInDiffEditor && isInDiffRightEditor && !operationInProgress && resourceScheme == 'git'"
+	},
+	{
+		"key": "ctrl+k ctrl+n",
+		"command": "-git.unstageSelectedRanges",
+		"when": "editorTextFocus && isInDiffEditor && isInDiffRightEditor && !operationInProgress && resourceScheme == 'git'"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-extension.vim_ctrl+p",
+		"when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+	}
+]

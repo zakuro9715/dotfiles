@@ -9,9 +9,22 @@ terminalSettingsBackupPath() {
   echo "$basedir/settings/windows_terminal.json"
 }
 
+vscode="$appdata/Roaming/Code/User"
 vscodeSettingsPath() {
-  echo $appdata/Roaming/Code/User/settings.json
+  echo $vscode/settings.json
 }
 vscodeSettingsBackupPath() {
   echo "$basedir/settings/vscode.json"
+}
+vscodeKeybindingsPath() {
+  echo $vscode/keybindings.json
+}
+vscodeKeybindingsBackupPath() {
+  echo "$basedir/settings/vscode-keybinding.json"
+}
+vscodeTasksPath() {
+  echo $vscode/tasks.json
+}
+vscodeTasksBackupPath() {
+  echo "$basedir/settings/vscode-tasks.json"
 }

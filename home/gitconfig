@@ -82,7 +82,7 @@
   soft-back = reset --soft HEAD~
   hard-back = reset --hard HEAD~
   c      = commit -v
-  cm     = commit -m
+  cc     = commit -v -m
   ca     = commit --amend -v
   cam    = commit --amend -m
   cac    = commit --amend --no-edit -v

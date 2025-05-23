@@ -142,6 +142,8 @@
   rei    = rebase -i
   rea    = rebase --abort
   rec    = rebase --continue
+  # https://stackoverflow.com/a/70205254
+  recc   = -c core.editor=true rebase --continue
   res    = rebase --skip
   rem    = !git zsh git rebase "$(git default-branch)"
   root   = rev-parse --show-toplevel

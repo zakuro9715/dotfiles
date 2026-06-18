@@ -1,2 +1,5 @@
 export PNPM_HOME="/home/zakuro/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

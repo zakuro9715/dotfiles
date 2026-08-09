@@ -21,6 +21,7 @@ apt=(
   ubuntu-wsl
   bat
   unzip
+  fzf
 )
 
 go=(

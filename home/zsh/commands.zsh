@@ -31,8 +31,8 @@ list-repo() {
 }
 
 find-repo() {
-  local target="$(echo "/$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
-  local repo="$(list-repo | grep "$target$" | head -n1)"
+  local target="$(echo "$1" | sed 's/\/\+/\//g')"  # multi slash to single slash
+  local repo="$(list-repo | fzf -0 -1 -q "'$target")"
   if [[ -n "$repo" ]]
   then
     echo "$repo"
@@ -41,7 +41,7 @@ find-repo() {
 
   echo "Not found on Linux" >&2
   echo "Searching on windows. Wait a minute." >&2
-  list-win-repo | grep "$target$" | head -n1
+  list-win-repo | fzf -0 -1 -q "'$target"
 }
 
 cd-set-title-tmux() {

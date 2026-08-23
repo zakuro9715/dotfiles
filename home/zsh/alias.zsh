@@ -36,6 +36,10 @@ then
   alias clip-paste="powershell.exe 'Get-Clipboard'"
   alias clip="clip.exe"
   alias open="powershell.exe /c start"
+  function explorer() {
+    /mnt/c/Windows/explorer.exe $(wslpath -w "$@")
+  }
+  alias explorer.exe="explorer"
 fi
 
 alias nuxi="pnpx nuxi@latest"

@@ -66,4 +66,5 @@ ghq=(
   git@github.com:cotowali/cotowali
   git@github.com:cotowali/vim-cotowali
   git@github.com:tmux-plugins/tpm
+  git@github.com:zsh-users/zsh-autosuggestions
 )

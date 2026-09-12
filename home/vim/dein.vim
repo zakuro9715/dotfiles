@@ -128,6 +128,10 @@ call dein#add('editorconfig/editorconfig-vim')
 " spell
 call dein#add('kamykn/spelunker.vim')
 execute 'set spellfile=' . printf('%s/%s.utf-8.add', expand('~/.vim/spell'), &spelllang)
+" translate
+call dein#add('voldikss/vim-translator')
+let g:translator_target_lang = 'ja'
+command! Trans TranslateW
 
 call dein#end()
 

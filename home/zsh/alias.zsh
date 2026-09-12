@@ -31,6 +31,9 @@ alias h="z"
 alias vv="z --config=$(find-repo v-zconfig)/z.yaml"
 alias t="z test"
 
+alias t:ja="trans -b :ja"
+alias t:en="trans -b :en"
+
 if is_wsl
 then
   alias clip-paste="powershell.exe 'Get-Clipboard'"

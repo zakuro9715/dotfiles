@@ -22,6 +22,7 @@ apt=(
   bat
   unzip
   fzf
+  shellcheck
 )
 
 go=(

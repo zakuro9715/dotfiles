@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 cat << EOS
 
       DDDDDDDD      OOOOOOO   TTTTTTTTTTT   FFFFFFFFF  IIIIIIIIIII   LL         EEEEEEEEEE   SSSSSSS

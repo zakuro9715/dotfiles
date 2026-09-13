@@ -10,3 +10,6 @@ home/git_template/hooks
 
 go.mod
 go.sum
+
+# bats test report
+/tests/report.tap

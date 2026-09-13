@@ -1,0 +1,12 @@
+#!/bin/sh
+
+basedir=$(cd $(dirname $0); pwd)
+
+targets="$@"
+if [ $# -eq 0 ]
+then
+  # Run all tests if no arguments are given
+  targets="$basedir"
+fi
+echo $targets
+bats -r -x --print-output-on-failure "$targets"

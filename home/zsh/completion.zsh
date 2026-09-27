@@ -3,6 +3,11 @@ fpath=(
   "/usr/share/git/completion",
   $fpath
 )
+if [[ ":$FPATH:" != *":/home/zakuro/.zsh/completions:"* ]];
+then
+  export FPATH="/home/zakuro/.zsh/completions:$FPATH";
+fi
+
 autoload -U compinit && compinit
 
 zstyle ':completion:*' verbose yes

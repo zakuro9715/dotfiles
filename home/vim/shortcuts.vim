@@ -4,7 +4,20 @@ inoremap <C-d> <C-O><Plug>(lsp-next-error)
 :command! Warn LspNextWarning
 :command! Diag LspNextDiagnostic
 :command! Hover LspHover
+:command! -range=% Fmt call s:lsp_format(<range>, <line1>, <line2>)
 noremap <tab> :LspHover<CR>
+
+function! s:lsp_format(range, line1, line2)
+  if a:range
+    let l:servers = filter(lsp#get_allowed_servers(), 'lsp#capabilities#has_document_range_formatting_provider(v:val)')
+    if !empty(l:servers)
+      execute a:line1 . ',' . a:line2 . 'LspDocumentRangeFormat'
+      return
+    endif
+  endif
+
+  LspDocumentFormat
+endfunction
 
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"

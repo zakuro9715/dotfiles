@@ -46,3 +46,4 @@ then
 fi
 
 alias nuxi="pnpx nuxi@latest"
+alias skill="skilld"

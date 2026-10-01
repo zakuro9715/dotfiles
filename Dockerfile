@@ -1,13 +1,15 @@
-FROM golang:1.15-buster
+FROM ubuntu:26.04
 
-RUN  apt update -yqq && apt install -yqq sudo zsh
+RUN apt update -yqq && apt install -yqq sudo zsh
 
-ENV HOME /home/zakuro
-ENV DOTFILES ${HOME}/src/github.com/zakuro9715/dotfiles
+ENV HOME=/home/zakuro
+ENV DOTFILES=${HOME}/src/github.com/zakuro9715/dotfiles
 WORKDIR ${HOME}
 
-ARG UID=1000
-RUN useradd -m -u ${UID} docker
+ARG USERNAME=zakuro
+ARG UID=1002
+RUN useradd -m -u $UID $USERNAME
+RUN echo "$USERNAME ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 
 COPY . $DOTFILES

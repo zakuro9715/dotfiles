@@ -9,6 +9,8 @@ bootstrap_mock=""
 bootstrap_mock_text="bootstrap mock called"
 
 setup() {
+  bats_require_minimum_version 1.5.0
+
   bootstrap_mock="$(mktemp)"
   chmod +x "$bootstrap_mock"
   echo "echo $bootstrap_mock_text" > "$bootstrap_mock"
@@ -19,8 +21,9 @@ teardown() {
 }
 
 @test "Exists '$dotfiles'" {
-  run "$script" "$bootstrap_mock"
-  echo "$output"
-  [ "${status}" -eq 0 ]
+  run -0 "$script" "$bootstrap_mock"
   [ "${lines[-1]}" = "$bootstrap_mock_text" ]
+
+  run -0 which zsh
+  run -0 which git
 }

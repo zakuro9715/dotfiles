@@ -1,6 +1,8 @@
 source "$HOME/.zsh/utils.zsh"
 source "$HOME/.zsh/env.zsh"
 
+githubcontent=https://raw.githubusercontent.com
+
 ppa=(
   ppa:longsleep/golang-backports
 )

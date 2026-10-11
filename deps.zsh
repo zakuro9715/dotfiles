@@ -71,4 +71,11 @@ ghq=(
   git@github.com:tmux-plugins/tpm
   git@github.com:zsh-users/zsh-autosuggestions
   git@github.com:zsh-users/zsh-completions.git
+  git@github.com:AGWA/git-crypt.git
 )
+
+ghq_postscript() {
+  cd ~/src/github.com/AGWA/git-crypt
+  make
+  sudo make install
+}

@@ -25,3 +25,5 @@ export TERM="xterm-256color"
 export NODE_OPTIONS="--max-old-space-size=4096"
 export COLOR="--color=always"
 export GPG_TTY=$(tty)
+
+export COPILOT_ALLOW_ALL=true

@@ -46,4 +46,7 @@ then
 fi
 
 alias nuxi="pnpx nuxi@latest"
-alias skill="skilld"
+alias skilld="pnpx skilld"
+alias skills="pnpx skillds"
+alias skd="skilld"
+alias sks="skills"

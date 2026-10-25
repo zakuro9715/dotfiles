@@ -144,7 +144,6 @@ worktree() {
   fi
   cd "$(git wt-dir "$branch")"
 }
-alias wt=worktree
 alias root='cd "$(git root)"'
 
 use-short-prompt() {

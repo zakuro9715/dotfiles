@@ -144,6 +144,21 @@ _is-worktree-subcommand() {
 }
 
 worktree() {
+
+  case "$1" in
+    "--")
+      shift
+      ;;
+    "root")
+      cd "$(git worktree list | grep "$(git default-branch)" | awk '{print $1}')"
+      return $?
+      ;;
+    "add"|"list"|"lock"|"prune"|"move"|"remove"|"repair"|"unlock")
+      git worktree $@
+      return $?
+      ;;
+  esac
+
   branch=$1
   cmd=''
 

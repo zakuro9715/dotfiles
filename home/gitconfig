@@ -157,6 +157,11 @@
   sas    = !git zsh git-pretty-stash show
   sasd   = !git zsh git-pretty-stash show -p
   sync   = !git plus && git psof
+  wt     = worktree
+  wl     = worktree list
+  wd     = worktree remove
+  wa     = !git zsh git-worktree-add
+  wb     = !git zsh git-worktree-with-branch
 
 [push]
   default = current

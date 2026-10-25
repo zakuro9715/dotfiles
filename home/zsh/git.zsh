@@ -141,3 +141,27 @@ git-pretty-stash() {
       ;;
   esac
 }
+
+_git-worktree-add-check-branch() {
+  branch="$1"
+  if [ -z "$branch" ]
+  then
+    echo "Branch name is required" 1>&2
+    return 1
+  fi
+}
+worktree-dir() {
+  echo "$(git root)/.worktrees/$1"
+}
+
+git-worktree-add() {
+  branch="$1"
+  _git-worktree-add-check-branch "$branch" || return 1
+  git worktree add "$(worktree-dir $branch)" "$branch"
+}
+
+git-worktree-with-branch() {
+  branch="$1"
+  _git-worktree-add-check-branch "$branch" || return 1
+  git worktree add -b "$branch" "$(worktree-dir $branch)"
+}

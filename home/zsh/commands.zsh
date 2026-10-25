@@ -147,7 +147,13 @@ worktree() {
   branch=$1
   cmd=''
 
-  if [[ _is-worktree-subcommand "$1" ]]
+  if [[ "$1" == "root" ]]
+  then
+    cd "$(git worktree list | grep "$(git default-branch)" | awk '{print $1}')"
+    return $?
+  fi
+
+  if _is-worktree-subcommand "$1"
   then
     cmd="$1"
     branch="$2"

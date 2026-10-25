@@ -127,6 +127,7 @@ upfind () {
   fi
   upfind "../$1"
 }
+
 upcd() {
   cd "$(upfind "$1")"
 }
@@ -149,11 +150,11 @@ worktree() {
   if [[ _is-worktree-subcommand "$1" ]]
   then
     cmd="$1"
-    branch=$2
+    branch="$2"
   fi
 
   # worktree
-  if [[ -z "$branch" ]];
+  if [[ -z "$branch" ]]
   then
     echo "branch name is required" >&2
     return 1

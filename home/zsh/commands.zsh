@@ -119,6 +119,19 @@ gitlab() {
 
 }
 
+upfind () {
+  if [[ -e "$1" ]]
+  then
+    print "$1"
+    return 0
+  fi
+  upfind "../$1"
+}
+
+upcd() {
+  cd "$(upfind "$1")"
+}
+
 worktree() {
   branch=$1
 

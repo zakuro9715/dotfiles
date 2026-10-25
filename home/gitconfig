@@ -99,6 +99,7 @@
   dih    = !git zsh git-custom-diff HEAD
   dis    = !git zsh git-custom-diff --staged
   dib    = !git zsh git-custom-diff HEAD~
+  exists = rev-parse --verify -q
   install-hooks = !git zsh git-install-hooks
   l      = !git zsh git-pretty-log
   lg     = !git zsh git-pretty-graph-log

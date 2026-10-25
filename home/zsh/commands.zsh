@@ -127,20 +127,57 @@ upfind () {
   fi
   upfind "../$1"
 }
-
 upcd() {
   cd "$(upfind "$1")"
 }
 
+_is-worktree-subcommand() {
+  case "$1" in
+    "rm"|"brm")
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
 worktree() {
   branch=$1
+  cmd=''
+
+  if [[ _is-worktree-subcommand "$1" ]]
+  then
+    cmd="$1"
+    branch=$2
+  fi
 
   # worktree
   if [[ -z "$branch" ]];
   then
-    echo "Usage: worktree BRANCH" >&2
+    echo "branch name is required" >&2
     return 1
   fi
+
+
+  # worktree subcommand
+  case "$command" in
+    "brm")
+      echo "brm"
+      git worktree remove "$branch"
+      cd "$(dirname "$(upfind .git)")"
+      git bad "$branch"
+      return 0
+      ;;
+    "rm")
+      echo "rm"
+      git worktree remove "$branch"
+      return 0
+      ;;
+    *)
+      ;;
+  esac
+
 
   # worktree branch
   if git worktree list | grep "$branch" > /dev/null

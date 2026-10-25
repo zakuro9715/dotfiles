@@ -119,6 +119,12 @@ gitlab() {
 
 }
 
+worktree() {
+  cd "$(git root)/.worktrees/$1"
+}
+alias wt=worktree
+alias root='cd "$(git root)"'
+
 use-short-prompt() {
   export SHORT_PROMPT='1'
 }

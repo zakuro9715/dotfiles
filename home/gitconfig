@@ -160,6 +160,7 @@
   wt     = worktree
   wl     = worktree list
   wd     = worktree remove
+  wbd    = "!f() { git wd "$1" && git bad "$1"; }; f"
   wa     = !git zsh git-worktree-add
   wb     = !git zsh git-worktree-with-branch
 

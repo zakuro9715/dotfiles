@@ -164,6 +164,7 @@
   wbd    = "!f() { git wd "$1" && git bad "$1"; }; f"
   wa     = !git zsh git-worktree-add
   wb     = !git zsh git-worktree-with-branch
+  wt-dir = !git zsh git-worktree-dir
 
 [push]
   default = current

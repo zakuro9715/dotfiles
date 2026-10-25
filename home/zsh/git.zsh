@@ -150,18 +150,19 @@ _git-worktree-add-check-branch() {
     return 1
   fi
 }
-worktree-dir() {
+
+git-worktree-dir() {
   echo "$(git root)/.worktrees/$1"
 }
 
 git-worktree-add() {
   branch="$1"
   _git-worktree-add-check-branch "$branch" || return 1
-  git worktree add "$(worktree-dir $branch)" "$branch"
+  git worktree add "$(git-worktree-dir $branch)" "$branch"
 }
 
 git-worktree-with-branch() {
   branch="$1"
   _git-worktree-add-check-branch "$branch" || return 1
-  git worktree add -b "$branch" "$(worktree-dir $branch)"
+  git worktree add -b "$branch" "$(git-worktree-dir $branch)"
 }

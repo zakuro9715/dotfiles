@@ -120,7 +120,29 @@ gitlab() {
 }
 
 worktree() {
-  cd "$(git root)/.worktrees/$1"
+  branch=$1
+
+  # worktree
+  if [[ -z "$branch" ]];
+  then
+    echo "Usage: worktree BRANCH" >&2
+    return 1
+  fi
+
+  # worktree branch
+  if git worktree list | grep "$branch" > /dev/null
+  then
+    # worktree exists
+    :
+  elif git rev-parse --verify -q "$branch" > /dev/null
+  then
+    # branch exists
+    git wa "$branch"
+  else
+    # branch and worktree not exists
+    git wb "$branch"
+  fi
+  cd "$(git wt-dir "$branch")"
 }
 alias wt=worktree
 alias root='cd "$(git root)"'

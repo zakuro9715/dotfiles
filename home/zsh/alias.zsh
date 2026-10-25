@@ -20,6 +20,10 @@ alias docker-dive="dive"
 
 alias npm="npm --color=always"
 
+alias cd1="cd .."
+alias cd2="cd ../.."
+alias cd3="cd ../../.."
+
 alias c="git c"
 alias s="git s"
 alias g="git"

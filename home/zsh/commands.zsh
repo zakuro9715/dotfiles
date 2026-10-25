@@ -168,9 +168,8 @@ worktree() {
 
 
   # worktree subcommand
-  case "$command" in
+  case "$cmd" in
     "brm")
-      echo "brm"
       git worktree remove "$branch"
       cd "$(dirname "$(upfind .git)")"
       git bad "$branch"

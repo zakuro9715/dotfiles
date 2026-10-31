@@ -280,6 +280,15 @@ cd-n() {
   SHELL_INIT="cd $@" $SHELL
 }
 
+dus() {
+  if [ $# -eq 0 ]
+  then
+    set -- *
+  fi
+  du -sh "$@" | sort -h
+}
+alias print-size="dus"
+
 v-wrapper() {
   if truthy "$VMASTER"
   then

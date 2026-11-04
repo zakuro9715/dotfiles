@@ -108,12 +108,13 @@ repo() {
 }
 
 zakuro() {
-  cd $GHQ_ROOT/github.com/zakuro9715
+  cd $ZAKURO
 }
 
 github() {
-  cd $GHQ_ROOT/github.com
+  cd $GITHUB
 }
+
 gitlab() {
   cd $GHQ_ROOT/gitlab.com
 

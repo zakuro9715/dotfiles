@@ -44,9 +44,8 @@ pip3=(
   'git+https://github.com/jeffkaufman/icdiff.git'
 )
 
-npm=(
+pnpm=(
   n
-  pnpm
   @devcontainers/cli
 )
 

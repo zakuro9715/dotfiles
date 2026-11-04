@@ -4,7 +4,7 @@ basedir="$(cd $(dirname $0)/..; pwd)"
 source "$basedir/deps.zsh"
 source "$HOME/.zsh/env.zsh"
 
-curl -fsSL https://get.pnpm.io/install.sh | PNPM_NO_MODIFY_PATH=1 sh
+npx get-pnpm --no-modify-path
 
 for pkg in $pnpm
 do

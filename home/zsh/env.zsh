@@ -27,3 +27,11 @@ export COLOR="--color=always"
 export GPG_TTY=$(tty)
 
 export COPILOT_ALLOW_ALL=true
+
+# pnpm
+export PNPM_HOME="/home/zakuro/.local/share/pnpm"
+export PATH="$PNPM_HOME/bin:$PATH"
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
+

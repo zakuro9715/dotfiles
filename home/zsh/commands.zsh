@@ -124,6 +124,12 @@ dotfiles() {
   cd $ZAKURO/dotfiles
 }
 
+install-symlinks() {
+  dotfiles
+  zsh ./scripts/install-symlinks.zsh
+}
+alias relink="install-symlinks"
+
 upfind () {
   if [[ -e "$1" ]]
   then

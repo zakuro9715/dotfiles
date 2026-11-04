@@ -120,6 +120,10 @@ gitlab() {
 
 }
 
+dotfiles() {
+  cd $ZAKURO/dotfiles
+}
+
 upfind () {
   if [[ -e "$1" ]]
   then
